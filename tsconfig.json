@@ -3,6 +3,7 @@
   "compilerOptions": {
     // Alias `src` to `~`
     "baseUrl": ".",
+    "jsx": "react-jsx",
     "paths": {
       "~/*": ["src/*"]
     }

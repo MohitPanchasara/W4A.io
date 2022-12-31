@@ -1,0 +1,19 @@
+---
+import Search from "../Atoms/search.astro";
+import Navbutton from "../Atoms/navbutton.astro";
+import Hamburger from "../Atoms/hamburger.astro";
+import Sidebar from "./sidebar.astro";
+---
+
+<div class="lg:flex space-x-3.5 hidden px-2 py-4">
+  <div class="">
+    <Navbutton text="Community" />
+    <Navbutton text="Enterprise" />
+    <Navbutton text="Developers" />
+    <Navbutton text="Research" />
+  </div>
+  <div class="translate-x-[100px]">
+    <Search />
+  </div>
+  <Hamburger />
+</div>

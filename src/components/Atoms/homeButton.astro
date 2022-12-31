@@ -1,0 +1,110 @@
+<style>
+  .button {
+    border-radius: 16px;
+    background: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+  .button span:after {
+    content: "\00bb";
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .button:hover span {
+    /* padding-right: 25px; */
+    color: #3f00f9;
+  }
+
+  .button:hover span:after {
+    color: #3f00f9;
+  }
+
+  [class^="hvr-"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0.4em;
+    padding: 1em;
+    cursor: pointer;
+    background: #e1e1e1;
+    text-decoration: none;
+    color: #fff;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  .hvr-radial-out:hover,
+  .hvr-radial-out:focus,
+  .hvr-radial-out:active {
+    /* color: black; */
+  }
+  .hvr-radial-out {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-radial-out:hover:before,
+  .hvr-radial-out:focus:before,
+  .hvr-radial-out:active:before {
+    -webkit-transform: scale(7);
+    transform: scale(7);
+  }
+  .hvr-radial-out:before {
+    content: "";
+    /* position: absolute; */
+    z-index: -1;
+    top: 100%;
+    left: -10%;
+    bottom: -100%;
+    right: 80%;
+    /* text-color: black; */
+    background: white;
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+</style>
+
+<button class="button hvr-radial-out font-grotesk text-8xl font-extrabold"
+  ><span>Join Community</span>
+</button>

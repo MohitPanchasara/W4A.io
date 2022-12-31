@@ -2,6 +2,10 @@
 import { Icon } from "astro-icon";
 import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
+import Navbutton from "./Atoms/navbutton.astro";
+import Hamburger from "./Atoms/hamburger.astro";
+import Search from "./Atoms/search.astro";
+import Logo from "./Atoms/logo.astro";
 
 const navItems: Array<NavItem> = [
   { title: "Features", url: "#features" },
@@ -12,16 +16,28 @@ const navItems: Array<NavItem> = [
 
 <header
   id="page-header"
-  class="absolute bottom-0 z-20 flex w-full items-center justify-between border-b border-transparent px-8 py-4 text-white"
+  class="absolute bottom z-20 flex w-full items-center justify-between border-transparent px-8 py-2 text-white fixed-header"
 >
-  <a class="flex items-center gap-3 hover:!text-default" href="#">
-    <h1 class="sr-only">Astro</h1>
+  <a class="flex items-center gap-3 font-grotesk" href="#">
+    <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
-    <Icon name="wordmark" class="hidden h-4 sm:block" />
+    <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
+    <Logo />
   </a>
+  <div class="">
+    <Navbutton text="Community" />
+    <Navbutton text="Enterprise" />
+    <Navbutton text="Developers" />
+    <Navbutton text="Research" />
+    <Hamburger />
+  </div>
+  <!-- <div class="translate-x-[100px]">
+    <Search />
+  </div> -->
+  
   <div>
     <div class="flex items-center gap-6">
-      <nav class="hidden sm:block">
+      <!-- <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
             navItems.map(({ title, url }) => (
@@ -33,19 +49,25 @@ const navItems: Array<NavItem> = [
             ))
           }
         </ul>
-      </nav>
+      </nav> -->
       <button
         id="open-nav-button"
         type="button"
         class="btn sm:hidden"
         aria-label="Navigation"
       >
+        
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
+      <div class="translate-x-[100px]">
+        <Search />
+      </div>
       <ThemeSwitcher />
     </div>
+
+    
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="fixed inset-0 bg-default px-8 py-4 text-default">
+      <div class="fixed inset-0 px-8 py-4">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
             <button
@@ -109,7 +131,7 @@ const navItems: Array<NavItem> = [
 
   document.addEventListener("scroll", () => {
     const d = page.clientHeight - page.scrollTop - header.offsetHeight;
-    header.classList.toggle("fixed-header", d < 0);
+    // header.classList.toggle("fixed-header", d < 0);
   });
 
   menu.addEventListener("click", (event) => {
@@ -130,7 +152,7 @@ const navItems: Array<NavItem> = [
 <style>
   .fixed-header {
     @apply fixed top-0 bottom-auto;
-    @apply border-default bg-default text-default;
+    @apply border-default bg-default text-default font-grotesk;
   }
   .modal.is-open {
     @apply block;

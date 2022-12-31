@@ -1,0 +1,241 @@
+---
+import HomeButton from "../Atoms/homeButton.astro";
+import FooterLogo from "../Atoms/footerLogo.astro";
+import W4logo from "../Atoms/w4logo.astro";
+import Sidebar from "../molecules/sidebar.astro";
+---
+
+<style>
+  .wrapper {
+    display: flex;
+  }
+
+  .wrapper .dynamic-txts {
+    height: 90px;
+
+    overflow: hidden;
+  }
+
+  .dynamic-txts li {
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -360px;
+    }
+  }
+
+  .dynamic-txts li span {
+    position: relative;
+
+    line-height: 90px;
+    color: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+  }
+
+  .dynamic-txts li span::after {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    animation: typing 3s steps(10) infinite;
+  }
+
+  @keyframes typing {
+    40%,
+    60% {
+      left: calc(100% + 30px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  .second {
+    background: radial-gradient(
+      89.2% 180.91% at 91.8% 50%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .third {
+    background: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+  .third:hover {
+    background: white;
+    color: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+  .element {
+    width: 100%;
+    height: 100%;
+    animation: pulse 8s infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      background-image: linear-gradient(
+        #ffffff 18.27%,
+        #ff6f62 73.18%,
+        #f95088 105.76%,
+        #b038ea 112.56%,
+        #6e53ff 120.21%,
+        #0894ff 126.04%
+      );
+    }
+    100% {
+      background-image: linear-gradient(
+        180deg,
+        #ffffff 12%,
+        #0894ff 68.43%,
+        #6e53ff 87.63%,
+        #b038ea 97.77%,
+        #f95088 107.91%,
+        #ff6f62 117.33%
+      );
+    }
+  }
+
+  html,
+  body {
+    height: 100%;
+  }
+
+  #grad1 {
+    background-image: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+    animation: colorchange 5s both;
+    /* position: absolute; */
+  }
+
+  @keyframes colorchange {
+    100% {
+      background-image: linear-gradient(
+        180deg,
+        #ffffff 18.27%,
+        #6e53ff 63.49%,
+        #b038ea 84.9%,
+        #ff6f62 99.08%,
+        #f95088 114.37%,
+        #0894ff 126.04%
+      );
+    }
+  } 
+
+  .sun {
+    width: 260px;
+    height: 260px;
+
+    transform: translate(150px,5px); 
+    background-color: white;
+    animation: sunani 5s forwards;
+    position: absolute;
+  }
+
+  @keyframes sunani {
+    100% {
+      width: 400px;
+      height: 400px;
+      transform: translate(550px, 60px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+<!-- <div class="element"> -->
+<div id="grad1" class="z-0 h-[680px]">
+  <div class="font-satoshi m-0 p-0 w-[100vw] h-auto">
+    <div class="w-[100vw] h-auto text-center translate-y-[60px]">
+      <W4logo />
+      <div class="wrapper justify-center">
+        <ul class="dynamic-txts font-grotesk">
+          <li>
+            <span class="second font-medium text-[52px]">Human And Machine</span
+            >
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]">Web 4.0 for Ads</span>
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]">Web for All</span>
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]"
+              >Web 4.0 for Anything
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="h-16 font-medium text-[32px] text-base text-purple-800 font-satoshi"
+      >
+        <p>Human decisioning meets Machine Intelligence</p>
+        <p>Developing precursor to intelligent Homind aka silico spains</p>
+      </div>
+
+      <div class="mt-[25px]">
+        <!-- <button
+          class="third rounded-[16px] w-[220px] h-[55px] text-[24px] text-white"
+          ><p class="font-grotesk">Join Community</p>
+        </button> -->
+        <HomeButton />
+      </div>
+    </div>
+  </div>
+  <div
+    class="sun rounded-[160px] overflow-hidden translate-x-[300px] -translate-y-[60px]"
+  >
+  </div>
+  <div class="">
+    <img src="../images/Parallax1.png" class="heroimg b" alt="" />
+  </div>
+</div>

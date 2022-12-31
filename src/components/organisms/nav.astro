@@ -1,0 +1,21 @@
+---
+import { MobileHeader } from "../organisms/MobileHeader";
+import Logo from "../Atoms/logo.astro";
+import NavElements from "../molecules/navElements.astro";
+import Hamburger from "../Atoms/hamburger.astro";
+---
+
+<div class="flex items-center justify-between px-1">
+  <nav
+    class="h-14 bg-inherit hover:translate-y-2 rounded-2xl hover:h-30 duration-200 ctive:bg-gray-200 focus:outline-none focus:ring focus:ring-gray-100 w-full flex relative justify-between items-center mx-auto px-8 h-12"
+  >
+    <Logo />
+
+    <div class="py-4">
+      <NavElements />
+    </div>
+    <div class="flex lg:hidden">
+      <MobileHeader client:visible />
+    </div>
+  </nav>
+</div>

@@ -1,0 +1,16 @@
+---
+import Layout from "~/components/organisms/Layout.astro";
+import CommunityBody from "~/components/organisms/communityBody.astro";
+
+interface Frontmatter {
+  title: string;
+  slug: string;
+  thumbnail: string;
+  date: string;
+}
+
+---
+
+<Layout title="Community">
+<CommunityBody/>
+</Layout>
