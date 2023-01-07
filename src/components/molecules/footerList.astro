@@ -1,0 +1,18 @@
+---
+
+export interface Props {
+  heading: string,
+  body: Array<String>;
+}
+
+const { heading, body } = Astro.props;
+---
+
+
+<div class=" pb-10 font-grotesk h-4  font-bold text-base flex items-center text-gray-900 flex-none order-none flex-grow-0">{heading}</div>
+
+<div class="font-medium text-base text-gray-700">
+    <ul>
+        {body.map((data) => <li class="pb-5">{data}</li>)}
+      </ul>
+</div>

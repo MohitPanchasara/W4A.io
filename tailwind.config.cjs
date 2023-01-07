@@ -4,9 +4,17 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
+    screens: {
+      'sm': {'max': '425px'},
+      'md': {'max': '768px'},
+      'lg':{'min':'769px'},
+    
+    },
+  
     extend: {
-      satoshi: ["Satoshi Variable"],
+      
       fontFamily: {
+        satoshi: ["Satoshi Variable"],
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
         grotesk: ["Space Grotesk"],
       },

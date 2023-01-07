@@ -8,10 +8,18 @@ const { heading, body } = Astro.props;
 
 ---
 
-<div class="bg-white w-[390px] h-[231px] translate-y-[280px]">
-    <div>
-    <div class="font-satoshi font-bold text-xl text-center text-black mt-[61px] ml-[103px] mr-[102px] ">{heading}</div>
+<style>
+  .box{
+    height: 231px;
+  flex:1 1 300px;
+  margin:50px;
+  }
+</style>
+
+<div class="box bg-white w-[390px] h-[231px] lg:h-auto">
+    
+    <div class="font-satoshi font-bold text-xl text-center text-black mt-[30px] ">{heading}</div>
 
     <div class=" font-medium text-sm text-center mt-[15px] text-gray-900  "><span class="w-[100px]">{body}</span></div>
-</div>
+
 </div>
