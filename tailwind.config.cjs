@@ -5,7 +5,7 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      'sm': {'max': '425px'},
+      'sm': {'max': '375px'},
       'md': {'max': '768px'},
       'lg':{'min':'769px'},
     
@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       
       fontFamily: {
-        satoshi: ["Satoshi Variable"],
+        satoshi: ["Satoshi-Variable","sans-serif"],
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
         grotesk: ["Space Grotesk"],
       },
