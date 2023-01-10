@@ -5,9 +5,9 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      'sm': {'max': '375px'},
-      'md': {'max': '768px'},
-      'lg':{'min':'769px'},
+      'sm': {'max': '480px'},
+      'md': {'min':'481','max': '769px'},
+      'lg':{'min':'770px'},
     
     },
   
