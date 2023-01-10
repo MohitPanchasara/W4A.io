@@ -1,0 +1,279 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+import HomeButton from "../Atoms/homeButton.astro";
+
+
+
+---
+
+
+
+
+<!-- <ContentSection title="What Is Web4.0?" id="whatisweb4"> -->
+<div>
+  <div class="carousel">
+    <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+      <li class="slide-container">
+        <div class="slide-image">
+            <img src="../images/slider1.svg">
+            <div class="center-left-up">PROBLEM</div>
+            <div class="center-left">Calculate Multiplication of two
+numbers within seconds</div>
+            <div class="centered">
+                <!-- <img src="../images/right_arrow.svg"> -->
+            </div>
+            <div class="center-right-up">SOLUTION</div>
+            <div class="center-right">A Modern calculator, using a microchip,
+does the calculation on your behalf</div>
+        </div>
+        <div class="carousel-controls">
+          <label for="img-5" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-2" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-2" />
+      <li class="slide-container">
+        <div class="slide-image">
+            <img src="../images/slider2.svg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-1" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-3" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-3" />
+      <li class="slide-container">
+        <div class="slide-image">
+            <img src="../images/slider3.svg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-2" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-4" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-4" />
+      <li class="slide-container">
+        <div class="slide-image">
+            <img src="../images/slider4.svg">
+        </div>
+        <div class="carousel-controls">
+          <label for="img-3" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-5" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      <input type="radio" name="radio-buttons" id="img-5" />
+      <li class="slide-container">
+        <div class="slide-image">
+            <img src="../images/slider5.svg">
+ 
+        
+        </div>
+        <div class="carousel-controls">
+          <label for="img-4" class="prev-slide">
+            <span>&lsaquo;</span>
+          </label>
+          <label for="img-1" class="next-slide">
+            <span>&rsaquo;</span>
+          </label>
+        </div>
+      </li>
+      
+      <div class="carousel-dots">
+        <label for="img-1" class="carousel-dot" id="img-dot-1"></label>
+        <label for="img-2" class="carousel-dot" id="img-dot-2"></label>
+        <label for="img-3" class="carousel-dot" id="img-dot-3"></label>
+         <label for="img-4" class="carousel-dot" id="img-dot-4"></label>
+         <label for="img-5" class="carousel-dot" id="img-dot-5"></label>
+      </div>
+    </ul>
+  </div>
+</div>
+
+<style>
+
+
+.carousel {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.img1 {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(DALL·E 2022-12-28 00.05.png);
+}
+ul.slides {
+    display: block;
+    position: relative;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+.slide-container { 
+    display: block; 
+   
+  position: relative;
+  text-align: center;
+  color: white;
+
+}
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.center-right {
+    position: absolute;
+    right: 50px;
+    left: 600px;
+    top: 50%;
+}
+.center-left {
+    position: absolute;
+    left: 50px;
+    right: 600px;
+    top: 50%;
+}
+.center-left-up {
+    position: absolute;
+    left: 50px;
+    right: 600px;
+    top: 35%;
+}
+.center-right-up {
+     position: absolute;
+    right: 50px;
+    left: 600px;
+    top: 35%;
+}
+
+ .slide-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    /* transition: all .7s ease-in-out; */
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 900px;
+} 
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 49%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 20px;
+    margin-bottom: 2px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    /* transition: opacity 1s ease-in-out; */
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+
+</style>

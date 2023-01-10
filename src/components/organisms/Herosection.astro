@@ -137,7 +137,23 @@ import Sidebar from "../molecules/sidebar.astro";
   }
 
   #grad1 {
-    background-image: linear-gradient(
+    /* background-image: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    ); */
+
+    animation: colorchange 5s both;
+    /* position: absolute; */
+  }
+
+  @keyframes colorchange {
+     0% {
+      background: linear-gradient(
       180deg,
       #ffffff 12%,
       #0894ff 68.43%,
@@ -146,13 +162,9 @@ import Sidebar from "../molecules/sidebar.astro";
       #f95088 107.91%,
       #ff6f62 117.33%
     );
-    animation: colorchange 5s both;
-    /* position: absolute; */
-  }
-
-  @keyframes colorchange {
+    }
     100% {
-      background-image: linear-gradient(
+      background: linear-gradient(
         180deg,
         #ffffff 18.27%,
         #6e53ff 63.49%,
@@ -161,24 +173,32 @@ import Sidebar from "../molecules/sidebar.astro";
         #f95088 114.37%,
         #0894ff 126.04%
       );
-    }
+    } 
   } 
+  
+  /* .sun {
+    width: 180px;
+    height: 180px;
 
-  .sun {
-    width: 260px;
-    height: 260px;
-
-    transform: translate(150px,5px); 
+    transform: translate(25px,-300px); 
     background-color: white;
     animation: sunani 5s forwards;
-    position: absolute;
+    position: relative;
+    overflow: hidden;
+    bottom: 0;
+  } */
+
+  svg {
+    transform: translate(25px,-300px);
+    animation: sunani 5s forwards;
+
   }
 
   @keyframes sunani {
     100% {
-      width: 400px;
-      height: 400px;
-      transform: translate(550px, 60px);
+      width: 550px;
+      height: 550px;
+      transform: translate(400px, 60px);
       border-radius: 10000px;
       opacity: 0.5;
     }
@@ -189,9 +209,24 @@ import Sidebar from "../molecules/sidebar.astro";
     bottom: 0;
     width: 100%;
   }
+  .overLap {
+    bottom: 0;
+    width:80%;
+    height: 50%;
+    transform: translate(180px, -30px);
+    animation: trax 5s forwards;
+  }
+
+  @keyframes trax {
+    100%{
+      width: 80%;
+      height: 50%;
+      transform: translate(200px, -30px);
+    }
+  }
 </style>
 <!-- <div class="element"> -->
-<div id="grad1" class="z-0 h-[680px]">
+<div id="grad1" class="z-0 h-[610px] overflow-hidden">
   <div class="font-satoshi m-0 p-0 w-[100vw] h-auto">
     <div class="w-[100vw] h-auto text-center translate-y-[60px]">
       <W4logo />
@@ -231,11 +266,15 @@ import Sidebar from "../molecules/sidebar.astro";
       </div>
     </div>
   </div>
-  <div
-    class="sun rounded-[160px] overflow-hidden translate-x-[300px] -translate-y-[60px]"
-  >
+  
+  <div class="h-[300px]">
+    <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+</svg>
+
   </div>
-  <div class="">
-    <img src="../images/Parallax1.png" class="heroimg b" alt="" />
+  <div class="py-40">
+    <img src="../images/Parallax.svg" class="overLap" />
+    <img src="../images/Parallax.svg" class="heroimg b" alt="" />
   </div>
 </div>

@@ -1,0 +1,332 @@
+---
+import { Icon } from "astro-icon";
+import ThemeSwitcher from "~/components/theme-switcher.astro";
+import type { NavItem } from "~/types";
+import Logo from "~/components/Atoms/logo.astro";
+import Navbutton from "~/components/Atoms/navbutton.astro";
+import Search from "~/components/Atoms/search.astro";
+
+
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+const description = "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+
+
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Developers</title>
+        <script src="https://kit.fontawesome.com/a46756f0b2.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+     <meta name="generator" content={generator} />
+
+    <title>Astro Landing Page</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" /> 
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+    </head>
+    <style>
+         #check{
+                display: none;
+            }
+        #check:checked ~ ul{
+            left: 0;
+        }
+ 
+            
+    </style>
+    <body class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary 
+    selection:text-white">
+        
+        <!-- class="flex  " -->
+        <header  id="page-header" class="flex absolute bottom z-20 text-white border-transparent 
+        fixed-header items-center px-8 py-2 justify-between bg-slate-600 h-20 w-full fixed font-grotesk">
+
+         <!-- <a class="flex items-center gap-3 font-grotesk" href="#"> -->
+            <!-- <h1 class="sr-only">AstroXX</h1>
+            <Icon name="logomark" class="h-10" />
+            <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
+            <label class="leading-[40] md:leading-[30px] md:pl-12">
+            <Logo />
+            </label>
+
+            <!-- </a> -->
+
+        <!-- <div class=""> -->
+            <!-- <Navbutton text="Community" /> -->
+            <!-- <Navbutton text="Enterprise" /> -->
+            <!-- <Navbutton text="Developers" /> -->
+            <!-- <Navbutton text="Research" /> -->
+            <!-- <Hamburger /> -->
+        <!-- </div> -->
+         
+            <!-- <label class="font-grotesk text-white leading-[80] md:leading-[80px] pl-12 md:pl-24 md:text-4xl
+            text-3xl">
+                Navigation
+            </label> -->
+
+            <div class="lg:w-full md:w-1/2 md:hidden sm:hidden lg:block">
+            <Navbutton text="Community" />
+            <Navbutton text="Enterprise" />
+            <Navbutton text="Developers" />
+            <Navbutton text="Research" />
+            </div>
+            <div>
+            <div class="flex items-center gap-6">
+                 <button
+                    id="open-nav-button"
+                    type="button"
+                    class="btn sm:hidden"
+                    aria-label="Navigation">
+        
+                    <Icon pack="mdi" name="menu" class="h-8" />
+
+                </button>
+                <div class="translate-x-[100px]">
+                    <Search />
+                </div>
+                <ThemeSwitcher />
+            </div>
+            </div>
+           
+            <!-- <ul>
+               <a class="active" href='#'>Home</a>
+                <a href='#'>Comminity</a>
+                <a href='#'>Enterprise</a>
+                <a href='#'>Developers</a>
+                <a href='#'>Research</a> 
+            </ul> -->
+
+           <input type="checkbox" id="check" hidden >
+            <label for="check" class="float-right text-white text-3xl 
+            leading-[80px] mr-10 lg:hidden">
+                <i class="fas fa-bars"></i>
+            </label>
+
+            <!--Hamburger Start -->
+            <ul class="float-right lg:hidden mr-10 lg:fixed leading-[80px] space-x-4 text-white uppercase
+            rounded fixed lg:relative h-[100vh] lg:h-0 w-[100%] lg:w-fit top-20 lg:top-0 left-[-100%]
+            lg:left-0 transition-all duration-300 lg:transition-none text-center bg-slate-700">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li>Profile</li>
+            </ul>
+            <!--Hamburger End -->
+
+        </header>
+  
+        <div class="container text-center">
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-6">
+      2 of 3 (wider)
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      1 of 3
+    </div>
+    <div class="col-5">
+      2 of 3 (wider)
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div>
+</div>
+
+<style>
+    .row {
+        background-color: red;
+    }
+    .col {
+        background-color: purple;
+    }
+</style>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Developer</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    </head>
+
+    <body>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">AdMyBrand</label>
+            <ul>
+                <li><a class="active" href='#'>Home</a></li>
+                <li><a href='#'>Comminity</a></li>
+                <li><a href='#'>Enterprise</a></li>
+                <li><a href='#'>Developers</a></li>
+                <li><a href='#'>Research</a></li>
+            </ul>
+        </nav>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                text-decoration: none;
+                list-style: none;
+                box-sizing: border-box;
+            }
+            body{
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            }
+            nav{
+                background: rgb(132, 0, 255);
+                height: 80px;
+                width: 100%;
+            }
+            label.logo{
+                color: white;
+                font-size: 35px;
+                line-height: 80px;
+                padding: 0 100px;
+                font-weight: bold;
+            }
+            nav ul{
+                float: right;
+                margin-right: 20px;
+            }
+            nav ul li{
+                display: inline-block;
+                line-height: 80px;
+                margin: 0 5px;
+            }
+            nav ul li a{
+                color: white;
+                font-size: 17px;
+                text-transform: uppercase;
+                border-radius: 3px;
+                padding: 7px 13px;
+            }
+
+            a.active, a:hover {
+                background: rgb(255, 1, 255);
+                transition: .5s;
+            }
+
+            .checkbtn {
+                font-size: 30px;
+                color: white;
+                float: right;
+                line-height: 40px;
+                margin-right: 40px;
+                cursor: pointer;
+                display: none;
+            }
+
+            #check{
+                display: none;
+            }
+
+            @media (max-width: 952px) {
+                label.logo{
+                    font-size: 30px;
+                    padding-left: 50px;
+                }
+                nav ul li a{
+                    font-size: 16px;
+                }
+            }
+
+            @media (max-width: 858px) {
+                .checkbtn{
+                }
+                ul{
+                    position: fixed;
+                    width: 100%;
+                    height: 100vh;
+                    background: rgb(98, 0, 255);
+                    top: 80px;
+                    left: 0;
+                    text-align: center;
+                    transition: all .5s;
+                }
+
+                nav ul li{
+                    display: block;
+                    margin: 50px 0;
+                    line-height: 30px;
+                }
+                nav ul li a{
+                    font-size: 20px;
+                }
+                a:hover, a.active{
+                    background: none;
+                    color: rgb(98, 0, 255);
+
+                }
+
+                #check:checked ~ ul{
+                    left: 0;
+                }
+            }
+
+
+
+
+
+        </style>
+    </body>
+</html> -->

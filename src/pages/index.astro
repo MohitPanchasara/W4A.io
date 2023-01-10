@@ -11,6 +11,10 @@ import "~/styles/index.css";
 import Nav from "~/components/organisms/nav.astro";
 import Herosection from "~/components/organisms/Herosection.astro";
 import Whatisweb4 from "~/components/organisms/whatisweb4.astro";
+import Evaluationofmordernworld from "~/components/organisms/evaluationofmordernworld.astro";
+import ScrollPart1 from "~/components/organisms/scrollpart1.astro";
+import Scrollpart2 from "~/components/organisms/scrollpart2.astro";
+import Scrollpart3 from "~/components/organisms/scrollpart3.astro";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -85,6 +89,8 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary selection:text-white"
   >
     <Header />
+
+    
     <!-- <Nav /> -->
     <!-- <Splash /> -->
     <div class="py-10">
@@ -92,12 +98,17 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
       <Herosection />
 
       <!-- <Intro /> -->
-      <div class="py-16">
-      <Features />
+      <div class="py-12">
+      <!-- <Features /> -->
       </div>
       <Whatisweb4 />
-      <Compatibility />
-      <Showcase />
+      <div class="py-12">
+      <Evaluationofmordernworld />
+      </div>
+      <Scrollpart3 />
+       <!-- <ScrollPart1 /> -->
+      <!--<Compatibility />
+      <Showcase /> -->
     </div>
     <Footer />
   </body>

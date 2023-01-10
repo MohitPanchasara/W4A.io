@@ -24,11 +24,14 @@ const navItems: Array<NavItem> = [
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
     <Logo />
   </a>
-  <div class="">
+  <div class="hidden md:w-10 lg:block">
     <Navbutton text="Community" />
     <Navbutton text="Enterprise" />
     <Navbutton text="Developers" />
     <Navbutton text="Research" />
+    
+  </div>
+  <div class="block md:hidden lg:hidden">
     <Hamburger />
   </div>
   <!-- <div class="translate-x-[100px]">

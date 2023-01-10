@@ -1,0 +1,276 @@
+---
+import CompatibilityList from "~/components/compatibility-list.astro";
+import ContentSection from "~/components/content-section.astro";
+import type { CompatibilityItem } from "~/types";
+import HomeButton from "../Atoms/homeButton.astro";
+---
+
+<!-- <ContentSection title="What Is Web4.0?" id="whatisweb4">
+  <Fragment slot="lead"> -->
+    <div class="container px-10 font-grotesk">
+      <a href="something" class="button4" style="background-color:#3F00F9">Defination</a>
+<a href="something" class="button4" style="background-color:#3F00F9">Features</a>
+<a href="something" class="button4" style="background-color:#3F00F9">Theme</a>
+<a href="something" class="button4" style="background-color:#3F00F9">Technology Breakthrough</a>
+<a href="something" class="button4" style="background-color:#3F00F9">Biggest Innovation</a>
+</div>
+
+    <div class="container font-grotesk ">
+  <div class="card ">
+    <div class="box ">
+      <div class="content">
+        <!-- <h2>Web 1.0</h2> -->
+        <h3>Web 1.0</h3>
+       <p>The Web of <br><span class="text-primary font-bold	">Cognition</span></p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content">
+        <!-- <h2>Web 2.0</h2> -->
+        <h3>Web 2.0</h3>
+        <p>The Web of <span class="text-primary font-bold	">Communication</span></p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="box">
+      <div class="content font-black text-2xl text-center text-black">
+        <!-- <h2>Web 3.0</h2> -->
+        <h3>Web 3.0</h3>
+         <p>The Web of <br><span class="text-primary font-bold	">Cooperation</span></p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+    </div>
+  </div>
+
+    <div class="card">
+    <div class="box">
+      <div class="content">
+        <!-- <h2>Web 4.0</h2> -->
+        <h3>Web 4.0</h3>
+         <p>The Web of <br><span class="text-primary font-bold	">Integration</span></p>
+        <!-- <a href="#">Read More</a> -->
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: "Poppins", sans-serif; */
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 50vh;
+  /* background: #232427; */
+}
+
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1600px;
+  margin: 20px 0;
+}
+
+body .container .card {
+  position: relative;
+  min-width: 280px;
+  height: 280px;
+  padding-top: 50px;
+  /* box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1); */
+  border-radius: 15px;
+  margin: 10px;
+  margin-top: 80px;
+  transition: 0.5s;
+}
+
+body .container .card:nth-child(1) .box .content a {
+  background: #e51abd;
+}
+
+body .container .card:nth-child(2) .box .content a {
+  background: #e51abd;
+}
+
+body .container .card:nth-child(3) .box .content a {
+  background: #e51abd;
+}
+body .container .card:nth-child(4) .box .content a {
+  background: #e51abd;
+}
+
+body .container .card:nth-child(1) .box {
+  background: #B0C8FF;
+}
+body .container .card:nth-child(2) .box {
+  background: #D2B5FB;
+}
+body .container .card:nth-child(3) .box {
+  background: #EEB4E3;
+}
+body .container .card:nth-child(4) .box {
+  background: #FEBEC9;
+}
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  /* background: #2a2b2f; */
+  border-radius: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+body .container .card .box:hover {
+  transform: translateY(-5px);
+}
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+body .container .card .box .content h2 {
+  position: absolute;
+  top: -10px;
+  right: 30px;
+  font-size: 8rem;
+  /* color: rgba(255, 255, 255, 0.1); */
+  color: black;
+}
+
+body .container .card .box .content h3 {
+  font-size: 2.0rem;
+  color: #0A090F;
+  z-index: 1;
+  transition: 0.5s;
+  margin-bottom: 25px;
+
+  font-style: normal;
+font-weight: 900;
+/* font-size: 24px; */
+line-height: 120%;
+/* identical to box height, or 29px */
+
+text-align: center;
+
+color: #0A090F;
+}
+
+body .container .card .box .content p {
+font-style: normal;
+font-weight: 700;
+font-size: 20px;
+line-height: 120%;
+/* or 24px */
+
+text-align: center;
+
+color: #0A090F;
+}
+
+body .container .card .box .content a {
+  position: relative;
+  display: inline-block;
+  padding: 2px 20px;
+  background: black;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  margin-top: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+body .container .card .box .content a:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  background: #fff;
+  color: #000;
+}
+
+a.button4{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+
+
+/* Inside auto layout */
+
+/* flex: none;
+order: 1;
+flex-grow: 0;
+    padding:0.3em 1.2em;
+    /* margin:0 0.1em 0.1em 0;
+     */
+     margin: 15px;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:8px;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-weight:300;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+transition: all 0.2s; 
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 6px 20px;
+gap: 10px;
+
+background: #3F00F9;
+border-radius: 8px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+}
+a.button4:hover{
+    /* border-color: rgba(255,255,255,1); */
+}
+@media all and (max-width:30em){
+    a.button4{
+    display:block;
+    margin:0.2em auto;
+    }
+}
+</style>
+
+    <!-- </Fragment>
+    </ContentSection> -->
