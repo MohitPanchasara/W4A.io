@@ -6,19 +6,21 @@ import Navbutton from "./Atoms/navbutton.astro";
 import Hamburger from "./Atoms/hamburger.astro";
 import Search from "./Atoms/search.astro";
 import Logo from "./Atoms/logo.astro";
+import W4logo from "./Atoms/w4logo.astro";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
-  { title: "Compatibility", url: "#compatibility" },
-  { title: "Showcase", url: "#showcase" },
+  { title: "Community", url: "#community" },
+  { title: "Enterprise", url: "#developer" },
+  { title: "Developer", url: "#showcase" }, 
+  { title: "Research", url: "#showcase" }, 
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom z-20 flex w-full items-center justify-between border-transparent px-8 py-2 text-white fixed-header"
+  class="absolute bottom z-20 sm:z-10 flex w-full items-center lg:justify-between border-transparent px-8 sm:py-[6px] py-2 text-white fixed-header"
 >
-  <a class="flex items-center gap-3 font-grotesk" href="#">
+  <a class="flex items-center gap-6 font-grotesk" href="#">
     <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
@@ -31,15 +33,13 @@ const navItems: Array<NavItem> = [
     <Navbutton text="Research" />
     
   </div>
-  <div class="block md:hidden lg:hidden">
-    <Hamburger />
-  </div>
+
   <!-- <div class="translate-x-[100px]">
     <Search />
   </div> -->
   
   <div>
-    <div class="flex items-center gap-6">
+    <div class="flex items-center gap-6 sm:px-40 ">
       <!-- <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
@@ -53,24 +53,31 @@ const navItems: Array<NavItem> = [
           }
         </ul>
       </nav> -->
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn sm:hidden"
-        aria-label="Navigation"
-      >
-        
-        <Icon pack="mdi" name="menu" class="h-8" />
-      </button>
+      
       <div class="translate-x-[100px]">
         <Search />
       </div>
       <ThemeSwitcher />
+      <button
+        id="open-nav-button"
+        type="button"
+        class="btn lg:hidden"
+        aria-label="Navigation"
+      >
+        
+        <!-- <Icon pack="mdi" name="menu" class="h-8" /> -->
+        <svg name="menu" class="h-10 bg-default" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="10" y="14" width="12" height="2.5" rx="1" fill="black"/>
+        <rect x="10" y="21" width="24" height="2.5" rx="1" fill="black"/>
+        <rect x="22" y="28" width="12" height="2.5" rx="1" fill="black"/>
+        </svg>
+
+      </button>
     </div>
 
     
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="fixed inset-0 px-8 py-4">
+      <div class="bg-default fixed inset-0 px-8 py-4">
         <div class="space-y-4" role="dialog" aria-modal="true">
           <header class="text-right">
             <button
@@ -83,7 +90,8 @@ const navItems: Array<NavItem> = [
             </button>
           </header>
           <div class="flex justify-center">
-            <Icon name="logomark" class="h-16" />
+            <!-- <Icon name="logomark" class="h-16" /> -->
+            <W4logo />
           </div>
           <nav>
             <ul class="flex flex-col">

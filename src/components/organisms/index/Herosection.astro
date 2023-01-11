@@ -1,8 +1,8 @@
 ---
-import HomeButton from "../Atoms/homeButton.astro";
-import FooterLogo from "../Atoms/footerLogo.astro";
-import W4logo from "../Atoms/w4logo.astro";
-import Sidebar from "../molecules/sidebar.astro";
+import HomeButton from "../../Atoms/homeButton.astro";
+import FooterLogo from "../../Atoms/footerLogo.astro";
+import W4logo from "../../Atoms/w4logo.astro";
+import Sidebar from "../../molecules/sidebar.astro";
 ---
 
 <style>
@@ -226,14 +226,14 @@ import Sidebar from "../molecules/sidebar.astro";
   }
 </style>
 <!-- <div class="element"> -->
-<div id="grad1" class="z-0 h-[610px] overflow-hidden">
+<div id="grad1" class="z-0 h-[610px] overflow-hidden sm:h-[550px]">
   <div class="font-satoshi m-0 p-0 w-[100vw] h-auto">
-    <div class="w-[100vw] h-auto text-center translate-y-[60px]">
+    <div class="w-[100vw] h-auto text-center translate-y-[60px] sm:translate-y-[30px]">
       <W4logo />
       <div class="wrapper justify-center">
-        <ul class="dynamic-txts font-grotesk">
+        <ul class="dynamic-txts font-grotesk sm:text-3xl">
           <li>
-            <span class="second font-medium text-[52px]">Human And Machine</span
+            <span class="second font-medium text-[52px] ">Human And Machine</span
             >
           </li>
           <li>
@@ -251,7 +251,7 @@ import Sidebar from "../molecules/sidebar.astro";
       </div>
 
       <div
-        class="h-16 font-medium text-[32px] text-base text-purple-800 font-satoshi"
+        class="h-16 sm:h-28 font-medium text-[32px] text-base text-purple-800 font-satoshi sm:m-[15px] sm:text-[80px]"
       >
         <p>Human decisioning meets Machine Intelligence</p>
         <p>Developing precursor to intelligent Homind aka silico spains</p>
@@ -267,14 +267,15 @@ import Sidebar from "../molecules/sidebar.astro";
     </div>
   </div>
   
-  <div class="h-[300px]">
+  <div class="h-[300px] w-auto sm:w-20">
     <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-<circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
-</svg>
+    <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
 
+    <!-- <div class="py-40 sm:py-10">
+      <img src="../images/Parallax.svg" class="overLap" />
+      <img src="../images/Parallax.svg" class="heroimg b" alt="" />
+    </div> -->
   </div>
-  <div class="py-40">
-    <img src="../images/Parallax.svg" class="overLap" />
-    <img src="../images/Parallax.svg" class="heroimg b" alt="" />
-  </div>
+
 </div>

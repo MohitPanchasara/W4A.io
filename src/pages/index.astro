@@ -1,20 +1,15 @@
 ---
 import "@fontsource/inter/variable.css";
-import Compatibility from "~/components/compatibility.astro";
-import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
-import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 import Nav from "~/components/organisms/nav.astro";
-import Herosection from "~/components/organisms/Herosection.astro";
+import Herosection from "~/components/organisms/index/Herosection.astro";
 import Whatisweb4 from "~/components/organisms/whatisweb4.astro";
-import Evaluationofmordernworld from "~/components/organisms/evaluationofmordernworld.astro";
+import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
 import ScrollPart1 from "~/components/organisms/scrollpart1.astro";
 import Scrollpart2 from "~/components/organisms/scrollpart2.astro";
-import Scrollpart3 from "~/components/organisms/scrollpart3.astro";
+import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -93,14 +88,10 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     
     <!-- <Nav /> -->
     <!-- <Splash /> -->
-    <div class="py-10">
+    <div class="py-10 block h-full w-full">
 
       <Herosection />
 
-      <!-- <Intro /> -->
-      <div class="py-12">
-      <!-- <Features /> -->
-      </div>
       <Whatisweb4 />
       <div class="py-12">
       <Evaluationofmordernworld />
@@ -109,7 +100,8 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
        <!-- <ScrollPart1 /> -->
       <!--<Compatibility />
       <Showcase /> -->
-    </div>
+      
     <Footer />
+    </div>
   </body>
 </html>
