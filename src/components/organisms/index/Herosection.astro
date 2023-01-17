@@ -131,12 +131,9 @@ import Sidebar from "../../molecules/sidebar.astro";
     }
   }
 
-  html,
-  body {
-    height: 100%;
-  }
-
   #grad1 {
+    bottom: 0;
+    position: absolute;
     /* background-image: linear-gradient(
       180deg,
       #ffffff 12%,
@@ -161,6 +158,39 @@ import Sidebar from "../../molecules/sidebar.astro";
       #b038ea 97.77%,
       #f95088 107.91%,
       #ff6f62 117.33%
+    );
+    }
+    25% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0f88ff 68.43%,
+      #824dfa 87.63%,
+      #e51cc0 97.77%,
+      #f95088 107.91%,
+      #ff6295 117.33%
+    );
+    }
+    50% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #3179ff 68.43%,
+      #9347f5 87.63%,
+      #fe2a98 97.77%,
+      #f95088 107.91%,
+      #e16cc8 117.33%
+    );
+    }
+    75% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #5168ff 68.43%,
+      #a240f0 87.63%,
+      #ff4d78 97.77%,
+      #f95088 107.91%,
+      #a281ef 117.33%
     );
     }
     100% {
@@ -188,7 +218,7 @@ import Sidebar from "../../molecules/sidebar.astro";
     bottom: 0;
   } */
 
-  svg {
+  .sunSvg {
     transform: translate(25px,-300px);
     animation: sunani 5s forwards;
 
@@ -204,34 +234,110 @@ import Sidebar from "../../molecules/sidebar.astro";
     }
   }
 
+  .sunSvgMD {
+    transform: translate(25px,-300px);
+    animation: sunaniMD 5s forwards;
+
+  }
+  @keyframes sunaniMD {
+    100% {
+      width: 450px;
+      height: 450px;
+      transform: translate(150px, 60px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  .sunSvgSM {
+    transform: translate(5px,-400px);
+    animation: sunaniSM 5s forwards;
+    width: 100px;
+    height: 100px;
+
+  }
+  @keyframes sunaniSM {
+    100% {
+      width: 300px;
+      height: 300px;
+      transform: translate(40px, 20px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
   img {
     position: absolute;
     bottom: 0;
     width: 100%;
+    /* aspect-ratio: 2/10; */
+    object-fit: contain;
   }
+
   .overLap {
     bottom: 0;
-    width:80%;
-    height: 50%;
-    transform: translate(180px, -30px);
+    transform: translate(50px, -30px);
     animation: trax 5s forwards;
   }
 
   @keyframes trax {
     100%{
-      width: 80%;
-      height: 50%;
-      transform: translate(200px, -30px);
+      transform: translate(65px, -30px);
     }
   }
+
+  .overLap2 {
+    bottom: 0;
+    /* width:80%;
+    height: 50%;
+    transform: translate(180px, -30px);
+    animation: trax2 5s forwards; */
+  }
+
+  .overLapMD {
+    bottom: 0;
+    transform: translate(50px, -20px);
+    animation: traxMD 5s forwards;
+  }
+
+  @keyframes traxMD {
+    100%{
+      transform: translate(80px, -20px);
+    }
+  }
+
+  .overLap2MD {
+    bottom: 0;
+    /* width:80%;
+    height: 50%;
+    transform: translate(180px, -30px);
+    animation: trax2 5s forwards; */
+  }
+  .overLapSM {
+    transform: translate(30px, 0px);
+    animation: traxSM 5s forwards;
+  }
+
+  @keyframes traxSM {
+    100%{
+      transform: translate(40px, 0px);
+    }
+  }
+
+  .overLap2SM {
+    bottom: 0;
+  }
+
 </style>
 <!-- <div class="element"> -->
-<div id="grad1" class="z-0 h-[610px] overflow-hidden sm:h-[550px]">
+<div id="grad1" class="z-0 md:bottom-0 overflow-hidden sm:h-[525px]">
   <div class="font-satoshi m-0 p-0 w-[100vw] h-auto">
-    <div class="w-[100vw] h-auto text-center translate-y-[60px] sm:translate-y-[30px]">
-      <W4logo />
-      <div class="wrapper justify-center">
-        <ul class="dynamic-txts font-grotesk sm:text-3xl">
+    <div class="w-[100vw] h-auto text-center translate-y-[60px] sm:translate-y-[30px] md:translate-y-[100px]">
+      <div class="flex justify-center items-center space-x-2 top-0 translate-y-[150px]">
+        <img class="w-[200px] h-[200px]" src="../svg/index/herologo.svg" />
+      </div>
+      <div class="wrapper justify-center pt-[100px]">
+        <ul class="dynamic-txts font-grotesk sm:text-3xl text-4xl md:text-3xl">
           <li>
             <span class="second font-medium text-[52px] ">Human And Machine</span
             >
@@ -251,12 +357,12 @@ import Sidebar from "../../molecules/sidebar.astro";
       </div>
 
       <div
-        class="h-16 sm:h-28 font-medium text-[32px] text-base text-purple-800 font-satoshi sm:m-[15px] sm:text-[80px]"
+        class="h-16 sm:h-28 font-medium text-[32px] text-purple-800 font-satoshi sm:m-[15px] sm:text-[80px]"
       >
         <p>Human decisioning meets Machine Intelligence</p>
         <p>Developing precursor to intelligent Homind aka silico spains</p>
       </div>
-
+      
       <div class="mt-[25px]">
         <!-- <button
           class="third rounded-[16px] w-[220px] h-[55px] text-[24px] text-white"
@@ -267,15 +373,40 @@ import Sidebar from "../../molecules/sidebar.astro";
     </div>
   </div>
   
-  <div class="h-[300px] w-auto sm:w-20">
-    <svg width="260" height="260" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+  <div class="h-[300px] w-auto sm:w-20 sm:hidden md:hidden bottom-0">
+ 
+    <svg class="sunSvg" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
     </svg>
 
-    <!-- <div class="py-40 sm:py-10">
+    <div class="py-10">
       <img src="../images/Parallax.svg" class="overLap" />
-      <img src="../images/Parallax.svg" class="heroimg b" alt="" />
-    </div> -->
+      <img src="../images/Parallax.svg" class="overLap2" alt="" />
+    </div>
+
   </div>
+  <!--TABLET -->
+  <div class="h-[300px] w-auto sm:w-20 sm:hidden lg:hidden">
+    <svg class="sunSvgMD" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
+
+    <div class="py-20">
+      <img src="../images/Parallax.svg" class="overLapMD" />
+      <img src="../images/Parallax.svg" class="overLap2MD" alt="" />
+    </div>
+  </div>
+
+   <!--Mobile -->
+  <div class="h-[300px] w-auto sm:w-20 md:hidden lg:hidden">
+    <svg class="sunSvgSM" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
+    <div class="py-10">
+      <img src="../images/Parallax.svg" class="overLapSM" />
+      <img src="../images/Parallax.svg" class="overLap2SM" alt="" />
+    </div>
+  </div>
+
 
 </div>

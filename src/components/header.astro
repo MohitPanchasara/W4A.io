@@ -18,15 +18,22 @@ const navItems: Array<NavItem> = [
 
 <header
   id="page-header"
-  class="absolute bottom z-20 sm:z-10 flex w-full items-center lg:justify-between border-transparent px-8 sm:py-[6px] py-2 text-white fixed-header"
+  class="absolute bottom z-20 flex w-full items-center lg:justify-between border-transparent px-8 py-2 text-white fixed-header"
 >
-  <a class="flex items-center gap-6 font-grotesk" href="#">
+  <a class="flex items-center gap-3 sm:gap-2 font-grotesk" href="">
     <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
     <Logo />
+      <!-- <div class="sm:hidden">
+        <Logo />
+      </div>
+      <div class="hidden sm:block">
+        <a>kdfo</a>
+        <Smlogo />
+      </div> -->
   </a>
-  <div class="hidden md:w-10 lg:block">
+  <div class="hidden translate-x-[20px] w-[700px] lg:block">
     <Navbutton text="Community" />
     <Navbutton text="Enterprise" />
     <Navbutton text="Developers" />
@@ -38,8 +45,7 @@ const navItems: Array<NavItem> = [
     <Search />
   </div> -->
   
-  <div>
-    <div class="flex items-center gap-6 sm:px-40 ">
+    <div class="flex items-center md:px-[540px]">
       <!-- <nav class="hidden sm:block">
         <ul class="flex items-center gap-6">
           {
@@ -54,26 +60,36 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav> -->
       
-      <div class="translate-x-[100px]">
+      <div class="translate-x-[10px] gap-1 sm:translate-x-[10px]">
         <Search />
       </div>
-      <ThemeSwitcher />
-      <button
-        id="open-nav-button"
-        type="button"
-        class="btn lg:hidden"
-        aria-label="Navigation"
-      >
-        
-        <!-- <Icon pack="mdi" name="menu" class="h-8" /> -->
-        <svg name="menu" class="h-10 bg-default" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="10" y="14" width="12" height="2.5" rx="1" fill="black"/>
-        <rect x="10" y="21" width="24" height="2.5" rx="1" fill="black"/>
-        <rect x="22" y="28" width="12" height="2.5" rx="1" fill="black"/>
-        </svg>
+      <div class="w-20 flex translate-x-[30px] sm:translate-x-[0px] items-center gap-6">
+        <ThemeSwitcher />
+        <button
+          id="open-nav-button"
+          type="button"
+          class="btn lg:hidden"
+          aria-label="Navigation"
+        >
+          
+          <Icon name="mdi:menu" class="h-8" />
+          <!-- <svg name="menu" class="h-10 bg-dark" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="14" width="12" height="2.5" rx="1" />
+          <rect x="10" y="21" width="24" height="2.5" rx="1" fill="black"/>
+          <rect x="22" y="28" width="12" height="2.5" rx="1" fill="black"/>
+          </svg>
+          
+          <div data-theme="light">
+           <svg name="menu" class="h-10 bg-light" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="10" y="14" width="12" height="2.5" rx="1" fill="white"/>
+          <rect x="10" y="21" width="24" height="2.5" rx="1" fill="white"/>
+          <rect x="22" y="28" width="12" height="2.5" rx="1" fill="white"/>
+          </svg>
+          </div> -->
 
-      </button>
-    </div>
+        </button>
+      </div>
+ 
 
     
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
