@@ -1,6 +1,33 @@
 <style>
-  .button {
-    border-radius: 16px;
+   .boton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+  }
+
+  .boton span:after {
+    content: "\00bb";
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .boton:hover span {
+    /* padding-right: 25px; */
+    position: relative;
+    color: #3f00f9;
+    z-index: 4;
+  }
+
+  .boton:hover span:after {
+    color: #3f00f9;
+    z-index: 4;
+  }
+
+  .boton {
     background: radial-gradient(
       85.92% 85.92% at 88.24% 12.7%,
       #0894ff 0%,
@@ -9,6 +36,9 @@
       #f95088 85.08%,
       #ff6f62 100%
     );
+    border-radius: 16px;
+    /* border: 2px solid #333;
+    color: #333; */
     color: white;
     border: none;
     text-align: center;
@@ -18,93 +48,45 @@
     transition: all 0.5s;
     cursor: pointer;
     margin: 5px;
-  }
 
-  .button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-
-  .button span:after {
-    content: "\00bb";
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-
-  .button:hover span {
-    /* padding-right: 25px; */
-    color: #3f00f9;
-  }
-
-  .button:hover span:after {
-    color: #3f00f9;
-  }
-
-  [class^="hvr-"] {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0.4em;
-    padding: 1em;
-    cursor: pointer;
-    background: #e1e1e1;
-    text-decoration: none;
-    color: #fff;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  }
-  .hvr-radial-out:hover,
-  .hvr-radial-out:focus,
-  .hvr-radial-out:active {
-    /* color: black; */
-  }
-  .hvr-radial-out {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0);
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    position: relative;
+    display: block;
+    margin: 0px auto;
     overflow: hidden;
-    -webkit-transition-property: color;
-    transition-property: color;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-  }
-  .hvr-radial-out:hover:before,
-  .hvr-radial-out:focus:before,
-  .hvr-radial-out:active:before {
-    -webkit-transform: scale(7);
-    transform: scale(7);
-  }
-  .hvr-radial-out:before {
+    position: relative;
+    text-align: center;
+    transition: .3s;
+}
+.boton:after {
     content: "";
-    /* position: absolute; */
-    z-index: -1;
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 0;
+    left: 50%;
+    position: absolute;
     top: 100%;
-    left: -10%;
-    bottom: -100%;
-    right: 80%;
-    /* text-color: black; */
-    background: white;
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-    transform: scale(0);
-    -webkit-transition-property: transform;
-    transition-property: transform;
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out;
-  }
+    transition: .5s;
+    width: 0;
+    z-index:2;
+}
+.boton:hover {
+    border-color: rgb(255, 255, 255);
+    color: #ffffff;
+}
+.boton:hover:after {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    color: blue;
+    height: 120%;
+    left: -21px;
+    top: -6px;
+    width: 120%;
+}
 </style>
 
-<button class="button hvr-radial-out font-grotesk text-8xl font-extrabold"
+<div class="contenedor-boton center font-grotesk text-8xl font-extrabold">
+  <a href="#" class="boton justify-center"><span class="translate-x-[9px]">Join Community</span></a>
+</div>
+
+<!-- <button class="button hvr-radial-out font-grotesk text-8xl font-extrabold"
   ><span>Join Community</span>
-</button>
+</button> -->

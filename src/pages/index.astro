@@ -5,7 +5,7 @@ import Header from "~/components/header.astro";
 import "~/styles/index.css";
 import Web2UseCases from "~/components/organisms/index/web2UseCases.astro";
 import Herosection from "~/components/organisms/index/Herosection.astro";
-import Whatisweb4 from "~/components/organisms/whatisweb4.astro";
+import Whatisweb4 from "~/components/organisms/index/whatisweb4.astro";
 import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
 import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
 import HumanMachine from "~/components/molecules/HumanMachine.astro";
@@ -82,14 +82,10 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
         <Herosection />
       </section>
 
-      <section>
-        <!-- <HumanMachine/> -->
-      </section>
-     
-
-<section class="">
-  <Whatisweb4 />
-</section >
+      <section class="">
+        <Whatisweb4 />
+        <HumanMachine/>
+      </section >
   
       <section class="">
         <Evaluationofmordernworld />
@@ -98,7 +94,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
    
     
     
-    <!-- <Scrollpart3 /> -->
+    <Scrollpart3 />
     
   <Web2UseCases/>      
   <!-- <Footer /> -->
