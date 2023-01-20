@@ -1,0 +1,68 @@
+
+      <style>
+
+        .human, .machine, .human-a, .machine-e{
+            color: #3F00F9;
+        }
+        
+        @keyframes seprate{
+        
+            10%{
+                opacity: 0.75;
+            }
+                100%{
+            opacity: 0.5;
+            transform: translateX(-20vw);
+        } }
+        
+        
+        
+        @keyframes sep{
+        
+        10%{
+            opacity: 0.75;
+        }
+            100%{
+        opacity: 0.5;
+        transform: translateX(20vw);
+        } }
+        
+        @keyframes hide{
+            100%{
+                opacity: 1;
+                transform: scale(5)  translate(2vw,2vw) translateX(1vw);
+            }
+        }
+        
+        @keyframes hide_e{
+                100%{
+                opacity: 1;
+                transform: scale(5)  translate(-2vw,2vw) translateX(-1.25vw);    
+            }
+        }
+        
+        </style>
+        
+        <script src="src/scripts/morph.jsx" defer>
+          
+        </script>
+      
+    
+    
+    
+    <div class="flex justify-evenly pt-32 h-[50vh] w-[100vw]">
+    
+    
+    <div class=" flex">
+    <div class=" human w-24 h-10 font-black text-3xl" >  human</div> 
+    <div class="human-a  absolute opacity-0 font-black text-3xl">a</div>        
+    </div>
+    
+    
+    <div class="flex">
+    <div class="machine  w-24 h-10  font-black text-3xl">machine</div>
+    <div class="machine-e  absolute opacity-0 font-black text-3xl">e</div>        
+    
+    </div>
+    </div>
+  
