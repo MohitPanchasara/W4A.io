@@ -7,6 +7,7 @@ import Hamburger from "./Atoms/hamburger.astro";
 import Search from "./Atoms/search.astro";
 import Logo from "./Atoms/logo.astro";
 import W4logo from "./Atoms/w4logo.astro";
+import NavElement from "~/components/Atoms/navelement.astro";
 
 const navItems: Array<NavItem> = [
   { title: "Community", url: "#community" },
@@ -34,10 +35,14 @@ const navItems: Array<NavItem> = [
       </div> -->
   </a>
   <div class="hidden translate-x-[20px] w-[700px] lg:block">
-    <Navbutton text="Community" />
+    <!-- <Navbutton text="Community" />
     <Navbutton text="Enterprise" />
     <Navbutton text="Developers" />
-    <Navbutton text="Research" />
+    <Navbutton text="Research" /> -->
+    <NavElement text="Community" items={["Community Hub", "Online Communities", "Events", "Research Work", "Support", "Contact"]} />
+    <NavElement text="Enterprise" items={["Maintain Web4.0", "Public Web4", "Private Web4"]} />
+    <NavElement text="Developer" items={["How to Develop?", "Documentation", "Tutorial", "Environment"]} />
+    <NavElement text="Research" items={["Resources","Web 2.0", "Web 3.0", "Web 2.0"]} />
     
   </div>
 

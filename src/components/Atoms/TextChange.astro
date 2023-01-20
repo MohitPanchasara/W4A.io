@@ -1,0 +1,287 @@
+<style>
+
+    
+  .wrapper {
+    display: flex;
+  }
+
+  .wrapper .dynamic-txts {
+    height: 90px;
+
+    overflow: hidden;
+  }
+
+  .dynamic-txts li {
+    list-style: none;
+    position: relative;
+    top: 0;
+    animation: slide 8s steps(4) infinite;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -360px;
+    }
+  }
+
+  .dynamic-txts li span {
+    position: relative;
+
+    line-height: 90px;
+    color: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+  }
+
+  .dynamic-txts li span::after {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    animation: typing 3s steps(10) infinite;
+  }
+
+  @keyframes typing {
+    40%,
+    60% {
+      left: calc(100% + 30px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  .second {
+    background: radial-gradient(
+      89.2% 180.91% at 91.8% 50%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .third {
+    background: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+  .third:hover {
+    background: white;
+    color: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+</style>
+
+<div class="wrapper justify-center ">
+    <ul class="dynamic-txts font-grotesk sm:text-3xl text-4xl md:text-3xl">
+      <li>
+        <span class="second font-medium text-[52px] ">Human And Machine</span
+        >
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]">Web 4.0 for Ads</span>
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]">Web for All</span>
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]"
+          >Web 4.0 for Anything
+        </span>
+      </li>
+    </ul>
+  </div>
+<!-- <style>
+
+   #grad1 {
+    bottom: 0;
+    position: absolute;
+
+    animation: colorchange 5s both;
+  }
+
+  @keyframes colorchange {
+     0% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+    }
+    25% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0f88ff 68.43%,
+      #824dfa 87.63%,
+      #e51cc0 97.77%,
+      #f95088 107.91%,
+      #ff6295 117.33%
+    );
+    }
+    50% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #3179ff 68.43%,
+      #9347f5 87.63%,
+      #fe2a98 97.77%,
+      #f95088 107.91%,
+      #e16cc8 117.33%
+    );
+    }
+    75% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #5168ff 68.43%,
+      #a240f0 87.63%,
+      #ff4d78 97.77%,
+      #f95088 107.91%,
+      #a281ef 117.33%
+    );
+    }
+    100% {
+      background: linear-gradient(
+        180deg,
+        #ffffff 18.27%,
+        #6e53ff 63.49%,
+        #b038ea 84.9%,
+        #ff6f62 99.08%,
+        #f95088 114.37%,
+        #0894ff 126.04%
+      );
+    } 
+  } 
+  
+  .sunSvg {
+    transform: translate(25px,-300px);
+    animation: sunani 5s forwards;
+
+  }
+
+  @keyframes sunani {
+    100% {
+      width: 550px;
+      height: 550px;
+      transform: translate(400px, 60px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  .sunSvgMD {
+    transform: translate(25px,-300px);
+    animation: sunaniMD 5s forwards;
+
+  }
+  @keyframes sunaniMD {
+    100% {
+      width: 450px;
+      height: 450px;
+      transform: translate(150px, 60px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  .sunSvgSM {
+    transform: translate(5px,-400px);
+    animation: sunaniSM 5s forwards;
+    width: 100px;
+    height: 100px;
+
+  }
+  @keyframes sunaniSM {
+    100% {
+      width: 300px;
+      height: 300px;
+      transform: translate(40px, 20px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  img {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .overLap {
+    bottom: 0;
+    transform: translate(50px, -30px);
+    animation: trax 5s forwards;
+  }
+
+  @keyframes trax {
+    100%{
+      transform: translate(65px, -30px);
+    }
+  }
+
+  .overLap2 {
+    bottom: 0;
+  }
+
+  .overLapMD {
+    bottom: 0;
+    transform: translate(50px, -20px);
+    animation: traxMD 5s forwards;
+  }
+
+  @keyframes traxMD {
+    100%{
+      transform: translate(80px, -20px);
+    }
+  }
+
+  .overLap2MD {
+    bottom: 0; 
+  }
+  .overLapSM {
+    transform: translate(30px, 0px);
+    animation: traxSM 5s forwards;
+  }
+
+  @keyframes traxSM {
+    100%{
+      transform: translate(40px, 0px);
+    }
+  }
+
+  .overLap2SM {
+    bottom: 0;
+  }
+  </style> -->
