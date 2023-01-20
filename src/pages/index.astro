@@ -1,15 +1,14 @@
 ---
 import "@fontsource/inter/variable.css";
-import Footer from "~/components/organisms/footer.astro";
+import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import "~/styles/index.css";
-import Nav from "~/components/organisms/nav.astro";
+import Web2UseCases from "~/components/organisms/index/web2UseCases.astro";
 import Herosection from "~/components/organisms/index/Herosection.astro";
 import Whatisweb4 from "~/components/organisms/whatisweb4.astro";
 import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
-import ScrollPart1 from "~/components/organisms/scrollpart1.astro";
-import Scrollpart2 from "~/components/organisms/scrollpart2.astro";
 import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
+import HumanMachine from "~/components/molecules/HumanMachine.astro";
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -17,17 +16,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
 ---
 
 <!DOCTYPE html>
-<!-- <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="generator" content={generator} />
 
-    <title>Astro Landing Page</title>
-    <meta name="description" content={description} />
-
-    <!-- social media -->
 
     <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
@@ -88,20 +77,31 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     
     <!-- <Nav /> -->
     <!-- <Splash /> -->
-    <div class="py-10 block h-full w-full">
+    <div class=" block h-full w-full">
+      <section class="">
+        <Herosection />
+      </section>
 
-      <Herosection />
+      <section>
+        <!-- <HumanMachine/> -->
+      </section>
+     
 
-      <Whatisweb4 />
-      <div class="py-12">
-      <Evaluationofmordernworld />
-      </div>
-      <Scrollpart3 />
-       <!-- <ScrollPart1 /> -->
-      <!--<Compatibility />
-      <Showcase /> -->
+<section class="">
+  <Whatisweb4 />
+</section >
+  
+      <section class="">
+        <Evaluationofmordernworld />
+      </section>
       
-    <Footer />
-    </div>
+   
+    
+    
+    <Scrollpart3 />
+    
+  <Web2UseCases/>      
+  <Footer />
+  </div>
   </body>
 </html>
