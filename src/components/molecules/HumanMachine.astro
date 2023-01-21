@@ -1,68 +1,66 @@
 
-      <style>
+<style>
 
-        .human, .machine, .human-a, .machine-e{
-            color: #3F00F9;
-        }
-        
-        @keyframes seprate{
-        
-            10%{
-                opacity: 0.75;
-            }
-                100%{
-            opacity: 0.5;
-            transform: translateX(-20vw);
-        } }
-        
-        
-        
-        @keyframes sep{
-        
+    .human, .machine, .human-a, .machine-e{
+        color: #3F00F9;
+    }
+
+    @keyframes seprate{
+
         10%{
             opacity: 0.75;
         }
             100%{
         opacity: 0.5;
-        transform: translateX(20vw);
-        } }
-        
-        @keyframes hide{
+        transform: translateX(-80%);
+    } }
+
+
+
+    @keyframes sep{
+
+    10%{
+        opacity: 0.75;
+    }
+        100%{
+    opacity: 0.5;
+    transform: translateX(80%);
+    } }
+
+    @keyframes hide{
+        100%{
+            opacity: 1;
+            transform: scale(5)  translate(100%,1vw) translateX(3vw);
+        }
+    }
+
+    @keyframes hide_e{
             100%{
-                opacity: 1;
-                transform: scale(5)  translate(2vw,2vw) translateX(1vw);
-            }
+            opacity: 1;
+            transform: scale(5)  translate(-100%,1vw) translateX(0.25vw);    
         }
-        
-        @keyframes hide_e{
-                100%{
-                opacity: 1;
-                transform: scale(5)  translate(-2vw,2vw) translateX(-1.25vw);    
-            }
-        }
-        
-        </style>
-        
-        <script src="src/scripts/morph.jsx" defer>
-          
-        </script>
-      
+    }
+
+</style>
+
+<script src="src/scripts/morph.jsx" defer>
     
+</script>
     
-    
-    <div class="flex justify-evenly pt-32 h-[50vh] w-[100vw]">
-    
-    
+
+
+
+<div class="flex justify-evenly pt-1 h-[50vh] w-[100vw] overflow:hidden m-[2vw] p-[2vw]">
+
     <div class=" flex">
-    <div class=" human w-24 h-10 font-black text-3xl" >  human</div> 
-    <div class="human-a  absolute opacity-0 font-black text-3xl">a</div>        
+            <div class=" human  h-10 font-black text-5xl" > human</div> 
+            <div class="human-a  absolute opacity-0 font-black text-3xl">a</div>        
     </div>
-    
-    
+        
     <div class="flex">
-    <div class="machine  w-24 h-10  font-black text-3xl">machine</div>
-    <div class="machine-e  absolute opacity-0 font-black text-3xl">e</div>        
+        <div class="machine h-10  font-black text-5xl">machine</div>
+        <div class="machine-e  absolute opacity-0 font-black text-3xl">e</div>        
+    </div>
     
-    </div>
-    </div>
-  
+</div>
+

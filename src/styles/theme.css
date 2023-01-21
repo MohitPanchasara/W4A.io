@@ -1,6 +1,6 @@
 [data-theme="light"] {
-  --color-primary: theme("colors.pink.500");
-  --color-secondary: theme("colors.indigo.500");
+  --color-primary: theme("colors.gray.900");
+  --color-secondary: theme("colors.gray.700");
   --color-text: theme("colors.gray.900");
   --color-tertiary: theme("colors.gray.900");
   --color-text-offset: theme("colors.gray.600");
@@ -10,8 +10,8 @@
 }
 
 [data-theme="dark"] {
-  --color-primary: theme("colors.pink.400");
-  --color-secondary: theme("colors.indigo.400");
+  --color-primary: theme("colors.white");
+  --color-secondary: theme("colors.gray.400");
   --color-text: theme("colors.gray.100");
   --color-tertiary: theme("colors.gray.100");
   --color-text-offset: theme("colors.gray.400");

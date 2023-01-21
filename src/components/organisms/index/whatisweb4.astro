@@ -1,29 +1,22 @@
 ---
 import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
+import HumanMachine from "~/components/molecules/HumanMachine.astro";
 import type { CompatibilityItem } from "~/types";
 ---
 
-<ContentSection title="What Is Web4.0?" id="whatisweb4">
+<ContentSection title="Creating Web 4.0 for all" id="whatisweb4">
   <Fragment slot="lead">
-    <div class="text-tertiary"> Web 4.0 is </div><span class="text-primary">Symbiotic Web</span>, 
-    where Human and machines work in symbiosis. 
-    The idea being the symbiotic web is that once the metadata is organized 
-    humans and machines can interact in symbiosis (with each other).
-
-    <div class="py-[200px] sm:py-[100px]">
-      
+    <div class="text-secondary m-[8vw] text-lg text-center">
+      <span>
+          Web 4.0 is Symbiotic Web where Human and machines work in symbiosis. 
+          The idea being the symbiotic web is that once the metadata is organized 
+          humans and machines can interact in symbiosis (with each other).
+      </span>
     </div>
-   
+  
+    <div class="items-center">
+      <!-- <HumanMachine /> -->
+    </div>
   </Fragment>
-  <!-- <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
-  />
-  <CompatibilityList
-    items={platforms}
-    title="Platforms"
-    url="https://docs.astro.build/guides/deploy/"
-  /> -->
 </ContentSection>
