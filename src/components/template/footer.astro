@@ -1,0 +1,52 @@
+---
+import FooterList from "~/components/molecules/footerList.astro";
+
+const image=["../svg/facebook.svg","../svg/LinkedIn.svg","../svg/twitter.svg","../svg/reddit.svg","../svg/Discord.svg"]
+---
+
+
+<footer class="w-[100vw]">
+    <div class="flex flex-wrap-reverse py-2 pt-24 px-1 gap-6 justify-center sm:justify-start sm:px-[10vw]">
+        <div class="innerContent flex gap-5 sm:gap-3 sm:flex-col  ">
+            <div>
+                <FooterList heading="Research" body={["Learn about Web 4.0"]}/>
+            </div>
+            <div class="">
+                <FooterList heading="Developers" body={["Resources","Documentation","Tutorials"]}/>
+            </div>
+            <div>
+                <FooterList heading="Community Hub" body={["Online Communities","Events","How can I get involved?","Research","Grants","Support","Language Resources"]}/>
+            </div>
+            <div>
+                <FooterList heading="About Web 4.O" body={["About Us","Jobs","Contribution","Language Support","Privacy Policy","Terms of Use","Cookie policy"]}/>
+            </div>
+        </div>
+    
+    <!-- Footer logo -->
+        <div class="flex lg:flex-col lg:gap-1  gap-4 pb-2 h-auto items-baseline lg:">
+            {image.map((data) =>
+                <div class="list-none pb-5">  
+                    <a href="/community" aria-label="iconsLink">
+                        <object data={data} aria-label="icons">
+                        </object>
+                    </a> 
+                </div>
+            )}     
+        </div>
+    <!-- Footer Logo Ends -->
+        
+    </div>
+    
+    
+    
+    <div class="w-[100vw]">
+        <div class="sm:hidden ">
+            <img src="../images/footerLG.svg" class="overLap absolute z-1 w-[100vw]" />
+        </div>
+    
+        <div class="hidden sm:block">
+           <img src="../images/footerSM.svg" class="overLap absolute z-1 w-[100vw]" />
+        </div> 
+    </div>
+    
+    </footer>

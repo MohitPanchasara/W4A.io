@@ -1,11 +1,11 @@
 ---
 import "@fontsource/inter/variable.css";
-import Footer from "~/components/footer.astro";
-import Header from "~/components/header.astro";
+import Footer from "~/components/template/footer.astro";
+import Header from "~/components/template/header.astro";
 import "~/styles/index.css";
 import Web2UseCases from "~/components/organisms/index/web2UseCases.astro";
 import Herosection from "~/components/organisms/index/Herosection.astro";
-import Whatisweb4 from "~/components/organisms/whatisweb4.astro";
+import Whatisweb4 from "~/components/organisms/index/whatisweb4.astro";
 import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
 import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
 import HumanMachine from "~/components/molecules/HumanMachine.astro";
@@ -81,27 +81,15 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
       <section class="">
         <Herosection />
       </section>
-
-      <section>
-        <HumanMachine/> 
-      </section>
-     
-
-<section class="">
-  <Whatisweb4 />
-</section >
   
       <section class="">
         <Evaluationofmordernworld />
       </section>
-      
-   
     
-    
-    <!-- <Scrollpart3 /> -->
+    <Scrollpart3 />
     
   <Web2UseCases/>      
-  <!-- <Footer /> -->
+  <Footer />
   </div>
   </body>
 </html>

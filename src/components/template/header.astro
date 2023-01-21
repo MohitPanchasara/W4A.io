@@ -1,12 +1,10 @@
 ---
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "~/components/theme-switcher.astro";
+import ThemeSwitcher from "~/components/template/theme-switcher.astro";
 import type { NavItem } from "~/types";
-import Navbutton from "./Atoms/navbutton.astro";
-import Hamburger from "./Atoms/hamburger.astro";
-import Search from "./Atoms/search.astro";
-import Logo from "./Atoms/logo.astro";
-import W4logo from "./Atoms/w4logo.astro";
+import Search from "../Atoms/search.astro";
+import Logo from "../Atoms/logo.astro";
+import W4logo from "../Atoms/w4logo.astro";
 import NavElement from "~/components/Atoms/navelement.astro";
 
 const navItems: Array<NavItem> = [
@@ -65,10 +63,10 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav> -->
       
-      <div class="translate-x-[10px] gap-1 sm:translate-x-[10px]">
+      <div class="translate-x-[10px] gap-1 sm:translate-x-[2px]">
         <Search />
       </div>
-      <div class="w-20 flex translate-x-[30px] sm:translate-x-[0px] items-center gap-6">
+      <div class="w-10 flex translate-x-[30px] sm:translate-x-[0px] sm:gap-4 items-center gap-6">
         <ThemeSwitcher />
         <button
           id="open-nav-button"
