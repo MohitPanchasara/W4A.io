@@ -5,22 +5,21 @@ module.exports = {
   content: ["./src/**/*.{astro,html,js,jsx,svelte,ts,tsx,vue}"],
   theme: {
     screens: {
-      'sm': {'max': '480px'},
-      'md': {'min':'481px','max': '769px'},
-      'lg':{'min':'770px'},
-    
+      sm: { max: "480px" },
+      md: { min: "481px", max: "769px" },
+      lg: { min: "770px" },
     },
-  
+
     extend: {
-      
       fontFamily: {
-        satoshi: ["Satoshi-Variable","sans-serif"],
+        satoshi: ["Satoshi-Variable", "sans-serif"],
         sans: ["Proxima Nova", ...defaultTheme.fontFamily.sans],
         grotesk: ["Space Grotesk"],
       },
       colors: {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
+        tertiary: "var(--color-tertiary)",
         primaryweb: "#0A090F",
         secodaryweb: "#232126",
         tertiaryweb: "#3D3D40",

@@ -1,8 +1,7 @@
 [data-theme="light"] {
   --color-primary: theme("colors.gray.900");
   --color-secondary: theme("colors.gray.700");
-  --color-text: theme("colors.gray.900");
-  --color-tertiary: theme("colors.gray.900");
+  --color-tertiary: theme("colors.pink.900");
   --color-text-offset: theme("colors.gray.600");
   --color-background: theme("colors.gray.50");
   --color-background-offset: theme("colors.gray.100");
@@ -12,8 +11,7 @@
 [data-theme="dark"] {
   --color-primary: theme("colors.white");
   --color-secondary: theme("colors.gray.400");
-  --color-text: theme("colors.gray.100");
-  --color-tertiary: theme("colors.gray.100");
+  --color-tertiary: theme("colors.pink.100");
   --color-text-offset: theme("colors.gray.400");
   --color-background: theme("colors.gray.900");
   --color-background-offset: theme("colors.gray.800");

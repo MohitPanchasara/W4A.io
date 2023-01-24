@@ -2,13 +2,16 @@
 import "@fontsource/inter/variable.css";
 import Footer from "~/components/template/footer.astro";
 import Header from "~/components/template/header.astro";
-import "~/styles/index.css";
+import "~/styles/theme.css";
+import "/public/fonts/satoshi-cufonfonts-webfont/app.css";
 import Web2UseCases from "~/components/organisms/index/web2UseCases.astro";
 import Herosection from "~/components/organisms/index/Herosection.astro";
 import Whatisweb4 from "~/components/organisms/index/whatisweb4.astro";
 import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
 import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
 import HumanMachine from "~/components/molecules/HumanMachine.astro";
+import FooterParalaxScroll from "~/components/organisms/index/footerParalaxScroll.astro";
+
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -20,6 +23,9 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
 
     <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
+    <script src="src/scripts/footerParalax.jsx"></script>
+    <link rel="preload" as="font">
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
@@ -29,7 +35,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     <title>Astro Landing Page</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link
-      rel="preconnect"
+      rel="preload"
       href="https://fonts.gstatic.com"
       crossorigin
     />
@@ -91,10 +97,15 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
       <section class="">
         <Evaluationofmordernworld />
       </section>
-    
-    <Scrollpart3 />
+
+      <section>
+        <Scrollpart3 />
+      </section>
     
   <Web2UseCases/>      
+  <section class="scrollElement overflow:hidden h-[100vh] w-[100vw]">
+    <FooterParalaxScroll />
+  </section>
   <Footer />
   </div>
   </body>

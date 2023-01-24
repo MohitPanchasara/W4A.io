@@ -7,9 +7,10 @@ export interface Props {
 
 const { text, items } = Astro.props as Props;
 ---
+<ul>
 <li>
     <span class="mr-0 text-base font-grotesk">
-        <strong> <a> {text} </a></strong>
+        <strong> <a href=""> {text} </a></strong>
     </span>
     <svg
         class="SVGD fill-current h-4 w-4"
@@ -28,8 +29,12 @@ const { text, items } = Astro.props as Props;
     </ul>
 
 </li>
+</ul>
 
 <style>
+  ul {
+    display: inline-block;
+  }
     li {
   font-size: 1rem;
   font-weight: 400;
