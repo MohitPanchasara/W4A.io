@@ -1,0 +1,42 @@
+---
+export interface Props {
+  heading: string,
+  body: string;
+}
+
+const { heading, body } = Astro.props;
+
+---
+
+
+
+<style>
+  .box{
+  
+    height: 231px;
+  flex:1 1 300px;
+  margin:50px;
+  border-right: 5px solid   #6E53FF;
+  border-bottom: 5px solid  #6E53FF;
+  border-left: 1px solid gray;
+  border-top: 1px solid gray;
+  border-radius: 12px;
+
+  }
+
+</style>
+
+
+<div class="box  bg-white w-[390px] h-[231px] lg:h-auto" >
+    
+  
+    
+
+    <div class="font-satoshi font-bold text-xl text-center text-purple-700 mt-[30px] "   data-aos="fade-down"
+    data-aos-duration="2000">{heading}</div>
+
+    <div class=" font-medium text-sm text-center p-10 text-gray-900 font-satoshi " data-aos="fade-up"
+    data-aos-duration="2000"><span class="w-[100px]"  >{body}</span></div>
+
+</div>
+

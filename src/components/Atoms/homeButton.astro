@@ -1,0 +1,92 @@
+<style>
+   .boton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+
+  }
+
+  .boton span:after {
+    content: "\00bb";
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+  .boton:hover span {
+    /* padding-right: 25px; */
+    position: relative;
+    color: #3f00f9;
+    z-index: 4;
+  }
+
+  .boton:hover span:after {
+    color: #3f00f9;
+    z-index: 4;
+  }
+
+  .boton {
+    background: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+    border-radius: 16px;
+    /* border: 2px solid #333;
+    color: #333; */
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 22px;
+    padding: 10px;
+    width: 220px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+
+    display: block;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: .3s;
+}
+.boton:after {
+    content: "";
+    background-color: rgb(255, 255, 255);
+    display: block;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    top: 100%;
+    transition: .5s;
+    width: 0;
+    z-index:2;
+}
+.boton:hover {
+    border-color: rgb(255, 255, 255);
+    color: #ffffff;
+}
+.boton:hover:after {
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    color: blue;
+    height: 120%;
+    left: -21px;
+    top: -6px;
+    width: 120%;
+}
+</style>
+
+<div class="contenedor-boton center font-grotesk text-8xl font-extrabold">
+  <a href="#" class="boton justify-center"><span class="translate-x-[9px]">Join Community</span></a>
+</div>
+
+<!-- <button class="button hvr-radial-out font-grotesk text-8xl font-extrabold"
+  ><span>Join Community</span>
+</button> -->

@@ -1,0 +1,118 @@
+<style>
+
+    
+  .wrapper {
+    display: flex;
+  }
+
+  .wrapper .dynamic-txts {
+    height: 90px;
+
+    overflow: hidden;
+  }
+
+  .dynamic-txts li {
+    list-style: none;
+    position: relative;
+    animation: slide 8s steps(4) infinite;
+  }
+
+  @keyframes slide {
+    100% {
+      top: -360px;
+    }
+  }
+
+  .dynamic-txts li span {
+    position: relative;
+
+    line-height: 90px;
+    color: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+  }
+
+  .dynamic-txts li span::after {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    animation: typing 3s steps(10) infinite;
+  }
+
+  @keyframes typing {
+    40%,
+    60% {
+      left: calc(100% + 30px);
+    }
+    100% {
+      left: 0;
+    }
+  }
+
+  .second {
+    background: radial-gradient(
+      89.2% 180.91% at 91.8% 50%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  .third {
+    background: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+  .third:hover {
+    background: white;
+    color: radial-gradient(
+      85.92% 85.92% at 88.24% 12.7%,
+      #0894ff 0%,
+      #6e53ff 29.05%,
+      #b038ea 60.92%,
+      #f95088 85.08%,
+      #ff6f62 100%
+    );
+  }
+
+</style>
+
+<div class="wrapper justify-center ">
+    <ul class="dynamic-txts font-grotesk sm:text-3xl text-4xl md:text-3xl">
+      <li>
+        <span class="second font-medium text-[52px] ">Human And Machine</span
+        >
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]">Web 4.0 for Ads</span>
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]">Web for All</span>
+      </li>
+      <li>
+        <span class="second font-medium text-[48px]"
+          >Web 4.0 for Anything
+        </span>
+      </li>
+    </ul>
+  </div>

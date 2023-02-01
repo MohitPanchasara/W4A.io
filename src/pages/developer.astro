@@ -1,0 +1,102 @@
+---
+import "@fontsource/inter/variable.css";
+import Footer from "~/components/template/footer.astro";
+import Header from "~/components/template/header.astro";
+import DeveloperResource from "../components/molecules/developerResource.astro";
+import HowYouLike from "../components/molecules/howYouLike.astro";
+import AboutResource from "../components/molecules/aboutResource.astro";
+import "src/styles/theme.css";
+
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+const description = "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+---
+
+<!DOCTYPE html>
+
+
+    <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <script src="src/scripts/footerParalax.jsx"></script>
+   <link rel="stylesheet" href="../fonts/satoshi-cufonfonts-webfont/app.css">
+   <link rel="stylesheet" href="../styles/theme.css">
+   
+    <link rel="preload" as="font">
+<script ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+     <meta name="generator" content={generator} />
+
+    <title>Astro Landing Page</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" /> 
+    
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+
+    
+   
+    <div class=" block h-full w-full">
+      
+        <section>
+            <DeveloperResource/>
+        </section>
+
+      <section>
+        <HowYouLike/>
+      </section>
+    
+      <section>
+        <AboutResource/>
+      </section>
+
+    
+
+  
+      <Footer />
+  </div>
+  
+  </body>
+</html>

@@ -1,0 +1,38 @@
+---
+
+export interface Props{
+    heading: string;
+    content: string;
+    image: string;
+}
+
+const {heading, content, image}=Astro.props;
+---
+
+
+<style>
+    .card{
+    width: 565px;
+  
+    border: 1px solid rgba(10, 9, 15, 0.5);
+    }
+    
+    </style>
+    
+    
+        <div class="card box-border h-auto  bg-white">
+        <a href="/community" >
+            <div class="w-inherit  ">
+                <div class="float-right">
+                <img class="align-right" src={image} alt="CardImage">
+
+                </div>
+            </div>
+    
+            <div class="p-[1.5rem]" >
+    
+                <div class=""> <span class="w-56 h-8 font-bold font-grotesk text-xl text-purple-700">{heading}</span></div>
+                <div class="pt-3"> <span class=" h-5 font-medium text-sm text-gray-900"> {content}</span></div>
+            </div>
+        </a>
+    </div>

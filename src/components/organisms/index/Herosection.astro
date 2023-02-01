@@ -1,0 +1,297 @@
+---
+import HomeButton from "../../Atoms/homeButton.astro";
+import W4logo from "../../Atoms/w4logo.astro";
+import Sidebar from "../../molecules/sidebar.astro";
+import TextChange from "~/components/Atoms/TextChange.astro";
+---
+
+<style>
+   #grad1 {
+   
+    animation: colorchange 5s both;
+   
+  }
+  @keyframes colorchange {
+     0% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0894ff 68.43%,
+      #6e53ff 87.63%,
+      #b038ea 97.77%,
+      #f95088 107.91%,
+      #ff6f62 117.33%
+    );
+    }
+    25% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #0f88ff 68.43%,
+      #824dfa 87.63%,
+      #e51cc0 97.77%,
+      #f95088 107.91%,
+      #ff6295 117.33%
+    );
+    }
+    50% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #3179ff 68.43%,
+      #9347f5 87.63%,
+      #fe2a98 97.77%,
+      #f95088 107.91%,
+      #e16cc8 117.33%
+    );
+    }
+    75% {
+      background: linear-gradient(
+      180deg,
+      #ffffff 12%,
+      #5168ff 68.43%,
+      #a240f0 87.63%,
+      #ff4d78 97.77%,
+      #f95088 107.91%,
+      #a281ef 117.33%
+    );
+    }
+    100% {
+      background: linear-gradient(
+        180deg,
+        #ffffff 18.27%,
+        #6e53ff 63.49%,
+        #b038ea 84.9%,
+        #ff6f62 99.08%,
+        #f95088 114.37%,
+        #0894ff 126.04%
+      );
+    } 
+  } 
+
+  .overLap {
+    transform: translate(100px, -30px);
+    animation: trax 5s both;
+  }
+  @keyframes trax {
+    100%{
+      transform: translate(125px, -30px);
+    }
+  }
+  .overLapMD {
+    /* /* bottom: 0; */
+    transform: translate(50px, -20px);
+    animation: traxMD 5s forwards;
+  }
+
+  @keyframes traxMD {
+    100%{
+      transform: translate(80px, -20px);
+    }
+  }
+
+  .overLapSM {
+    transform: translate(30px, 0px);
+    animation: traxSM 5s forwards;
+  }
+
+  @keyframes traxSM {
+    100%{
+      transform: translate(40px, 0px);
+    }
+  }
+
+
+  .sunSvg {
+    transform: translate(25px,-600px);
+    animation: sunani 5s forwards;
+  }
+
+  @keyframes sunani {
+    100% {
+      width: 550px;
+      height: 550px;
+      transform: translate(400px, -300px);
+      
+      opacity: 0.5;
+    }
+  }
+   .sunSvgMD {
+    transform: translate(25px,-300px);
+    animation: sunaniMD 5s forwards;
+
+  }
+  @keyframes sunaniMD {
+    100% {
+      width: 450px;
+      height: 450px;
+      transform: translate(150px, 100px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+
+  .sunSvgSM {
+    transform: translate(5px,-400px);
+    animation: sunaniSM 5s forwards;
+    width: 100px;
+    height: 100px;
+
+  }
+  @keyframes sunaniSM {
+    100% {
+      width: 300px;
+      height: 300px;
+      transform: translate(40px, 400px);
+      border-radius: 10000px;
+      opacity: 0.5;
+    }
+  }
+ 
+
+</style>
+<!-- <div class="element"> -->
+
+  <div id="grad1" class="bg-black relative h-[100vh] w-[100vw] overflow-hidden">
+    
+    
+        <!-- W4A img -->
+        <div class="h-[50vw]">
+
+            <div class="w-[100vw] text-center pt-[8vw] md:pt-[15vw] sm:pt-[35vw] z-10">
+              <img class="block m-auto" src="../svg/index/herologo.svg" width="209" height="49" alt="W4A.io home logo"  />
+            </div>
+            
+
+            <!-- human&Machine text change -->
+            <div class="w-[100vw] text-center z-10 p-[1vw] md:p-[2vw] sm:p-[5vw] sm:text-3xl text-4xl md:text-6xl"> <TextChange/> </div>
+            
+      
+            <!-- paragraph -->
+            <div class=" font-medium  text-purple-800 font-satoshi w-[100vw] text-center z-10
+            h-16 sm:h-28 font-medium text-[32px] sm:m-[15px] sm:text-[80px] sm:p-[20px]">
+              <p>Human decisioning meets Machine Intelligence</p>
+              <p>Developing precursor to intelligent Homind aka silico spains</p>
+            </div>
+            
+            <!-- join community -->
+            <div class="pt-[25px] absolute w-[100vw] text-center z-10"><HomeButton /></div>
+        </div>
+        
+     
+    <!-- For Laptop -->
+        <div class="sm:hidden md:hidden bottom-0">
+            <div class="absolute z-0">
+              <svg class="sunSvg" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+                </svg>
+            </div>
+
+            <img src="../images/Parallax.svg" class="overLap absolute z-1 bottom-0 w-[100vw]" alt="Laptop paralax image" />
+            <img src="../images/Parallax.svg" class="absolute z-2 bottom-0 w-[100vw]" alt="Laptop paralax image front" />
+        </div>
+
+        <!-- for tablet -->
+        <div class="h-[300px] w-auto sm:w-20 sm:hidden lg:hidden">
+            <div class="absolute z-0">
+              <svg class="sunSvgMD" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+                </svg>
+            </div>
+            
+            <img src="../images/Parallax.svg" class="overLapMD absolute z-1 bottom-0 w-[100vw]" alt="Laptop paralax image" />
+            <img src="../images/Parallax.svg" class="absolute z-2 bottom-0 w-[100vw]" alt="Tablet paralax image front" />
+        </div>
+
+        <!-- for mobile -->
+        <div class="h-[300px] w-auto sm:w-20 md:hidden lg:hidden">
+            <div class="absolute z-0">
+              <svg class="sunSvgSM" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+                </svg>
+            </div>
+            
+              <img src="../images/Parallax.svg" class="overLapSM absolute z-1 bottom-0 w-[100vw]" alt="Mobile paralax image" />
+              <img src="../images/Parallax.svg" class="absolute z-2 bottom-0 w-[100vw]" alt="Mobile paralax image front" />
+        
+        </div>
+
+
+
+</div>
+<!-- 
+<div id="grad1" class="z-0 md:bottom-0 overflow-hidden sm:h-[525px]">
+  <div class="font-satoshi m-0 p-0 w-[100vw] h-auto">
+    <div class="w-[100vw] h-auto text-center translate-y-[60px] sm:translate-y-[30px] md:translate-y-[100px]">
+      <div class="flex justify-center items-center space-x-2 top-0 translate-y-[150px]">
+        <img class="w-[200px] h-[200px]" src="../svg/index/herologo.svg" />
+      </div>
+      <div class="wrapper justify-center pt-[100px]">
+        <ul class="dynamic-txts font-grotesk sm:text-3xl text-4xl md:text-3xl">
+          <li>
+            <span class="second font-medium text-[52px] ">Human And Machine</span
+            >
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]">Web 4.0 for Ads</span>
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]">Web for All</span>
+          </li>
+          <li>
+            <span class="second font-medium text-[48px]"
+              >Web 4.0 for Anything
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div
+        class="h-16 sm:h-28 font-medium text-[32px] text-purple-800 font-satoshi sm:m-[15px] sm:text-[80px]"
+      >
+        <p>Human decisioning meets Machine Intelligence</p>
+        <p>Developing precursor to intelligent Homind aka silico spains</p>
+      </div>
+      
+      <div class="mt-[25px]">
+        <HomeButton />
+      </div>
+    </div>
+  </div>
+  
+  <div class="h-[300px] w-auto sm:w-20 sm:hidden md:hidden bottom-0">
+ 
+    <svg class="sunSvg" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
+
+    <div class="py-10">
+      <img src="../images/Parallax.svg" class="overLap" />
+      <img src="../images/Parallax.svg" class="overLap2" alt="" />
+    </div>
+
+  </div>
+
+  <div class="h-[300px] w-auto sm:w-20 sm:hidden lg:hidden">
+    <svg class="sunSvgMD" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
+
+    <div class="py-20">
+      <img src="../images/Parallax.svg" class="overLapMD" />
+      <img src="../images/Parallax.svg" class="overLap2MD" alt="" />
+    </div>
+  </div>
+
+  <div class="h-[300px] w-auto sm:w-20 md:hidden lg:hidden">
+    <svg class="sunSvgSM" width="200" height="200" viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="130" cy="130" r="130" fill="white" fill-opacity="0.6"/>
+    </svg>
+    <div class="py-10">
+      <img src="../images/Parallax.svg" class="overLapSM" />
+      <img src="../images/Parallax.svg" class="overLap2SM" alt="" />
+    </div>
+  </div>
+
+
+</div> -->

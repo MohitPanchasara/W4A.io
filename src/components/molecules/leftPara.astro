@@ -1,0 +1,34 @@
+---
+export interface Props {
+  heading: string,
+  body: string,
+  image: string,
+  alink: string;
+}
+
+const { heading, body, alink, image } = Astro.props;
+---
+
+
+
+
+<div class="flex justify-evenly   sm:flex-wrap-reverse w-[100vw]">
+
+    <div class="sm:p-0">
+       <div><p class="text-4xl sm:text-lg font-grotesk font-bold  text-black ">{heading}</p></div>
+        <div class="pt-5 sm:pt-3"><p class="font-satoshi w-[35vw] sm:w-[60vw] font-medium text-sm text-gray-900 flex-none order-1 flex-grow-0">{body}</p></div>
+            <div class="pt-5 sm:pt-2">
+                <button class="items-center w-32 sm:w-20 h-10 bg-purple-700 rounded text-white "><a href={alink}>Know More </a></button>
+
+            </div>
+          
+    </div>
+
+    <div class="">
+        <img src={image} alt="nothinh">
+            
+            
+            
+    </div>
+
+</div>

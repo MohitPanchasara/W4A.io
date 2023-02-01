@@ -1,0 +1,42 @@
+---
+import CommunityCard from "~/components/molecules/communityCard.astro";
+---
+
+<div class="w-[100vw]">
+    <div class="p-10">
+       <div class="flex items-center mb-[3rem] mt-[1rem]  flex-wrap-reverse pb-10">
+          <div class="  " data-aos="fade-down"
+          data-aos-duration="2000">
+             <div class=""> <span class="h-12 font-medium text-4xl text-purple-700 " >How can I get involved?</span>
+             </div>
+             <div class="pt-10">
+                <p class="w-[50vw] sm:w-none block  font-normal text-lg text-gray-900">There are many ways to get involved in the fast-growing Web 4.0 community; you can join one of the popular online communities, attend an event, join a meetup group, 
+                contribute to a project, or participate in one of the many online forums about Web 4.0.</p>
+             </div>
+          </div>
+          <!-- image starts -->
+          <div>
+          </div>
+          <!-- image ends -->
+       </div>
+       <!-- Card section starts -->
+       <div class="flex flex-wrap grid-rows-2 grid-flow-col gap-10 pt-[100px] justify-center">
+          <CommunityCard heading="Join an online community" 
+          content="Find your tribe and participate in community with other Ethereum enthusiasts." 
+          image="../svg/community/humanvr.svg"/>
+
+          <CommunityCard heading="Web 4.0 events" 
+          content="Find and participate in an Ethereum conference, hackathon, or meetup." 
+          image="../svg/community/humanvr.svg"/>
+
+          <CommunityCard heading="Contribute to a project"
+           content="Check out how to get involved for a list of ways that you can contribute based on your skills and professional background." 
+           image="../svg/community/mobile.svg"/>
+
+          <CommunityCard heading="Search for grants" 
+          content="Funding grants are available to help you get a project off the ground." 
+          image="../svg/community/house.svg"/>
+       </div>
+       <!-- Card section ends -->
+    </div>
+ </div>

@@ -1,0 +1,34 @@
+---
+export interface Props {
+  head: string,
+  content: string,
+  ahref: string,
+  photo: string;
+}
+
+const { head, content, ahref, photo } = Astro.props;
+---
+
+
+
+
+<div class="flex p-20 sm:p-10 justify-evenly sm:flex-wrap w-[100vw]">
+
+    <div class="">
+        <img src={photo} alt="hello">
+    </div>
+
+
+    <div class="">
+       <div><p class="text-4xl font-grotesk font-bold  text-black ">{head}</p></div>
+        <div class="pt-5"><p class="font-satoshi w-[35vw] font-medium text-xl text-gray-900 flex-none order-1 flex-grow-0">{content}</p></div>
+            <div class="pt-4">
+                <button class="items-center w-32 h-10 bg-purple-700 rounded text-white "> <a href={ahref}>Know More</a></button>
+
+            </div>
+          
+    </div>
+
+   
+
+</div>
