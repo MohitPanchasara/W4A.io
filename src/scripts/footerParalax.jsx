@@ -83,10 +83,10 @@ ScrollTrigger.create({
 sun.to("#bg_grad", { attr: { cy: "330" } }, 0.0);
 
 //bg change
-sun.to("#sun", { attr: { offset: "10" } }, 0.0);
-sun.to("#bg_grad stop:nth-child(2)", { attr: { offset: "9" } }, 0.0);
-sun.to("#bg_grad stop:nth-child(3)", { attr: { offset: "10" } }, 0.0);
-sun.to("#bg_grad stop:nth-child(4)", { attr: { offset: "11" } }, 0.0);
+sun.to("#sun", { attr: { offset: "12" } }, 0.0);
+sun.to("#bg_grad stop:nth-child(2)", { attr: { offset: "12" } }, 0.0);
+sun.to("#bg_grad stop:nth-child(3)", { attr: { offset: "12" } }, 0.0);
+sun.to("#bg_grad stop:nth-child(4)", { attr: { offset: "12" } }, 0.0);
 sun.to("#bg_grad stop:nth-child(5)", { attr: { offset: "12" } }, 0.0);
 sun.to("#bg_grad stop:nth-child(6)", { attr: { "stop-color": "#FF9171" } }, 0);
 

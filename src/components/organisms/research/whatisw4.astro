@@ -1,0 +1,17 @@
+---
+export interface Props {
+
+      title: string;
+      body: string;
+
+}
+
+const { title, body} = Astro.props as Props;
+---
+<div class="flex justify-evenly p-14 sm:p-0 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-middle">
+
+    <div class="sm:p-0 align middle">
+       <div><p class="text-4xl sm:text-2xl font-grotesk font-bold text-primary sm:pt-4">{title}</p></div>
+        <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[80vw] sm:w-[80vw] font-medium text-lg sm:text-sm text-secondary flex-none order-1 flex-grow-0">{body}</p></div>
+     </div>
+</div>

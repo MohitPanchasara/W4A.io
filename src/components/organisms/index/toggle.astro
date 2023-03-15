@@ -1,0 +1,384 @@
+---
+import Togglecardlayer from "~/components/molecules/togglecardlayer.astro";
+import Togglecardlayer2 from "~/components/molecules/togglecardlayer2.astro";
+
+---
+<script src="src/scripts/test.jsx"></script>
+
+
+    <style>
+a {
+    color: #3F00F9!important;
+}
+
+.nav-pills .nav-link.active {
+    color: white!important;
+    background-color: #3F00F9!important;
+}
+    .container {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+
+@media (min-width:576px) {
+	.container {
+		max-width: 540px
+	}
+}
+
+@media (min-width:768px) {
+	.container {
+		max-width: 720px
+	}
+}
+
+@media (min-width:992px) {
+	.container {
+		max-width: 960px
+	}
+}
+
+@media (min-width:1200px) {
+	.container {
+		max-width: 1140px
+	}
+}
+
+.container-fluid {
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto
+}
+.navbar>.container,
+.navbar>.container-fluid {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	-ms-flex-align: center;
+	align-items: center;
+	-ms-flex-pack: justify;
+	justify-content: space-between
+}
+.container {
+    min-width: 992px !important
+}
+@media (max-width:575.98px) {
+
+	.navbar-expand-sm>.container,
+	.navbar-expand-sm>.container-fluid {
+		padding-right: 0;
+		padding-left: 0
+	}
+}
+	.navbar-expand-sm>.container,
+	.navbar-expand-sm>.container-fluid {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap
+	}@media (max-width:767.98px) {
+
+	.navbar-expand-md>.container,
+	.navbar-expand-md>.container-fluid {
+		padding-right: 0;
+		padding-left: 0
+	}
+}	.navbar-expand-md>.container,
+	.navbar-expand-md>.container-fluid {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap
+	}
+
+    @media (max-width:991.98px) {
+
+	.navbar-expand-lg>.container,
+	.navbar-expand-lg>.container-fluid {
+		padding-right: 0;
+		padding-left: 0
+	}
+}
+.navbar-expand-lg>.container,
+	.navbar-expand-lg>.container-fluid {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap
+	}
+@media (max-width:1199.98px) {
+
+	.navbar-expand-xl>.container,
+	.navbar-expand-xl>.container-fluid {
+		padding-right: 0;
+		padding-left: 0
+	}
+}
+
+	.navbar-expand-xl>.container,
+	.navbar-expand-xl>.container-fluid {
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap
+	}
+
+.navbar-expand>.container,
+.navbar-expand>.container-fluid {
+	padding-right: 0;
+	padding-left: 0
+}
+.navbar-expand>.container,
+.navbar-expand>.container-fluid {
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap
+}
+
+.nav-pills .nav-link {
+	border-radius: 15px;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+	color: #fff;
+	background-color: #007bff
+}
+
+.nav-link {
+	display: block;
+	padding: .5rem 1rem
+}
+
+.nav-link:focus,
+.nav-link:hover {
+	text-decoration: none
+}
+
+.nav-link.disabled {
+	color: #6c757d;
+	pointer-events: none;
+	cursor: default
+}
+
+.nav-tabs .nav-link {
+	border: 1px solid transparent;
+	border-top-left-radius: .25rem;
+	border-top-right-radius: .25rem
+}
+
+.nav-tabs .nav-link:focus,
+.nav-tabs .nav-link:hover {
+	border-color: #e9ecef #e9ecef #dee2e6
+}
+
+.nav-tabs .nav-link.disabled {
+	color: #6c757d;
+	background-color: transparent;
+	border-color: transparent
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+	color: #495057;
+	background-color: #fff;
+	border-color: #dee2e6 #dee2e6 #fff
+}
+.navbar-nav .nav-link {
+	padding-right: 0;
+	padding-left: 0
+}	.navbar-expand-sm .navbar-nav .nav-link {
+		padding-right: .5rem;
+		padding-left: .5rem
+	}
+.navbar-expand-md .navbar-nav .nav-link {
+		padding-right: .5rem;
+		padding-left: .5rem
+	}
+
+	.navbar-expand-lg .navbar-nav .nav-link {
+		padding-right: .5rem;
+		padding-left: .5rem
+	}
+.navbar-light .navbar-nav .nav-link {
+	color: rgba(0, 0, 0, .5)
+}
+
+.navbar-light .navbar-nav .nav-link:focus,
+.navbar-light .navbar-nav .nav-link:hover {
+	color: rgba(0, 0, 0, .7)
+}
+
+.navbar-light .navbar-nav .nav-link.disabled {
+	color: rgba(0, 0, 0, .3)
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+	color: rgba(0, 0, 0, .9)
+}
+.navbar-dark .navbar-nav .nav-link {
+	color: rgba(255, 255, 255, .5)
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: rgba(255, 255, 255, .75)
+}
+
+.navbar-dark .navbar-nav .nav-link.disabled {
+	color: rgba(255, 255, 255, .25)
+}
+
+.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link.show,
+.navbar-dark .navbar-nav .show>.nav-link {
+	color: #fff
+}
+	.navbar-expand-xl .navbar-nav .nav-link {
+		padding-right: .5rem;
+		padding-left: .5rem
+	}.navbar-expand .navbar-nav .nav-link {
+	padding-right: .5rem;
+	padding-left: .5rem
+}
+
+.nav-tabs .nav-item {
+	margin-bottom: -1px
+}
+
+
+
+.nav-tabs .dropdown-menu {
+	margin-top: -1px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0
+}
+
+
+
+.nav-fill .nav-item {
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	text-align: center
+}
+
+.nav-justified .nav-item {
+	-ms-flex-preferred-size: 0;
+	flex-basis: 0;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	text-align: center
+}
+
+.tab-content>.tab-pane {
+	display: none
+}
+
+.tab-content>.active {
+	display: block
+}
+
+
+nav {
+  display: block;
+}
+.nav {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding-left: 0;
+	margin-bottom: 0;
+	list-style: none
+}
+
+
+
+
+    </style>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+
+<body id="page-top">
+  <!-- Page Wrapper -->
+  <div id="wrapper" class="pt-20 mt-10 mb-10 pb-20 align-center items-center h-auto bg-bgdark">
+	
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="container d-flex flex-column">
+      <!-- Main Content -->
+      <div id="content">
+        <!-- Begin Page Content -->
+        <div class="container-fluid">
+          <div class="tabControl">
+            <div class="container">
+              <ul class="nav nav-pills font-grotesk color-textblue font-bold nav-fill" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab">Defination</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab">Features</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab">Theme</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab">Technology Breakthrough</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab">Biggest Innovation</a>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="pills-tabContent">
+              <div class="tab-pane show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                
+                <Togglecardlayer body1="The Web of Cognition" 
+                                body2="The Web of Communication" 
+                                body3="The Web of Cooperation" 
+                                body4="The Web of Integration"/>
+                
+              </div>
+              <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
+                
+                <Togglecardlayer2 />
+
+              </div>
+              <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
+                
+                <Togglecardlayer body1="Digitalization" 
+                                body2="Democratization" 
+                                body3="Decentralization" 
+                                body4="Decarbonization"/>
+
+              </div>
+              <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <Togglecardlayer body1="Internet" 
+                                body2="Web platforms" 
+                                body3="Blockchain" 
+                                body4="HeadRoom"/>
+
+              </div>
+              <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <Togglecardlayer body1="Search Engine" 
+                                body2="E-commerce" 
+                                body3="Cryptocurrency" 
+                                body4="Symbiotic Bots"/>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap -->
+
+ 
+</body>
+
+ <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- <script src="https://kit.fontawesome.com/1b59bc20c8.js"></script> -->
+

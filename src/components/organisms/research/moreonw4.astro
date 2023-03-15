@@ -1,0 +1,135 @@
+---
+export interface Props {
+  heading: string,
+}
+
+const { heading } = Astro.props;
+---
+
+
+
+
+<div class="flex justify-evenly p-14 sm:p-0 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-middle">
+
+    <div class="sm:p-0 align middle pt-20">
+       <div><p class="text-3xl sm:text-2xl font-grotesk font-bold text-primary sm:pt-4">{heading}</p></div>
+    </div>
+</div>
+
+<div class="accordion font-grotesk text-primary ">
+        <div class="accordion__collapsible mt-10">
+            <div class="collapsible__header bg-lightdark">
+                <p>What is Web 4.0?</p>
+            </div>
+            <div class="collapsible__content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deleniti optio voluptates rerum quibusdam sed maiores sint.
+                </p>
+            </div>
+        </div>
+        <div class="accordion__collapsible mt-10">
+            <div class="collapsible__header bg-lightdark">
+                <p>What is Web 4.0?</p>
+            </div>
+            <div class="collapsible__content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deleniti optio voluptates rerum quibusdam sed maiores sint.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deleniti optio voluptates rerum quibusdam sed maiores sint.
+                </p>
+            </div>
+        </div>
+        <div class="accordion__collapsible mt-10">
+            <div class="collapsible__header bg-lightdark">
+                <p>What is Web 4.0?</p>
+            </div>
+            <div class="collapsible__content">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Deleniti optio voluptates rerum quibusdam sed maiores sint.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+       let collapsibleHeaders = document.getElementsByClassName('collapsible__header');
+
+        Array.from(collapsibleHeaders).forEach(header => {
+            header.addEventListener('click', () => {
+                let parentElement = header.parentElement;
+                if (parentElement) { // Check if parentElement is not null
+                    parentElement.classList.toggle('collapsible--open');
+                }
+            });
+        });
+    </script>
+
+
+<style>
+
+.accordion {
+    width: 600px;
+    /* Horizontally and vertically centering the accordion */
+    position: relative;
+    top: 40%;
+    left: 71%;
+    transform: translate(-100%, 0%);
+}
+
+.accordion__collapsible {
+    border: 1px solid lightgray;
+    border-radius: 13px;
+}
+
+.accordion__collapsible:not(:last-child) {
+    /* border-bottom: none; */
+}
+
+.collapsible__header {
+    box-shadow: 10px;
+    
+    border-radius: 13px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.collapsible__header::after {
+    content: '+';
+    position: relative;
+    right: 10px;
+}
+
+.collapsible__content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 1s, opacity 1s;
+}
+
+.collapsible--open .collapsible__header::after {
+    content: '-';
+}
+
+.collapsible--open .collapsible__content {
+    max-height: 200px;
+    opacity: 1;
+}
+
+
+
+/* Content styles - To make inner content look better */
+.collapsible__header p {
+    font-size: large;
+}
+
+.collapsible__content p {
+    font-size: medium;
+    margin: 10px;
+}
+
+</style>

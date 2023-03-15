@@ -1,0 +1,139 @@
+---
+import Footer from "~/components/template/footer.astro";
+import Header from "~/components/template/header.astro";
+import "src/styles/theme.css";
+import Dynamiclink from "~/components/molecules/dynamiclink.astro";
+import LeftparaNew from "~/components/organisms/research/leftparaNew.astro";
+import CardScroll from "~/components/organisms/research/cardScroll.astro";
+
+const { generator, site } = Astro;
+const image = new URL("/public/Hero Section.png", site);
+const description = "Web 4.0 Community";
+
+
+const items = [
+    { text: 'Home', urls: '/'},
+    { text: 'Research', urls: '/research'},
+    { text: 'LEARN MORE ABOUT WEB 4.0', urls: '/research#researchGrid'}
+];
+
+---
+
+<!DOCTYPE html>
+
+
+    <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <script src="src/scripts/footerParalax.jsx"></script>
+   <link rel="stylesheet" href="../fonts/satoshi-cufonfonts-webfont/app.css">
+   <link rel="stylesheet" href="../styles/theme.css">
+   
+    <link rel="preload" as="font">
+<script ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+     <meta name="generator" content={generator} />
+
+    <title>Web4 Developers</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" /> 
+    
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary selection:text-white"
+  >
+    <Header />
+
+    
+   
+    <div class=" block h-full w-full">
+        
+        <section>
+            <Dynamiclink items={items} current="DAPPS"/>
+        </section>
+        <section>
+            <LeftparaNew heading="Decentralized applications (dapps)" 
+      body="Decentralized applications—also known as 'dApps' or 'dapps' —are digital applications that run on a blockchain network of computers instead of relying on a single computer." 
+      image="../svg/research/dappR.svg" alink="/"/>
+        </section>
+        <section>
+            
+            <LeftparaNew heading="How dapps work?" 
+                body="Dapps have their backend code (smart contracts) running on a decentralized network and not a centralized server. They use the Ethereum blockchain for data storage and smart contracts for their app logic. A smart contract is like a set of rules that live on-chain for all to see and run exactly according to those rules. Imagine a vending machine: if you supply it with enough funds and the right selection, you'll get the item you want. And like vending machines, smart contracts can hold funds much like your Ethereum account. This allows code to mediate agreements and transactions." 
+                    image="../svg/research/dappsHandnft.svg" alink="/"
+            />
+      
+        </section>
+        <section>
+            <CardScroll />
+        </section>
+<!-- 
+        <section>
+            <Whatisw4 title="What is Web 4.0?" body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." />
+        </section>
+
+        <section>
+            <Researchbox />
+        </section>
+
+        <section>
+            <Moreonw4 heading="More On Web 4.0 Basics" />
+        </section>
+        <section>
+            <Whatisw4 title="How does Web 4.0 work?" body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." />
+            <ResearchGrid />
+        </section>
+        <section>
+          <LeftPara heading="Learn more about the Web 4.0 community" 
+      body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." 
+      image="../svg/index/2arm.svg" alink="/" button="Explore The Community"/>
+        </section> -->
+
+    
+
+  
+      <Footer />
+  </div>
+  
+  </body>
+</html>
+

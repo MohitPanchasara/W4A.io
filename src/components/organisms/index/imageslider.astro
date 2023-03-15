@@ -1,0 +1,202 @@
+<div class="slideshow-container">
+<div class="slideshow" data-transition="fade">
+		<input type="radio" name="ss2" id="ss2-item-1" class="slideshow--bullet" checked="checked" />
+		<div class="slideshow--item">
+			<img src="../images/index/web0.png" alt="web0"/>
+			<label for="ss2-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
+			<label for="ss2-item-2" class="slideshow--nav slideshow--nav-next">Go to slide 2</label>
+		</div>
+	
+		<input type="radio" name="ss2" id="ss2-item-2" class="slideshow--bullet" />
+		<div class="slideshow--item">
+			<img src="../images/index/web1.png" alt="web1"/>
+			<label for="ss2-item-1" class="slideshow--nav slideshow--nav-previous">Go to slide 1</label>
+			<label for="ss2-item-3" class="slideshow--nav slideshow--nav-next">Go to slide 3</label>
+		</div>
+	
+		<input type="radio" name="ss2" id="ss2-item-3" class="slideshow--bullet" />
+		<div class="slideshow--item">
+			<img src="../images/index/web2.png"alt="web2" />
+			<label for="ss2-item-2" class="slideshow--nav slideshow--nav-previous">Go to slide 2</label>
+			<label for="ss2-item-4" class="slideshow--nav slideshow--nav-next">Go to slide 4</label>
+		</div>
+		
+		<input type="radio" name="ss2" id="ss2-item-4" class="slideshow--bullet" />
+		<div class="slideshow--item">
+			<img src="../images/index/web3.png" alt="web3" />
+			<label for="ss2-item-3" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
+			<label for="ss2-item-5" class="slideshow--nav slideshow--nav-next">Go to slide 1</label>
+		</div>
+
+        <input type="radio" name="ss2" id="ss2-item-5" class="slideshow--bullet" />
+		<div class="slideshow--item">
+			<img src="../images/index/web4.png" alt="web4" />
+			<label for="ss2-item-4" class="slideshow--nav slideshow--nav-previous">Go to slide 3</label>
+			<label for="ss2-item-1" class="slideshow--nav slideshow--nav-next">Go to slide 1</label>
+		</div>
+
+	</div>
+</div>
+
+<style>
+   
+.slideshow-container {
+	
+}
+.slideshow {
+	width: 80%;
+  height: 80vh;
+	position: relative;
+	text-align: center;
+	line-height: 400px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+	transition: all 0.5s ease;
+}
+/* slideshow item */
+.slideshow--item {
+	width: 100%;
+  height: 100vh;
+	line-height: 1.5;
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	visibility: hidden;
+}
+.slideshow--item img {
+	width: 100%;
+	height: auto;
+	
+}
+.slideshow--bullet:checked + .slideshow--item {
+	visibility: visible;
+}
+.slideshow[data-transition="fade"] .slideshow--item {
+	visibility: visible;
+	opacity: 0;
+	transition: .2s ease-out opacity;
+}
+.slideshow[data-transition="fade"] .slideshow--bullet:checked + .slideshow--item {
+	opacity: 1;
+}
+/* slideshow navigation */
+.slideshow--nav {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 50%;
+	display: none;
+	z-index: 88;
+	cursor: pointer;
+	color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.slideshow--nav:after {
+	display: block;
+	content: '\25B6';
+	font-size: 1.2em;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	height: 50px;
+	top: 50%;
+	right: -35px;
+  padding-right:40px;
+	padding-top: 25px;
+	padding-left: 10px;
+	border-radius: 50%;
+	margin-top: -1.5em;
+	transition: all 0.5s ease;
+    visibility: hidden;
+}
+.slideshow--nav:hover:after {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+.slideshow--nav-previous {
+	left: -45px;
+	display: block;
+}
+.slideshow--nav-previous:after {
+	-webkit-transform: scaleX(-1);
+	-moz-transform: scaleX(-1);
+	transform: scaleX(-1);
+	right: auto;
+	left: 10px;
+}
+.slideshow--nav-next {
+	left: 50%;
+	display: block;
+}
+/* Radiobuttons to control the slideshow */
+.slideshow--bullet {
+	font-size: .75em;
+	width: 8px;
+	height: 8px;
+	display: inline-block;
+	position: relative;
+	margin: 8px 8px -120px;
+	z-index: 99;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background: #8d8d8d;
+	border-radius: 50%;
+	transition: all 0.5s ease;
+}
+.slideshow--bullet {
+    visibility: hidden;
+}
+.slideshow--bullet:checked {
+	background: none;
+	outline: none;
+    visibility: hidden;
+}
+.slideshow--bullet::after {
+    visibility: hidden;
+}
+.button-container {
+	padding: 20px;
+}
+.folio-button {
+	margin: 0 auto;
+	padding: 5px 10px;
+	background-color: #91B0A5;
+	border-radius: 4px;
+	color: #333;
+	text-decoration: none;
+	font-family: 'Roboto', sans-serif;
+	transition: all 0.3s ease;
+}
+.folio-button:hover {
+	background-color: #B0D6C9;
+}
+@media only screen and (max-width: 980px) {
+	.slideshow {
+		width: 100%;
+  	height: 200px;
+}
+	.slideshow--bullet {
+		margin: 8px 8px -110px;
+}
+	.button-container {
+		margin-top: 80px;
+	}
+}
+@media only screen and (max-width: 402px) {
+	.slideshow {
+		width: 100%;
+  	height: 150px;
+}
+	.slideshow--bullet {
+		margin: 8px 8px -100px;
+}
+		.button-container {
+		margin-top: 120px;
+	}
+}
+</style>

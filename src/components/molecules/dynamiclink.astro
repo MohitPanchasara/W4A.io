@@ -1,0 +1,65 @@
+---
+  interface Item {
+    text: string;
+    urls: string;
+  }
+
+  export interface Props {
+    items: Item[];
+    current: string;
+  }
+
+  const {items, current} = Astro.props as Props;
+ 
+---
+
+<div class="pt-20 overflow-hidden">  
+    <div>
+        <ul class="breadcrumb pl-10 font-satoshi font-semibold text-primary ">
+        {items.map((item) => (
+            <li><a href={item.urls}>{item.text}</a></li>
+        ))}
+        <li><p class="curr text-textblue">{current}</p></li>
+        </ul>
+    </div>
+
+    <style>
+        ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+    background-color: none;
+    }
+
+    /* Display list items side by side */
+    ul.breadcrumb li {
+    display: inline;
+    font-size: 14px;
+    }
+
+    /* Add a slash symbol (/) before/behind each list item */
+    ul.breadcrumb li+li:before {
+    padding: 8px;
+    content: "/\00a0";
+    }
+
+    /* Add a color to all links inside the list */
+    ul.breadcrumb li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    }
+
+    /* Add a color on mouse-over */
+    ul.breadcrumb li a:hover {
+    color: #6d3cff;
+    text-transform: uppercase;
+    }
+    .curr{
+        display: inline;
+        text-transform: uppercase;
+    }
+
+    </style>
+
+
+
+</div>

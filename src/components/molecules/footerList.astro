@@ -9,10 +9,10 @@ const { heading, body } = Astro.props;
 ---
 
 
-<div class=" pb-10 font-grotesk h-4 text-primary font-bold text-base flex items-center flex-none order-none flex-grow-0">{heading}</div>
+<div class="pt-4 sm:pt-8 pb-10 sm:pb-4 font-grotesk h-4 text-white font-bold text-lg flex items-center flex-none order-none flex-grow-0">{heading}</div>
 
-<div class="font-medium text-base">
+<div class="text-md">
     <ul>
-        {body.map((data) => <li class="pb-5 text-secondary">{data}</li>)}
+        {body.map((data) => <li class="pb-2 text-white">{data}</li>)}
       </ul>
 </div>

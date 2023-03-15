@@ -1,0 +1,26 @@
+<script src="src/scripts/textchange.jsx"></script>
+<style> 
+
+h1 {
+
+  text-align: center;
+
+  background: radial-gradient(89.2% 180.91% at 91.8% 50%, #0894FF 0%, #6E53FF 29.05%, #B038EA 60.92%, #F95088 85.08%, #FF6F62 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+span {
+  border-right: .05em solid;
+  animation: caret 1s steps(1) infinite;
+}
+
+@keyframes caret {
+  50% {
+    border-color: transparent;
+  }
+}
+</style>
+<h1 class="font-satoshi">Human and Machine</h1>

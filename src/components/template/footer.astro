@@ -1,23 +1,24 @@
 ---
 import FooterList from "~/components/molecules/footerList.astro";
+import Footerwaves from "../Atoms/footerwaves.astro";
 
 const image=["../svg/facebook.svg","../svg/LinkedIn.svg","../svg/twitter.svg","../svg/reddit.svg","../svg/Discord.svg"]
 ---
 
 
-<footer class="w-[100vw]">
-    <div class="flex flex-wrap-reverse py-2 pt-24 px-1 gap-6 justify-center sm:justify-start sm:px-[10vw]">
-        <div class="innerContent flex gap-5 sm:gap-3 sm:flex-col  ">
-            <div>
+<footer class="w-[100vw] bg-black text-white">
+    <div class="flex flex-wrap-reverse py-2 gap-10 pt-24 px-1 justify-center sm:justify-start sm:px-[20vw] pt-40">
+        <div class="innerContent flex gap-6 sm:flex-col sm:items-center  ">
+            <div class="sm:w-[70vw]">
                 <FooterList heading="Research" body={["Learn about Web 4.0"]}/>
             </div>
-            <div class="">
+            <div class="sm:w-[70vw]">
                 <FooterList heading="Developers" body={["Resources","Documentation","Tutorials"]}/>
             </div>
-            <div>
+            <div class="sm:w-[70vw]">
                 <FooterList heading="Community Hub" body={["Online Communities","Events","How can I get involved?","Research","Grants","Support","Language Resources"]}/>
             </div>
-            <div>
+            <div class="sm:w-[70vw]">
                 <FooterList heading="About Web 4.O" body={["About Us","Jobs","Contribution","Language Support","Privacy Policy","Terms of Use","Cookie policy"]}/>
             </div>
         </div>
@@ -40,12 +41,19 @@ const image=["../svg/facebook.svg","../svg/LinkedIn.svg","../svg/twitter.svg",".
     
     
     <div class="">
-        <div class="sm:hidden ">
-            <img  src="../images/footerLG.svg" class="overLap absolute z-1 w-[100vw]" alt="Footer End logo" />
+        <div class="sm:hidden bg-black ">
+            <img  src="../images/footerLG.svg" class="overLap absolute z-10" alt="Footer End logo" />
+            <div class="z-0 h-[50px] bottom-0">
+            <Footerwaves />
+            </div>
         </div>
     
-        <div class="hidden sm:block">
-           <img src="../images/footerSM.svg" class="overLap absolute z-1 w-[100vw]" alt="Mobile footer end logo" />
+        <div class="hidden sm:block bg-black">
+             <div class="z-0 h-10 bottom-0">
+            <Footerwaves />
+            </div>
+           <img src="../images/footerSM.svg" class="bg-none overLap absolute z-10 w-[140vw]" alt="Mobile footer end logo" />
+            
         </div> 
     </div>
     

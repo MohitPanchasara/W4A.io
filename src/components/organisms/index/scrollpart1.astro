@@ -1,0 +1,59 @@
+<script src="src/scripts/webswitch.jsx"></script>
+
+
+
+<div class="slide1 slide">
+  <h1>Scroll Down</h1>
+</div>
+<div class="slide2 slide"></div>
+<div class="slide3 slide"></div>
+<div class="slide1 slide"></div>
+<div class="slide2 slide"></div>
+<div class="slide3 slide"></div>
+<div class="slide1 slide"></div>
+<div class="slide2 slide"></div>
+<div class="slide3 slide"></div>
+
+<style>
+  /* 
+  Background gradients from lea.verou.me/css3patterns
+  Background SVG from heropatterns.com
+*/
+
+.slide {
+ height: 100vh;
+}
+.slide1 {
+  background-color: #fff; 
+  background-image: linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+  linear-gradient(#eee .1em, transparent .1em);
+  background-size: 100% 1.2em;
+}
+.slide2 {
+  background:
+    linear-gradient(135deg, #A8B1BB 22px, #ffffff 22px, #ffffff 24px, transparent 24px, transparent 67px, #ffffff 67px, #ffffff 69px, transparent 69px),
+    linear-gradient(225deg, #A8B1BB 22px, #ffffff 22px, #ffffff 24px, transparent 24px, transparent 67px, #ffffff 67px, #ffffff 69px, transparent 69px)0 64px;
+  background-color:#A8B1BB;
+  background-size: 64px 128px
+}
+.slide3 {
+  background: radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent),
+    radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent) 50px 50px,
+    linear-gradient(#A8B1BB 8px, transparent 8px) 0 -4px,
+    linear-gradient(90deg, #A8B1BB 8px, transparent 8px) -4px 0;
+  background-color: slategray;
+  background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+}
+.fix-it {
+   background-attachment: fixed;
+  
+}
+h1 {
+  display: block;
+  margin: auto;
+  padding: 20%;
+  font-size: 40px;
+  color: dimgray;
+  text-align: center;
+}
+</style>

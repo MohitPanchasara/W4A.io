@@ -11,6 +11,18 @@ import { Icon } from "astro-icon";
   type="button"
   class="sm:translate-x-[10px]"
 >
+    <style lang="css">
+          [astro-icon="theme/light"] {
+                color: #A07FFF;
+                /* OR */
+                /* fill: red; */
+            }
+          [astro-icon="theme/dark"] {
+              color: #3F00F9;
+              /* OR */
+              /* fill: red; */
+          }
+    </style>
   <div id="icon-theme-light">
     <Icon name="theme/light" class="h-8" />
     <span class="sr-only">Use light theme</span>
@@ -53,6 +65,8 @@ import { Icon } from "astro-icon";
     localStorage.setItem("theme", themeNext);
     updateIcon();
   });
+
+
 
   updateIcon();
 </script>

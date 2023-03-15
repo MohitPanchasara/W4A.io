@@ -1,15 +1,22 @@
 ---
-import "@fontsource/inter/variable.css";
 import Footer from "~/components/template/footer.astro";
 import Header from "~/components/template/header.astro";
-import DeveloperResource from "../components/molecules/developerResource.astro";
-import HowYouLike from "../components/molecules/howYouLike.astro";
-import AboutResource from "../components/molecules/aboutResource.astro";
 import "src/styles/theme.css";
+import Dynamiclink from "~/components/molecules/dynamiclink.astro";
+import LeftparaNew from "~/components/organisms/research/leftparaNew.astro";
+import CardScroll from "~/components/organisms/research/cardScroll.astro";
 
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
 const description = "Web 4.0 Community";
+
+
+const items = [
+    { text: 'Home', urls: '/'},
+    { text: 'Research', urls: '/research'},
+    { text: 'LEARN MORE ABOUT WEB 4.0', urls: '/research#researchGrid'}
+];
+
 ---
 
 <!DOCTYPE html>
@@ -79,24 +86,27 @@ const description = "Web 4.0 Community";
     
    
     <div class=" block h-full w-full">
-      
+        
         <section>
-            <DeveloperResource/>
+            <Dynamiclink items={items} current="NFTS"/>
         </section>
-
-      <section>
-        <HowYouLike/>
-      </section>
-    
-      <section>
-        <AboutResource/>
-      </section>
-
-    
-
+        <section>
+            <LeftparaNew heading="Non-fungible tokens (NFTs)" 
+      body="Non-fungible tokens are a unique digital identifier that cannot be copied, substituted or divided, that are recorded in a blockchain, and that are used to certify authenticity and ownership." 
+      image="../svg/research/nft.svg" alink="/"/>
+        </section>
+        <section>
+            
+            <LeftparaNew heading="What’s an NFT?" 
+                body="NFTs are tokens that we can use to represent ownership of unique items. They let us tokenize things like art, collectibles, even real estate. Ownership of an asset is secured by the Ethereum blockchain – no one can modify the record of ownership or copy/paste a new NFT into existence. NFT stands for non-fungible token. Non-fungible is an economic term that you could use to describe things like your furniture, a song file, or your computer. These things are not interchangeable for other items because they have unique properties. Fungible items, on the other hand, can be exchanged because their value defines them rather than their unique properties. For example, ETH or dollars are fungible because 1 ETH / $1 USD is exchangeable for another 1 ETH / $1 USD." 
+                    image="../svg/research/monalisanft.svg" alink="/"
+            />
+      
+        </section>
   
       <Footer />
   </div>
   
   </body>
 </html>
+

@@ -1,0 +1,88 @@
+<style>
+    .boo{
+        border: 1px solid #0A090F;
+        border-radius: 10px;
+    }
+
+    .butto{
+    width:-webkit-fill-available
+}
+.card {
+  padding: 1rem;
+/* border: 1px solid #0A090F; */
+
+}
+.cards {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+}
+@media (min-width: 600px) {
+  .cards { 
+    grid-template-columns: repeat(2, 1fr);
+ }
+}
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* @media (min-width: 375px){
+    .cards{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        padding: 40px;
+    }
+} */
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+</style>
+
+
+<!-- 
+<div class="p-20">
+
+
+    <div class=" flex  p-6 justify-center gap-5 bg-white">
+
+        <div class="boo w-[50vw]  p-5 box -border">
+            <heading class="font-grotesk font-bold text-lg text-black"> Learn Web 4.0 development</heading>
+            <p class="py-5 font-satoshi font-medium text-base text-gray-900">Read up on core concepts and the Web 4.0 stack with our docs.</p>
+            <button class="butto mt-5  bg-purple-700 rounded text-white font-satoshi">Read the documents</button>
+        </div>
+
+
+        <div class="boo w-[50vw]  p-5 box -border">
+            <heading class="font-grotesk font-bold text-lg text-black">Learn through tutorials</heading>
+            <p class="py-5 font-satoshi font-medium text-base text-gray-900">Learn Web 4.0 development from builders who have already done it.</p>
+            <button class="butto   bg-purple-700 rounded text-white font-satoshi">View Tutorials</button>
+        </div>
+
+    </div>
+
+</div> -->
+
+<div class="cards sm:p-[40px] pt-[40px]">
+  <div class="card p-10 border-2 rounded-lg border-primary bg-bgdark">
+    <img src="../svg/index/marketing.svg" height="470px" width="470px" class="items-center pb-10" alt="Tablet paralax image front" />
+    <heading class="font-grotesk m-4 font-bold text-lg text-primary sm:text-md"> Marketing & Advertising Stack</heading>
+    <p class="font-satoshi m-4 font-medium text-sm text-secondary">Our flagship product is AI snippet based ad exchange for AI search engines, where organic results are embedded with demand side ad network to hyperlink and show relevant ads to audience and thus, ability to use AI based search engines for Free.
+</p>
+  </div>
+  <div class="card p-5 border-2	rounded-lg border-primary bg-bgdark">
+    <img src="../images/index/autonomous.png" height="470px" width="470px" class="items-center pb-10" alt="Tablet paralax image front" />
+    <heading class="font-grotesk m-4 font-bold text-lg text-primary"> Buildings’ Automation Stack</heading>
+    <p class=" font-satoshi m-4 font-medium text-sm text-secondary">Our Clean tech focused product suite automate and optimize building systems such as heating, ventilation & air conditioning. This can help reduce energy waste and improve occupant comfort. We are also working on indoor Agri stack for Consumers.
+</p>
+  </div>
+  <div class="card p-5 border-2 rounded-lg	border-primary bg-bgdark">
+    <img src="../svg/index/homedapp.svg" height="470px" width="470px" class="items-center pb-10" alt="Tablet paralax image front" />
+    <heading class="font-grotesk m-4 font-bold text-lg text-primary"> Mental and Physical Health Stack</heading>
+    <p class="font-satoshi m-4 font-medium text-sm text-secondary">Our AI-powered wearables & app can track the user's biometric data such as heart rate, breathing rate, and brain waves to analyze the user's preferences, mood etc. and and them develop strategies to manage stress and improve their overall health.
+</p>
+  </div>
+  <div class="card p-5 border-2	rounded-lg border-primary bg-bgdark">
+    <img src="../svg/index/startbuild.svg" height="470px" width="470px" class="items-center pb-10" alt="Tablet paralax image front" />
+    <heading class="font-grotesk m-4 font-bold text-lg text-primary">Use a dapp or Start building your own Stack</heading>
+    <p class="font-satoshi m-4 font-medium text-sm text-secondary">Our open community resources & developers helps everyone who want to start building their own Web 4.0 tech stack on AI and other web4.0 technologies, we have developer matching, tutorials, and more in our community to offer.</p>
+  </div>
+</div>

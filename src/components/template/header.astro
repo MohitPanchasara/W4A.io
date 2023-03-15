@@ -8,22 +8,22 @@ import W4logo from "../Atoms/w4logo.astro";
 import NavElement from "~/components/Atoms/navelement.astro";
 
 const navItems: Array<NavItem> = [
-  { title: "Community", url: "#community" },
-  { title: "Enterprise", url: "#developer" },
-  { title: "Developer", url: "#showcase" }, 
-  { title: "Research", url: "#showcase" }, 
+  { title: "Community", url: "/community" },
+  { title: "Enterprise", url: "/enterprise" },
+  { title: "Developer", url: "/developer" }, 
+  { title: "Research", url: "/research" }, 
 ];
 ---
 
 <header
   id="page-header"
-  class="absolute bottom z-20 flex w-full items-center lg:justify-between border-transparent px-8 py-2 text-white fixed-header"
+  class="absolute bottom z-20 flex w-full items-center lg:justify-between border-transparent px-8 py-3 text-white fixed-header"
 >
   <a class="flex items-center gap-3 sm:gap-2 font-grotesk" href="/">
     <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
-    <div class="sm:translate-x-[30px] sm:px-24 sm:items-center sm:items-center md:translate-x-[320px]">   
+    <div class="sm:translate-x-[40px] sm:px-24 sm:items-center sm:items-center md:translate-x-[120px]">   
       <img src="../svg/index/navbarlogo.svg" width="35" height="35" alt="AE navbar logo"  />
     </div>
     <!-- <Logo /> -->
@@ -34,16 +34,18 @@ const navItems: Array<NavItem> = [
         <a>kdfo</a>
         <Smlogo />
       </div> -->
+ 
   </a>
   <div class="hidden translate-x-[20px] w-[700px] lg:block">
     <!-- <Navbutton text="Community" />
     <Navbutton text="Enterprise" />
     <Navbutton text="Developers" />
     <Navbutton text="Research" /> -->
-    <NavElement text="Community" items={["Community Hub", "Online Communities", "Events", "Research Work", "Support", "Contact"]} />
-    <NavElement text="Enterprise" items={["Maintain Web4.0", "Public Web4", "Private Web4"]} />
-    <NavElement text="Developer" items={["How to Develop?", "Documentation", "Tutorial", "Environment"]} />
-    <NavElement text="Research" items={["Resources","Web 2.0", "Web 3.0", "Web 2.0"]} />
+    <NavElement text="Community" url="/community" items={["Community Hub", "Online Communities", "Events", "Research Work", "Support", "Contact"]}
+   />
+    <NavElement text="Enterprise" url="/enterprise" items={["Maintain Web4.0", "Public Web4", "Private Web4"]} />
+    <NavElement text="Developer" url="/developer" items={["How to Develop?", "Documentation", "Tutorial", "Environment"]} />
+    <NavElement text="Research" url="/research" items={["Resources","Web 2.0", "Web 3.0", "Web 2.0"]} />
     
   </div>
 
@@ -69,16 +71,21 @@ const navItems: Array<NavItem> = [
       <div class="translate-x-[10px] gap-1 sm:translate-x-[2px]">
         <Search />
       </div>
-      <div class="w-10 flex translate-x-[30px] sm:translate-x-[0px] sm:gap-4 items-center gap-6">
+      <div class="w-10 flex textbluetheme translate-x-[30px] sm:translate-x-[10px] sm:gap-6 items-center gap-6">
         <ThemeSwitcher />
         <button
           id="open-nav-button"
           type="button"
-          class="btn lg:hidden"
+          class="btn lg:hidden textbluetheme"
           aria-label="Navigation"
         >
-          
-          <Icon name="mdi:menu" class="h-8" />
+                   
+          <Icon name="el:lines" class="h-5 textbluetheme" />
+          <style>
+                  [astro-icon="el:lines"] {
+                    color: #A080FF;
+                }
+            </style>
           <!-- <svg name="menu" class="h-10 bg-dark" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="10" y="14" width="12" height="2.5" rx="1" />
           <rect x="10" y="21" width="24" height="2.5" rx="1" fill="black"/>
@@ -105,10 +112,15 @@ const navItems: Array<NavItem> = [
             <button
               id="close-nav-button"
               type="button"
-              class="btn"
+              class="btn "
               aria-label="Close navigation"
             >
-              <Icon pack="mdi" name="close" class="h-8" />
+              <Icon name="teenyicons:x-outline" class="h-8" />
+              <style>
+                  [astro-icon="teenyicons:x-outline"] {
+                    color: #A080FF;
+                }
+            </style>
             </button>
           </header>
           <div class="flex justify-center">
@@ -120,7 +132,7 @@ const navItems: Array<NavItem> = [
               {
                 navItems.map(({ title, url }) => (
                   <li>
-                    <a class="block py-4 text-center text-xl" href={url}>
+                    <a class="block py-4 text-center text-primary text-xl" href={url}>
                       {title}
                     </a>
                   </li>

@@ -1,22 +1,24 @@
 ---
-import "@fontsource/inter/variable.css";
 import Footer from "~/components/template/footer.astro";
 import Header from "~/components/template/header.astro";
-import Web2UseCases from "~/components/organisms/index/web2UseCases.astro";
 import Herosection from "~/components/organisms/index/Herosection.astro";
 import Whatisweb4 from "~/components/organisms/index/whatisweb4.astro";
-import Evaluationofmordernworld from "~/components/organisms/index/evaluationofmordernworld.astro";
 import Scrollpart3 from "~/components/organisms/index/scrollpart3.astro";
-import HumanMachine from "~/components/molecules/HumanMachine.astro";
 import FooterParalaxScroll from "~/components/organisms/index/footerParalaxScroll.astro";
 import LeftPara from "~/components/molecules/leftPara.astro";
 import RightPara from "~/components/molecules/rightPara.astro";
+import Scrollpart1 from "~/components/organisms/index/scrollpart1.astro";
 import "src/styles/theme.css";
-
+import Boxes from "~/components/organisms/index/boxes.astro";
+import Beforeafter from "~/components/organisms/index/beforeafter.astro";
+import Toggle from "~/components/organisms/index/toggle.astro";
+import Leftpara2 from "~/components/molecules/leftpara2.astro";
+import AIexchange from "~/components/molecules/AIexchange.astro";
+import Imageslider from "~/components/organisms/index/imageslider.astro";
 
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
-const description = "Build fast websites, faster. Astro is a new kind of site builder for the modern web. Lightning-fast performance meets powerful developer experience.";
+const image = new URL("/public/Hero Section.png", site);
+const description = "W4A.io - An open AI community to support and develop Web 4.0 Technologies!";
 ---
 
 <!DOCTYPE html>
@@ -35,7 +37,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     <meta name="generator" content={Astro.generator} />
      <meta name="generator" content={generator} />
 
-    <title>Astro Landing Page</title>
+    <title>Home - W4A.io</title>
     <meta name="description" content={description} />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link
       rel="preload"
@@ -47,7 +49,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
       rel="stylesheet"
     />
     <!-- <title>{title}</title> -->
-
+<!-- sdfd -->
     <meta property="og:title" content="Astro" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content={description} />
@@ -57,6 +59,7 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
     <!-- initialize theme -->
     <script is:inline>
       const themeSaved = localStorage.getItem("theme");
+      console.log(themeSaved)
 
       if (themeSaved) {
         document.documentElement.dataset.theme = themeSaved;
@@ -76,6 +79,8 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
               : "light";
           }
         });
+
+        console.log(document.documentElement.dataset.theme)
     </script>
   </head>
   <body
@@ -92,69 +97,79 @@ const description = "Build fast websites, faster. Astro is a new kind of site bu
       </section>
 
       <section class="">
-        <Whatisweb4 />
-        <HumanMachine/>
-        
+        <Whatisweb4 />        
       </section >
+      <section>
+        <Boxes />
+      </section>
 
-      <section class="">
-        <Evaluationofmordernworld />
+      <section class="overflow-hidden	">
+        <Toggle />
+      </section>
+
+
+        <!-- <Scrollpart3 /> -->
+        <!-- <Scrollpart1 /> -->
+    
+      
+       <section>
+        <div>
+          <LeftPara heading="W4A is platform for Web 4.0" 
+          body="W4A or commonly called as Web 4.0 is the read-write-execution-concurrency web platform that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities. What Ethereum is for Web3 and OpenAI for AI Technologies, W4A is platform for Web4.0 technologies." 
+          image="../svg/index/brain.svg" alink="/" button="Know More"/>
+        </div>
+      </section>
+      <section>
+        <div>
+            <RightPara head="Redefine work humans do?" 
+            content="Although mundane work is generally disliked, we encounter it frequently in our daily lives, such as in data entry and call center positions. However, the advent of web4.0 technologies presents an opportunity to automate these tasks, freeing up human potential to focus on utilizing other web4.0 technologies in fields such as healthcare, research, and science. With the ease of transition from mundane jobs to impactful work, web4.0 has the potential to propel human civilization forward." 
+            photo="../svg/index/camera.svg" ahref="/" button="Know More"/>
+        </div>
+      </section>
+      <section>
+
+        <div>
+          <LeftPara heading="The internet of intelligence" 
+          body="Web 4.0 (W4A) is envisioned as a smarter, more intuitive, and customized version of the internet. It harnesses advanced technologies like AI, ML, and NLP to interpret human behavior and preferences to provide personalized responses and solutions. This intelligence is fueled by the massive amount of data generated by users, devices, and systems. This shift towards intelligence signifies the evolution of the internet that has the potential to revolutionize the way we live, work, and interact with technology (Machine)." 
+          image="../svg/index/vr.svg" alink="/" button="Know More"/>
+        </div>
+      </section>
+      <section>
+        <div>
+            <RightPara head="Robots are borning, Now!" 
+            content="Throughout history, robots have undergone a significant evolution. Initially, basic machines were created to perform simple tasks, but the development of Web 4.0 technologies such as AI has led to the creation of more advanced and intelligent robots. With the ability to perform complex functions with greater efficiency and accuracy, these robots are now capable of assisting humans in various fields. As a result, they have the potential to greatly enhance human productivity and quality of life." 
+            photo="../svg/index/life.svg" ahref="/" button="Know More"/>
+        </div>
+      </section>
+      <section>
+        <div>
+            <LeftPara heading="A new frontier for Humanoids" 
+            body="The depiction of robots in movies like Terminator has often shown machines that are physically and functionally alike humans, but without empathy. Nonetheless, the future may present a different picture where humans and robots coexist. In this future, robots may serve as physical extensions of humans and undertake laborious tasks like cooking, organizing the Cupboard, clean their apartments . The humanoids could significantly simplify and revolutionize human lives towards a stress-free and prosperous future" 
+            image="../svg/index/astronaut.svg" alink="/" button="Know More"/>
+        </div>
       </section>
 
       <section>
-        <Scrollpart3 />
+        <!-- <Web2UseCases/>  -->
+        <Beforeafter />
+      </section>     
+
+      <section class="h-[100vh]">
+        <Imageslider />
       </section>
-    
-      <div>
-        <LeftPara heading="What is web 4.0?" 
-        body="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-        image="../svg/index/brain.svg" alink="/"/>
-      </div>
-      <div>
-          <RightPara head="What is web 4.0?" 
-          content="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-          photo="../svg/index/camera.svg" ahref="/"/>
-      </div>
 
-
-      <div>
-        <LeftPara heading="What is web 4.0?" 
-        body="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-        image="../svg/index/vr.svg" alink="/"/>
-    </div>
-    <div>
-        <RightPara head="What is web 4.0?" 
-        content="Web 4.0 is the readte-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-        photo="../svg/index/life.svg" ahref="/"/>
-    </div>
-      
-      <div>
-          <LeftPara heading="What is web 4.0?" 
-          body="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-          image="../svg/index/astronaut.svg" alink="/"/>
-      </div>
-
-  <Web2UseCases/>      
-
-  <section>
-
-    <div>
-      <RightPara head="What is web 4.0?" 
-      content="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-      photo="../svg/index/4arm.svg" ahref="/"/>
-  </div>
-  <div>
-      <LeftPara heading="What is web 4.0?" 
-      body="Web 4.0 is the read-write-execution-concurrency web that is on track to receive a critical mass of participation in online networks that deliver global transparency, governance, distribution, participation, collaboration into key communities such as industry, political, social and other communities." 
-      image="../svg/index/2arm.svg" alink="/"/>
-  </div>
-
-  </section>
-
-  <section class="scrollElement overflow:hidden h-[100vh] w-[100vw]">
-    <FooterParalaxScroll />
+       <section>
+          <AIexchange />
+      </section>
+      <section>
+          <Leftpara2 />
+      </section>
+     
+  <section class="scrollElement overflow:hidden h-[150vh] w-[100vw]">
+    <FooterParalaxScroll class="z-1" />
   </section>
   <Footer />
   </div>
+
   </body>
 </html>

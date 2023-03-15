@@ -1,30 +1,28 @@
 ---
+import { Icon } from 'astro-icon';
 export interface Props {
 
     items: Array<string>;
       text: string;
+      url: string;
+
 }
 
-const { text, items } = Astro.props as Props;
+const { text, items, url} = Astro.props as Props;
 ---
 <ul>
 <li>
-    <span class="mr-0 text-base font-grotesk">
-        <strong> <a href=""> {text} </a></strong>
+    <span class="mr-0 text-base font-grotesk text-textbluetheme pr-[10px]">
+        <strong> <a href={url}> {text} <Icon name="ep:arrow-down-bold" class="textbluetheme  fa-bold w-3 bold h-2 border-1 inline-block" /> </a></strong>
+        
     </span>
-    <svg
-        class="SVGD fill-current h-4 w-4"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 20 20"
-    >
-        <path
-        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"
-        ></path>
-    </svg>
+
 
     <ul>
         {items.map((item) => (
-        <li>{item}</li>
+        <li>
+            {item}
+        </li>
         ))}
     </ul>
 
@@ -121,6 +119,5 @@ li:hover ul li {
 }
 .SVGD {
   display: inline-block;
-  color: rgb(111, 0, 255);
 }
 </style>
