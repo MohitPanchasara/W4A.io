@@ -20,6 +20,12 @@ module.exports = {
         primary: "var(--color-primary)",
         secondary: "var(--color-secondary)",
         tertiary: "var(--color-tertiary)",
+        textblue: "var(--color-textblue)",
+        textbluetheme: "var(--color-textbluetheme)",
+        lightdark: "var(--color-lightdark)",
+        bgdark: "var(--color-bgdark)",
+
+        current: "currentColor",
         primaryweb: "#0A090F",
         secodaryweb: "#232126",
         tertiaryweb: "#3D3D40",

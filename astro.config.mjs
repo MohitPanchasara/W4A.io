@@ -5,7 +5,7 @@ import react from "@astrojs/react";
 
 // https://astro.build/config V
 export default defineConfig({
-  site: "https://astro-moon-landing.netlify.app/",
+  site: "https://w4a.netlify.app/",
   server: { port: 2000, host: true },
   integrations: [
     tailwind(),
