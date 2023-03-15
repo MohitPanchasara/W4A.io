@@ -1,0 +1,31 @@
+[data-theme="light"] {
+  --color-primary: #0a090f;
+  --color-secondary: #232126;
+  --color-tertiary: #3d3d40;
+  --color-textblue: #3f00f9;
+  --color-textbluetheme: #3f00f9;
+  --color-lightdark: white;
+  --color-text-offset: theme("colors.gray.600");
+  --color-bgdark: theme("colors.gray.50");
+  --color-background: theme("colors.gray.50");
+  --color-background-offset: theme("colors.gray.100");
+  --color-border: theme("colors.gray.900" / 10%);
+  --color-text: #0a090f;
+  --color-text-offset: #3d3d40;
+}
+
+[data-theme="dark"] {
+  --color-primary: #ffffff;
+  --color-secondary: #cac7ce;
+  --color-tertiary: #9791a0;
+  --color-textblue: #3f00f9;
+  --color-textbluetheme: #a080ff;
+  --color-lightdark: #0a090f;
+  --color-text-offset: theme("colors.gray.400");
+  --color-bgdark: #222222;
+  --color-background: #272627;
+  --color-background-offset: #272627;
+  --color-border: theme("colors.gray.50" / 10%);
+  --color-text: #ffffff;
+  --color-text-offset: #9791a0;
+}
