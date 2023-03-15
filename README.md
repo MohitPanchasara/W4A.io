@@ -1,8 +1,8 @@
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
-# The Landing Page
+# Astro Landing Page
 
-> W4A.io Landing Page Display
+> An Astro + Tailwind CSS example/template for landing pages.
 
 ![Screenshots of Astro Landing Page](./public/Hero%20Section.png)
 
@@ -13,9 +13,9 @@
   - CSS variables are defined in `src/styles/theme.css` and mapped to Tailwind classes (`tailwind.config.cjs`)
 - 🌙 Dark mode
 - 📱 Responsive (layout, images, typography)
-- ♿ Accessible (as measured by LightHouse Tesing https://www.webpagetest.org/lighthouse)
-- 🔎 SEO-enabled (as measured by LightHouse Tesing https://www.webpagetest.org/lighthouse)
-<!-- - 🔗 Open Graph tags for social media sharing -->
+- ♿ Accessible (as measured by https://web.dev/measure/)
+- 🔎 SEO-enabled (as measured by https://web.dev/measure/)
+- 🔗 Open Graph tags for social media sharing
 - 💅 [Prettier](https://prettier.io/) setup for both [Astro](https://github.com/withastro/prettier-plugin-astro) and [Tailwind](https://github.com/tailwindlabs/prettier-plugin-tailwindcss)
 
 ## Commands
@@ -31,11 +31,10 @@
 | `npm run format`       | Format code with [Prettier](https://prettier.io/)  |
 | `npm run clean`        | Remove `node_modules` and build output             |
 
-<!--
 ## Credits
 
 - astronaut image
   - source: https://github.com/withastro/astro-og-image; note: this repo is not available anymore
 - moon image
   - source: https://unsplash.com/@nasa
-- other than that, a lot of material (showcase data, copy) was taken from official Astro sources, in particular https://astro.build/blog/introducing-astro/ and https://github.com/withastro/astro.build -->
+- other than that, a lot of material (showcase data, copy) was taken from official Astro sources, in particular https://astro.build/blog/introducing-astro/ and https://github.com/withastro/astro.build
