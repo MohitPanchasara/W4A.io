@@ -1,6 +1,6 @@
 [![Built with Astro](https://astro.badg.es/v1/built-with-astro.svg)](https://astro.build)
 
-# W4A.io
+# [W4A.io](https://w4a.netlify.app/)
 
 > An open AI community to support and develop Web 4.0 Technologies!
 
