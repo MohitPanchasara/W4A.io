@@ -1,4 +1,5 @@
 ---
+import { changeLanguage } from "i18next";
 import Footer from "~/components/template/footer.astro";
 import Header from "~/components/template/header.astro";
 import "src/styles/theme.css";
@@ -6,17 +7,16 @@ import Dynamiclink from "~/components/molecules/dynamiclink.astro";
 import LeftparaNew from "~/components/organisms/research/leftparaNew.astro";
 import CardScroll from "~/components/organisms/research/cardScroll.astro";
 
+changeLanguage("en");
+
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
 const description = "Web 4.0 Community";
-
-
 const items = [
-    { text: 'Home', urls: '/'},
-    { text: 'Research', urls: '/research'},
-    { text: 'LEARN MORE ABOUT WEB 4.0', urls: '/research#researchGrid'}
+    { text: "Home", urls: "/" },
+    { text: "Research", urls: "/research" },
+    { text: "LEARN MORE ABOUT WEB 4.0", urls: "/research#researchGrid" }
 ];
-
 ---
 
 <!DOCTYPE html>

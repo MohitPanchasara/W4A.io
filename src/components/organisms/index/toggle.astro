@@ -1,7 +1,7 @@
 ---
 import Togglecardlayer from "~/components/molecules/togglecardlayer.astro";
 import Togglecardlayer2 from "~/components/molecules/togglecardlayer2.astro";
-
+import i18next, { t } from "i18next";
 ---
 <script src="src/scripts/test.jsx"></script>
 
@@ -313,29 +313,29 @@ nav {
             <div class="container">
               <ul class="nav nav-pills font-grotesk color-textblue font-bold nav-fill" id="pills-tab" role="tablist">
                 <li class="nav-item">
-                  <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab">Defination</a>
+                  <a class="nav-link active " id="pills-home-tab" data-toggle="pill" href="#pills-1" role="tab">{t("index.toggle.Defination")}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab">Features</a>
+                  <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-2" role="tab">{t("index.toggle.Features")}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab">Theme</a>
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-3" role="tab">{t("index.toggle.Theme")}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab">Technology Breakthrough</a>
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-4" role="tab">{t("index.toggle.Technology Breakthrough")}</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab">Biggest Innovation</a>
+                  <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-5" role="tab">{t("index.toggle.Biggest Innovation")}</a>
                 </li>
               </ul>
             </div>
             <div class="tab-content" id="pills-tabContent">
               <div class="tab-pane show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
                 
-                <Togglecardlayer body1="The Web of Cognition" 
-                                body2="The Web of Communication" 
-                                body3="The Web of Cooperation" 
-                                body4="The Web of Integration"/>
+                <Togglecardlayer body1= {t("index.toggle.toggleCard1.body1")}
+                                body2= {t("index.toggle.toggleCard1.body2")}
+                                body3= {t("index.toggle.toggleCard1.body3")}
+                                body4= {t("index.toggle.toggleCard1.body4")}/>
                 
               </div>
               <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-profile-tab">
@@ -345,24 +345,24 @@ nav {
               </div>
               <div class="tab-pane fade" id="pills-3" role="tabpanel" aria-labelledby="pills-contact-tab">
                 
-                <Togglecardlayer body1="Digitalization" 
-                                body2="Democratization" 
-                                body3="Decentralization" 
-                                body4="Decarbonization"/>
+                <Togglecardlayer body1= {t("index.toggle.toggleCard2.body1")}
+                                body2= {t("index.toggle.toggleCard2.body2")}
+                                body3= {t("index.toggle.toggleCard2.body3")}
+                                body4= {t("index.toggle.toggleCard2.body4")}/>
 
               </div>
               <div class="tab-pane fade" id="pills-4" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <Togglecardlayer body1="Internet" 
-                                body2="Web platforms" 
-                                body3="Blockchain" 
-                                body4="HeadRoom"/>
+                <Togglecardlayer body1= {t("index.toggle.toggleCard3.body1")}
+                                body2= {t("index.toggle.toggleCard3.body2")}
+                                body3= {t("index.toggle.toggleCard3.body3")}
+                                body4= {t("index.toggle.toggleCard3.body4")}/>
 
               </div>
               <div class="tab-pane fade" id="pills-5" role="tabpanel" aria-labelledby="pills-contact-tab">
-                <Togglecardlayer body1="Search Engine" 
-                                body2="E-commerce" 
-                                body3="Cryptocurrency" 
-                                body4="Symbiotic Bots"/>
+                <Togglecardlayer body1= {t("index.toggle.toggleCard4.body1")}
+                                body2= {t("index.toggle.toggleCard4.body1")}
+                                body3= {t("index.toggle.toggleCard4.body1")}
+                                body4= {t("index.toggle.toggleCard4.body1")}/>
 
               </div>
             </div>

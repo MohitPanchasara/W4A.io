@@ -1,12 +1,13 @@
 ---
 import { Icon } from "astro-icon";
+import {t} from "i18next";
 ---
 <div class="m-0 lg:block left-0 hidden px-2">
   <input
     class="bg-inherit h-10 m-0 pr-1 rounded-xl border-1 border-textbluetheme text-textbluetheme text-sm focus:outline-none"
     type="search"
     name="search"
-    placeholder="Search"
+    placeholder={t("nav.search")}
   />
   <button aria-label="Search" type="submit" class="absolute text-textbluetheme right-0 top-0 mt-3 mr-6">
      <Icon name="ep:search" class="h-4 textbluetheme" />

@@ -6,15 +6,21 @@ import Search from "../Atoms/search.astro";
 import Logo from "../Atoms/logo.astro";
 import W4logo from "../Atoms/w4logo.astro";
 import NavElement from "~/components/Atoms/navelement.astro";
+import {t} from "i18next";
+import Community from "~/pages/community.astro";
+import { HeadHrefLangs } from "astro-i18next/components";
+
+import { localizePath } from "astro-i18next";
+
 
 const navItems: Array<NavItem> = [
-  { title: "Community", url: "/community" },
-  { title: "Enterprise", url: "/enterprise" },
-  { title: "Developer", url: "/developer" }, 
-  { title: "Research", url: "/research" }, 
+  { title: "Research", url: localizePath("/research") }, 
+  { title: "Community", url: localizePath("/community") },
+  { title: "Developer", url: localizePath("/developer") } 
+  
 ];
 ---
-
+<HeadHrefLangs />
 <header
   id="page-header"
   class="absolute bottom z-20 flex w-full items-center lg:justify-between border-transparent px-8 py-3 text-white fixed-header"
@@ -38,14 +44,15 @@ const navItems: Array<NavItem> = [
   </a>
   <div class="hidden translate-x-[20px] w-[700px] lg:block">
     <!-- <Navbutton text="Community" />
-    <Navbutton text="Enterprise" />
+   
     <Navbutton text="Developers" />
     <Navbutton text="Research" /> -->
-    <NavElement text="Community" url="/community" items={["Community Hub", "Online Communities", "Events", "Research Work", "Support", "Contact"]}
+    <NavElement text={t("nav.research.head")}  url={localizePath("/research")} items={[t("nav.research.1"),t("nav.research.2"),t("nav.research.3") ,t("nav.research.4") ]} />
+    <NavElement text={t("nav.community.head")} url=  {localizePath("/community")} items={[t("nav.community.1"), t("nav.community.2"), t("nav.community.3"), t("nav.community.4"), t("nav.community.5"), t("nav.community.6") ]}
    />
-    <NavElement text="Enterprise" url="/enterprise" items={["Maintain Web4.0", "Public Web4", "Private Web4"]} />
-    <NavElement text="Developer" url="/developer" items={["How to Develop?", "Documentation", "Tutorial", "Environment"]} />
-    <NavElement text="Research" url="/research" items={["Resources","Web 2.0", "Web 3.0", "Web 2.0"]} />
+    
+    <NavElement text={t("nav.developer.head")}  url={localizePath("/developer")} items={[t("nav.developer.1"),t("nav.developer.2") ,t("nav.developer.3") ,t("nav.developer.4") ]} />
+    
     
   </div>
 
@@ -71,6 +78,7 @@ const navItems: Array<NavItem> = [
       <div class="translate-x-[10px] gap-1 sm:translate-x-[2px]">
         <Search />
       </div>
+      
       <div class="w-10 flex textbluetheme translate-x-[30px] sm:translate-x-[10px] sm:gap-6 items-center gap-6">
         <ThemeSwitcher />
         <button

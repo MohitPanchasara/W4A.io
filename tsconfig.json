@@ -2,6 +2,7 @@
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
     // Alias all `src` to `~`
+    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "jsx": "react-jsx",
     "paths": {

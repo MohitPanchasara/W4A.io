@@ -1,5 +1,6 @@
 ---
 import CommunityWhybox from "~/components/molecules/communityWhybox.astro";
+import {t} from "i18next";
 ---
 
 
@@ -13,12 +14,12 @@ import CommunityWhybox from "~/components/molecules/communityWhybox.astro";
 
  <div class="  h-auto   w-[100vw]">   
 <div class="w-[100vw] text-center  pt-[80px]"> 
-    <span class="font-grotesk h-10 font-medium text-3xl  text-primary" >Why get involved?</span>
+    <span class="font-grotesk h-10 font-medium text-3xl  text-primary" >{t("community.communitySec2.title")}</span>
 </div>
 <div class=" flex flex-wrap  h-auto pt-10 w-[100vw] justify-around " >
-<CommunityWhybox heading="Find your people." body="There is a group for everyone. Find and connect with like minded individuals to discuss, ponder, and celebrate Web 4.0 together."/>
-<CommunityWhybox heading="Earn a living." body="Everyone has bills to pay. Web 4.0 can allow you to find meaningful work, and get paid to do it."/>
-<CommunityWhybox heading="Make a difference." body="Getting involved with Web 4.0 will allow you to be an active stakeholder in a technology that will have a positive impact on millions of people."/>
+<CommunityWhybox heading={t("community.communitySec2.head1")} body= {t("community.communitySec2.body1")}/>
+<CommunityWhybox heading={t("community.communitySec2.head2")} body= {t("community.communitySec2.body1")}/>
+<CommunityWhybox heading={t("community.communitySec2.head3")} body= {t("community.communitySec2.body1")}/>
 </div>
 
 </div>

@@ -8,23 +8,22 @@ import Whatisw4 from "~/components/organisms/research/whatisw4.astro";
 import Researchbox from "~/components/organisms/research/researchbox.astro";
 import Moreonw4 from "~/components/organisms/research/moreonw4.astro";
 import ResearchGrid from "~/components/organisms/research/researchGrid.astro";
+import i18next, { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
 
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
-const description = "Web 4.0 Community";
-
-
 const items = [
-    { text: 'Home', urls: '/'},
-    { text: 'Research', urls: '/research'},
+    { text: "Home", urls: "/" },
+    { text: "Research", urls: "/research" },
 ];
-
 ---
 
 <!DOCTYPE html>
 
 
-    <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+    <html lang={i18next.language} class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <script src="src/scripts/footerParalax.jsx"></script>
    <link rel="stylesheet" href="../fonts/satoshi-cufonfonts-webfont/app.css">
@@ -38,8 +37,8 @@ const items = [
     <meta name="generator" content={Astro.generator} />
      <meta name="generator" content={generator} />
 
-    <title>Web4 Developers</title>
-    <meta name="description" content={description} />
+    <title>{t("research.title")}</title>
+    <meta name="description" content={t("research.description")} />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link
       rel="preload"
       href="https://fonts.gstatic.com"
@@ -52,7 +51,7 @@ const items = [
     
     <meta property="og:title" content="Astro" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={t("research.description")} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" /> 
@@ -90,16 +89,16 @@ const items = [
     <div class=" block h-full w-full">
         
         <section>
-            <Dynamiclink items={items} current="LEARN MORE ABOUT WEB 4.0"/>
+            <Dynamiclink items={items} current= {t("research.dynamicLink_current")}/>
         </section>
         <section>
-            <LeftPara heading="Learn more about Web 4.0" 
-      body="Your guide to the world of Web 4.0. Learn how this technology works and how to connect to it. This page includes both technical and non-technical articles, guides and resources." 
+            <LeftPara heading={t("research.leftPara.head")}
+      body= {t("research.leftPara.body")}
       image="../svg/research/book.svg" alink="/" button="Let's Get started"/>
         </section>
 
         <section>
-            <Whatisw4 title="What is Web 4.0?" body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." />
+            <Whatisw4 title={t("research.Whatisw4.title")} body={t("research.Whatisw4.body")} />
         </section>
 
         <section>
@@ -107,18 +106,18 @@ const items = [
         </section>
 
         <section>
-            <Moreonw4 heading="More On Web 4.0 Basics" />
+            <Moreonw4 heading={t("research.moreOnW4")} />
         </section>
         <section>
             
-            <Whatisw4 title="How does Web 4.0 work?" body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." />
+            <Whatisw4 title={t("research.whatisW4_2.title")} body={t("research.whatisW4_2.body")} />
             <div id="researchGrid">
             <ResearchGrid />
             </div>
         </section>
         <section>
-          <LeftPara heading="Learn more about the Web 4.0 community" 
-      body="Web 4.0 is a symbiotic web, where humans and machines work in symbiosis. The idea being the symbiotic web is that once the metadata is organized humans and machines can interact in symbiosis (with each other)." 
+          <LeftPara heading= {t("research.leftPara2.head")}
+      body= {t("research.leftPara2.body")}
       image="../svg/index/2arm.svg" alink="/" button="Explore The Community"/>
         </section>
 

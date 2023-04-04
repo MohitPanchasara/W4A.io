@@ -1,0 +1,95 @@
+---
+import "@fontsource/inter/variable.css";
+import Header from "~/components/template/header.astro";
+import Footer from "~/components/template/footer.astro";
+import "src/styles/theme.css";
+import i18next, { t, changeLanguage } from "i18next";
+import CommunityBody from "~/components/organisms/community/communityBody.astro";
+
+changeLanguage("fr");
+
+interface Frontmatter {
+    title: string;
+    slug: string;
+    thumbnail: string;
+    date: string;
+}
+const { generator, site } = Astro;
+const image = new URL("/public/Hero Section.png", site);
+---
+
+<!DOCTYPE html>
+
+    <!-- social media -->
+
+    <html lang={i18next.language}  class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+     <meta name="generator" content={generator} />
+
+    <title>{t("community.title")}</title>
+    <meta name="description" content={t("community.description")} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    
+
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={t("community.description")} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" /> 
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+
+<script src="../../scripts/scroll.jsx"></script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary selection:text-white"
+  >
+
+  <Header />
+    <div class="py-10">
+      <CommunityBody/>
+   </div>
+  <Footer />
+
+ 
+
+  </body>
+</html>
+
+
+
+

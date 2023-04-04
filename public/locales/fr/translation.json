@@ -1,0 +1,282 @@
+{
+  "nav": {
+    "community": {
+      "1": "Community-Hub",
+      "2": "Online-Communities",
+      "3": "Veranstaltungen",
+      "4": "Forschungsarbeit",
+      "5": "Unterstützung",
+      "6": "Kontakt",
+      "head": "Gemeinschaft"
+    },
+    "developer": {
+      "1": "Wie entwickeln?",
+      "2": "Dokumentation",
+      "3": "Lernprogramm",
+      "4": "Umfeld",
+      "head": "Entwickler"
+    },
+    "research": {
+      "1": "Ressourcen",
+      "2": "Web 2.0",
+      "3": "Web 3.0",
+      "4": "Web 2.0",
+      "head": "Forschung"
+    },
+    "search": "Suchen"
+  },
+  "footer": {
+    "research": {
+      "head": "Forschung",
+      "body": "Erfahren Sie mehr über Web 4.0"
+    },
+    "developer": {
+      "head": "Entwickler",
+      "body1": "Ressourcen",
+      "body2": "Dokumentation",
+      "body3": "Tutorials"
+    },
+    "communityHub": {
+      "head": "Community-Hub",
+      "body1": "Online-Communities",
+      "body2": "Veranstaltungen",
+      "body3": "Wie kann ich mich engagieren?",
+      "body4": "Forschung",
+      "body5": "Zuschüsse",
+      "body6": "Unterstützung",
+      "body7": "Sprachressourcen"
+    },
+    "aboutWeb4": {
+      "head": "Über Web 4.0",
+      "body1": "Über uns",
+      "body2": "Arbeitsplätze",
+      "body3": "Beitrag",
+      "body4": "Sprachunterstützung",
+      "body5": "Datenschutz-Bestimmungen",
+      "body6": "Nutzungsbedingungen",
+      "body7": "Cookie-Richtlinie"
+    }
+  },
+  "textChange": {
+    "1": "Mensch und Maschine",
+    "2": "Web 4.0 für Werbung",
+    "3": "Web 4.0 für alles",
+    "4": "Web für alle"
+  },
+  "index": {
+    "title": "Startseite - W4A.io",
+    "description": "W4A.io - Eine offene KI-Community zur Unterstützung und Entwicklung von Web 4.0-Technologien!",
+    "leftPara1": {
+      "heading": "W4A ist Plattform für Web 4.0 ",
+      "body": "W4A oder allgemein als Web 4.0 bezeichnet, ist die Read-Write-Execution-Concurrency-Webplattform, die auf dem besten Weg ist, eine kritische Masse der Teilnahme an Online-Netzwerken zu erreichen, die globale Transparenz, Governance, Verteilung, Teilnahme und Zusammenarbeit in Schlüsselgemeinschaften wie der Industrie bieten "
+    },
+    "rightPara1": {
+      "heading": "Die Arbeit des Menschen neu definieren?",
+      "body": "Obwohl alltägliche Arbeit im Allgemeinen nicht gemocht wird, begegnen wir ihr häufig in unserem täglichen Leben, beispielsweise bei der Dateneingabe und in Callcenter-Positionen. "
+    },
+    "leftPara2": {
+      "heading": "Das Internet der Intelligenz",
+      "body": "Web 4.0 (W4A) ist als intelligentere, intuitivere und angepasstere Version des Internets gedacht. "
+    },
+    "rightPara2": {
+      "heading": "Roboter werden geboren, jetzt!",
+      "body": "Im Laufe der Geschichte haben Roboter eine bedeutende Entwicklung durchlaufen. "
+    },
+    "knowMore": "Mehr wissen",
+    "leftPara3": {
+      "heading": "Eine neue Grenze für Humanoide",
+      "body": "Die Darstellung von Robotern in Filmen wie Terminator hat oft Maschinen gezeigt, die körperlich und funktionell Menschen ähnlich sind, aber ohne Empathie. "
+    },
+    "heroSection": {
+      "heroText": "Mensch und Maschine",
+      "para": {
+        "p1": "Menschliche Entscheidungsfindung trifft auf maschinelle Intelligenz",
+        "p2": "Entwicklung des Vorläufers des intelligenten Homind alias Silico Spains"
+      },
+      "homeButton": "Gemeinschaft beitreten"
+    },
+    "Whatisweb4": {
+      "h2": "Was ist Web 4.0?",
+      "span": "Web 4.0 ist ein symbiotisches Web, in dem Mensch und Maschine in Symbiose arbeiten. "
+    },
+    "boxes": {
+      "head1": "Marketing",
+      "p1": "Unser Flaggschiffprodukt ist ein KI-Snippet-basierter Anzeigenaustausch für KI-Suchmaschinen, bei dem organische Ergebnisse in ein nachfrageseitiges Werbenetzwerk eingebettet werden, um Hyperlinks zu erstellen und relevante Anzeigen für das Publikum zu zeigen, und somit die Möglichkeit, KI-basierte Suchmaschinen kostenlos zu nutzen.",
+      "head2": "Stack für die Gebäudeautomatisierung",
+      "p2": "Unsere auf Clean Tech fokussierte Produktsuite automatisiert und optimiert Gebäudesysteme wie Heizung, Lüftung",
+      "head3": "Stack für geistige und körperliche Gesundheit",
+      "p3": "Unsere KI-betriebenen Wearables",
+      "head4": "Verwenden Sie eine Dapp oder beginnen Sie mit dem Aufbau Ihres eigenen Stacks",
+      "p4": "Unsere offenen Community-Ressourcen"
+    },
+    "toggle": {
+      "Defination": "Definition",
+      "Features": "Merkmale",
+      "Theme": "Thema",
+      "Technology Breakthrough": "Technologie-Durchbruch",
+      "Biggest Innovation": "Größte Innovation",
+      "toggleCard1": {
+        "body1": "Das Netz der Erkenntnis",
+        "body2": "Das Web der Kommunikation",
+        "body3": "Das Netz der Zusammenarbeit",
+        "body4": "Das Netz der Integration"
+      },
+      "toggleCard2": {
+        "body1": "Digitalisierung",
+        "body2": "Demokratisierung",
+        "body3": "Dezentralisierung",
+        "body4": "Dekarbonisierung"
+      },
+      "toggleCard3": {
+        "body1": "Internet",
+        "body2": "Webplattformen",
+        "body3": "Blockchain",
+        "body4": "Kopfraum"
+      },
+      "toggleCard4": {
+        "body1": "Suchmaschine",
+        "body2": "E-Commerce",
+        "body3": "Kryptowährung",
+        "body4": "Symbiotische Bots"
+      },
+      "toggleCardLayer2": {
+        "web1": {
+          "h3": "Web 1.0",
+          "li1": "Schreibgeschützt",
+          "li2": "Online-Informationen",
+          "li3": "Kein Smart-Gadget"
+        },
+        "web2": {
+          "h3": "Web 2.0",
+          "li1": "Lesen Sie Schreiben Web",
+          "li2": "Globale Crowd managen",
+          "li3": "Soziale Interaktionen"
+        },
+        "web3": {
+          "h3": "Web 3.0",
+          "li1": "Maschinenlesbar",
+          "li2": "Semantische Web-Wünsche",
+          "li3": "Soziales Computing"
+        },
+        "web4": {
+          "h3": "Web 4.0",
+          "li1": "Lesen-Schreiben-Ausführungsparallelität",
+          "li2": "Intelligente Interaktionen"
+        }
+      }
+    },
+    "AIexchange": {
+      "head": "Die weltweit erste KI-Anzeigenbörse",
+      "body": "Sehen Sie das Unglaubliche!",
+      "button": "Dokumentation"
+    },
+    "paraLeft2": {
+      "head1": "Trete der Community bei",
+      "body1": "Treten Sie der Web 4.0-Community bei, die Hunderttausende von Entwicklern, Technologen, Designern, Benutzern und Enthusiasten beherbergt, und helfen Sie mit, eine Community aufzubauen, die Neulingen den Einstieg erleichtert.",
+      "button1": "Gemeinschaft beitreten",
+      "head2": "Tragen Sie zu Web 4.0 bei",
+      "body2": "Diese Plattform ist Open Source mit Hunderten von Community-Mitwirkenden. ",
+      "button2": "Jetzt beitragen"
+    }
+  },
+  "community": {
+    "title": "Web4-Community",
+    "description": "W4A.io - Eine offene KI-Community zur Unterstützung und Entwicklung von Web 4.0-Technologien!",
+    "communitySec1": {
+      "head": "Willkommen beim Web 4.0-Community-Hub",
+      "body": "Die Web 4.0-Community ist die Heimat von Hunderttausenden von Entwicklern, Technologen, Designern, Benutzern und Enthusiasten."
+    },
+    "communitySec2": {
+      "title": "Warum mitmachen?",
+      "head1": "Finden Sie Ihre Leute.",
+      "body1": "Es gibt für jeden eine Gruppe. ",
+      "head2": "Lebensunterhalt verdienen.",
+      "body2": "Jeder hat Rechnungen zu bezahlen. ",
+      "head3": "Einen Unterschied machen.",
+      "body3": "Wenn Sie sich mit Web 4.0 beschäftigen, können Sie ein aktiver Stakeholder in einer Technologie sein, die sich positiv auf Millionen von Menschen auswirken wird."
+    },
+    "communitySec3": {
+      "title": "Wie kann ich mich engagieren?",
+      "body": "Es gibt viele Möglichkeiten, sich in der schnell wachsenden Web 4.0-Community zu engagieren; ",
+      "head1": "Tritt einer Online-Community bei",
+      "content1": "Finden Sie Ihren Stamm und beteiligen Sie sich an der Gemeinschaft mit anderen Ethereum-Enthusiasten.",
+      "head2": "Web 4.0-Veranstaltungen",
+      "content2": "Finden Sie eine Ethereum-Konferenz, einen Hackathon oder ein Meetup und nehmen Sie daran teil.",
+      "head3": "Tragen Sie zu einem Projekt bei",
+      "content3": "Sehen Sie sich an, wie Sie sich beteiligen können, um eine Liste mit Möglichkeiten zu erhalten, wie Sie sich basierend auf Ihren Fähigkeiten und Ihrem beruflichen Hintergrund einbringen können.",
+      "head4": "Stipendien suchen",
+      "content4": "Fördermittel stehen zur Verfügung, um Ihnen zu helfen, ein Projekt auf den Weg zu bringen."
+    },
+    "communitySec4": {
+      "head": "Schöpfer? ",
+      "body": "Bauen Sie auf Ethereum oder wollen Sie das? ",
+      "button1": "Mehr wissen",
+      "button2": "Erkunde mehr"
+    },
+    "communitySec5": {
+      "head": "Tragen Sie zu Web 4.0 bei",
+      "body": "Für viele Menschen ist Web 4.0 der erste Schritt in das Ökosystem. ",
+      "button1": "Mehr zum Beitragen",
+      "button2": "Auf Github ansehen"
+    }
+  },
+  "developer": {
+    "title": "Web4-Entwickler",
+    "description": "Web 4.0-Entwicklerseite",
+    "developerResource": {
+      "head": "Entwicklerressource",
+      "body": "Eine Bauanleitung für Web 4.0. ",
+      "button": "Loslegen"
+    }
+  },
+  "research": {
+    "title": "Web4-Forschung",
+    "description": "Recherchieren Sie mehr über Web4",
+    "dynamicLink_current": "ERFAHREN SIE MEHR ÜBER WEB 4.0",
+    "leftPara": {
+      "head": "Erfahren Sie mehr über Web 4.0",
+      "body": "Ihr Wegweiser in die Welt des Web 4.0. "
+    },
+    "Whatisw4": {
+      "title": "Was ist Web 4.0?",
+      "body": "Web 4.0 ist ein symbiotisches Web, in dem Mensch und Maschine in Symbiose arbeiten. "
+    },
+    "researchbox": {
+      "head1": "Was ist Web4?",
+      "body1": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button1": "Mehr wissen",
+      "head2": "Wie kannst du helfen?",
+      "body2": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button2": "Mehr wissen"
+    },
+    "moreOnW4": "Mehr zu Web 4.0-Grundlagen",
+    "whatisW4_2": {
+      "title": "Wie funktioniert Web 4.0?",
+      "body": "Web 4.0 ist ein symbiotisches Web, in dem Mensch und Maschine in Symbiose arbeiten. "
+    },
+    "researchGrid": {
+      "head1": "Was ist Web4?",
+      "body1": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button1": "Entdecken Sie DAPPS",
+      "head2": "Wie kannst du helfen?",
+      "body2": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button2": "Entdecken Sie NFTs",
+      "head3": "Was ist Web4?",
+      "body3": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button3": "Entdecken Sie IoT",
+      "head4": "Wie kannst du helfen?",
+      "body4": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button4": "Entdecken Sie AR/VR",
+      "head5": "Was ist Web4?",
+      "body5": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button5": "Entdecken Sie KI/ML",
+      "head6": " Wie kannst du helfen?",
+      "body6": "Wenn Sie neu sind, beginnen Sie hier, um die Grundlagen von Web 4.0 zu lernen und warum es wichtig ist. ",
+      "button6": "Entdecken Sie 5G"
+    },
+    "leftPara2": {
+      "head": "Erfahren Sie mehr über die Web 4.0-Community",
+      "body": "Web 4.0 ist ein symbiotisches Web, in dem Mensch und Maschine in Symbiose arbeiten. "
+    }
+  }
+}

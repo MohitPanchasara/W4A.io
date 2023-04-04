@@ -3,28 +3,26 @@ import "@fontsource/inter/variable.css";
 import Header from "~/components/template/header.astro";
 import Footer from "~/components/template/footer.astro";
 import "src/styles/theme.css";
-
-
+import i18next, { t, changeLanguage } from "i18next";
 import CommunityBody from "~/components/organisms/community/communityBody.astro";
 
+changeLanguage("en");
+
 interface Frontmatter {
-  title: string;
-  slug: string;
-  thumbnail: string;
-  date: string;
+    title: string;
+    slug: string;
+    thumbnail: string;
+    date: string;
 }
-
-
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
-const description = "Web 4.0 Community";
 ---
 
 <!DOCTYPE html>
 
     <!-- social media -->
 
-    <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+    <html lang={i18next.language}  class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
@@ -32,8 +30,8 @@ const description = "Web 4.0 Community";
     <meta name="generator" content={Astro.generator} />
      <meta name="generator" content={generator} />
 
-    <title>Web4 Community</title>
-    <meta name="description" content={description} />
+    <title>{t("community.title")}</title>
+    <meta name="description" content={t("community.description")} />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link
       rel="preconnect"
       href="https://fonts.gstatic.com"
@@ -47,7 +45,7 @@ const description = "Web 4.0 Community";
 
     <meta property="og:title" content="Astro" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={t("community.description")} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" /> 

@@ -3,6 +3,7 @@ import HomeButton from "../../Atoms/homeButton.astro";
 import W4logo from "../../Atoms/w4logo.astro";
 import { Image, Picture } from '@astrojs/image/components';
 import HeroText from "~/components/Atoms/herotext.astro";
+import i18next, { t } from "i18next";
 
 // import ParallaxFG from "public/images/parallaxFG.astro";
 
@@ -288,8 +289,8 @@ background-image: linear-gradient(to right top, #e16cc8, #d571d3, #c676de, #b57c
             <div class="w-[100vw] text-center z-10 p-[1vw] md:p-[2vw] sm:p-[5vw] 
             font-medium  text-textblue font-satoshi h-20 
             sm:h-[15vh] text-[32px] sm:m-[10px] sm:text-[100px] sm:z-10 sm:p-[10px] sm:translate-x-[-10px]">
-              <p>Human decisioning meets Machine Intelligence</p>
-              <p>Developing precursor to intelligent Homind aka silico spains</p>
+              <p>{t("index.heroSection.para.p1")}</p>
+              <p>{t("index.heroSection.para.p2")}</p>
             </div>
             
             <!-- join community -->

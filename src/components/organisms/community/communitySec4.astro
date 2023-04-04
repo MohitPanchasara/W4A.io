@@ -1,3 +1,6 @@
+---
+import {t} from "i18next";
+---
 
 <style>
     .sec{
@@ -59,12 +62,11 @@ color: #FFFFFF;
     </div>
 
     <div class="sm:p-0">
-       <div><p class="text-2xl sm:text-lg font-grotesk font-bold  text-purple-700  ">Creator? Builder? Get paid for your work.</p></div>
-        <div class="pt-5 sm:pt-3"><p class="font-satoshi w-[35vw] sm:w-[60vw] font-medium text-sm text-gray-900 flex-none order-1 flex-grow-0">Are you building on Ethereum, or do you want to? Companies are hiring for thousands of technical 
-            and non-technical roles. Got an idea of your own? Try finding a grant to get your project off the ground.</p></div>
+       <div><p class="text-2xl sm:text-lg font-grotesk font-bold  text-purple-700  "> {t("community.communitySec4.head")}</p></div>
+        <div class="pt-5 sm:pt-3"><p class="font-satoshi w-[35vw] sm:w-[60vw] font-medium text-sm text-gray-900 flex-none order-1 flex-grow-0">{t("community.communitySec4.body")}</p></div>
             <div class="pt-5 sm:pt-2 flex gap-5">
-                <button class="items-center w-32 text-sm sm:w-20 h-10 font-satoshi bg-purple-700 rounded text-white "><a href="">Know More </a></button>
-                <button class="explore items-center w-32 sm:w-20 h-10 font-satoshi border-solid rounded text-sm "><a href="">Explore More </a></button>
+                <button class="items-center w-32 text-sm sm:w-20 h-10 font-satoshi bg-purple-700 rounded text-white "><a href="">{t("community.communitySec4.button1")} </a></button>
+                <button class="explore items-center w-32 sm:w-20 h-10 font-satoshi border-solid rounded text-sm "><a href="">{t("community.communitySec4.button2")} </a></button>
 
             </div>
           

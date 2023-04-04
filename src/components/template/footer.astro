@@ -1,8 +1,9 @@
 ---
 import FooterList from "~/components/molecules/footerList.astro";
 import Footerwaves from "../Atoms/footerwaves.astro";
+import {t} from "i18next";
 
-const image=["../svg/facebook.svg","../svg/LinkedIn.svg","../svg/twitter.svg","../svg/reddit.svg","../svg/Discord.svg"]
+var image=["../svg/facebook.svg","../svg/LinkedIn.svg" ,"../svg/twitter.svg" ,"../svg/reddit.svg" , "../svg/Discord.svg"]
 ---
 
 
@@ -10,25 +11,25 @@ const image=["../svg/facebook.svg","../svg/LinkedIn.svg","../svg/twitter.svg",".
     <div class="flex flex-wrap-reverse py-2 gap-10 pt-24 px-1 justify-center sm:justify-start sm:px-[20vw] pt-40">
         <div class="innerContent flex gap-6 sm:flex-col sm:items-center  ">
             <div class="sm:w-[70vw]">
-                <FooterList heading="Research" body={["Learn about Web 4.0"]}/>
+                <FooterList heading={t("footer.research.head")} body={[t("footer.research.body")]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading="Developers" body={["Resources","Documentation","Tutorials"]}/>
+                <FooterList heading={t("footer.developer.head")} body={[t("footer.developer.body1"),t("footer.developer.body2"), t("footer.developer.body3")]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading="Community Hub" body={["Online Communities","Events","How can I get involved?","Research","Grants","Support","Language Resources"]}/>
+                <FooterList heading={t("footer.communityHub.head")} body={[t("footer.communityHub.body1"),t("footer.communityHub.body2"),t("footer.communityHub.body3"),t("footer.communityHub.body4"),t("footer.communityHub.body6"),t("footer.communityHub.body6"),t("footer.communityHub.body7")]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading="About Web 4.O" body={["About Us","Jobs","Contribution","Language Support","Privacy Policy","Terms of Use","Cookie policy"]}/>
+                <FooterList heading={t("footer.aboutWeb4.head")} body={[t("footer.aboutWeb4.body1"),t("footer.aboutWeb4.body2"),t("footer.aboutWeb4.body3"),t("footer.aboutWeb4.body4"),t("footer.aboutWeb4.body5"),t("footer.aboutWeb4.body6"),t("footer.aboutWeb4.body7")]}/>
             </div>
         </div>
     
     <!-- Footer logo -->
         <div class="flex lg:flex-col lg:gap-1  gap-4 pb-2 h-auto items-baseline lg:">
-            {image.map((data) =>
+            {image.map((value) =>
                 <div class="list-none pb-5">  
-                    <a href="/community" aria-label="iconsLink">
-                        <object data={data} aria-label="icons">
+                    <a href="/" aria-label="iconsLink">
+                        <object data={value} aria-label="icons">
                         </object>
                     </a> 
                 </div>

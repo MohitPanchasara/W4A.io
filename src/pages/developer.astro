@@ -6,16 +6,18 @@ import DeveloperResource from "../components/molecules/developerResource.astro";
 import HowYouLike from "../components/molecules/howYouLike.astro";
 import AboutResource from "../components/molecules/aboutResource.astro";
 import "src/styles/theme.css";
+import i18next, { t, changeLanguage } from "i18next";
+
+changeLanguage("en");
 
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
-const description = "Web 4.0 Community";
 ---
 
 <!DOCTYPE html>
 
 
-    <html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+    <html lang={i18next.language} class="h-full motion-safe:scroll-smooth" data-theme="dark">
   <head>
     <script src="src/scripts/footerParalax.jsx"></script>
    <link rel="stylesheet" href="../fonts/satoshi-cufonfonts-webfont/app.css">
@@ -29,8 +31,8 @@ const description = "Web 4.0 Community";
     <meta name="generator" content={Astro.generator} />
      <meta name="generator" content={generator} />
 
-    <title>Web4 Developers</title>
-    <meta name="description" content={description} />
+    <title>{t("developer.title")}</title>
+    <meta name="description" content={t("developer.description")} />
     <link rel="preconnect" href="https://fonts.googleapis.com" /><link
       rel="preload"
       href="https://fonts.gstatic.com"
@@ -43,7 +45,7 @@ const description = "Web 4.0 Community";
     
     <meta property="og:title" content="Astro" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={t("developer.description")} />
     <meta property="og:image" content={image} />
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" /> 
