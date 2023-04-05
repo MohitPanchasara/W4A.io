@@ -2,7 +2,7 @@
 import { Icon } from 'astro-icon';
 export interface Props {
 
-    items: Array<string>;
+    items: Array<any>;
       text: string;
       url: string;
 
@@ -21,7 +21,10 @@ const { text, items, url} = Astro.props as Props;
     <ul>
         {items.map((item) => (
         <li>
-            {item}
+          <a href= {item.link}>
+            {item.content}
+            </a>
+            
         </li>
         ))}
     </ul>

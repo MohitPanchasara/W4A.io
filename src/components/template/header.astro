@@ -47,11 +47,11 @@ const navItems: Array<NavItem> = [
    
     <Navbutton text="Developers" />
     <Navbutton text="Research" /> -->
-    <NavElement text={t("nav.research.head")}  url={localizePath("/research")} items={[t("nav.research.1"),t("nav.research.2"),t("nav.research.3") ,t("nav.research.4") ]} />
-    <NavElement text={t("nav.community.head")} url=  {localizePath("/community")} items={[t("nav.community.1"), t("nav.community.2"), t("nav.community.3"), t("nav.community.4"), t("nav.community.5"), t("nav.community.6") ]}
+    <NavElement text={t("nav.research.head")}  url={localizePath("/research")} items={[{content: t("nav.research.1"), link:"/"},{content:t("nav.research.2"), link:"/"},{content:t("nav.research.3"), link:"/"} ,{content:t("nav.research.4"), link:"/"} ]} />
+    <NavElement text={t("nav.community.head")} url=  {localizePath("/community")} items={[{content:t("nav.community.1"), link:"/"}, {content:t("nav.community.2"), link:"/"}, {content:t("nav.community.3"), link:"/"}, {content:t("nav.community.4"), link:"/"}, {content:t("nav.community.5"), link:"/"}, {content:t("nav.community.6"), link:"/"} ]}
    />
     
-    <NavElement text={t("nav.developer.head")}  url={localizePath("/developer")} items={[t("nav.developer.1"),t("nav.developer.2") ,t("nav.developer.3") ,t("nav.developer.4") ]} />
+    <NavElement text={t("nav.developer.head")}  url={localizePath("/developer")} items={[{content:t("nav.developer.1"), link:"/"},{content:t("nav.developer.2"), link:"/"} ,{content:t("nav.developer.3"), link:"/"} ,{content:t("nav.developer.4"), link:"/"} ]} />
     
     
   </div>

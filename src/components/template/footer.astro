@@ -2,42 +2,56 @@
 import FooterList from "~/components/molecules/footerList.astro";
 import Footerwaves from "../Atoms/footerwaves.astro";
 import {t} from "i18next";
+import { localizePath } from "astro-i18next";
+var image=[
+    { photo: "../svg/facebook.svg",
+      link: "https://www.facebook.com/w4a.io/"
+},
+{ photo: "../svg/LinkedIn.svg",link: " https://www.linkedin.com/company/w4a-io/ "} ,
+{ photo: "../svg/twitter.svg",
+link: "https://twitter.com/w4a_io"} ,
+{ photo: "../svg/reddit.svg",
+link: "https://www.reddit.com/r/w4a/"} , 
+{ photo: "../svg/slack.svg",
+link: "https://w4a-io.slack.com/"},
 
-var image=["../svg/facebook.svg","../svg/LinkedIn.svg" ,"../svg/twitter.svg" ,"../svg/reddit.svg" , "../svg/Discord.svg"]
+{ photo: "../svg/Discord.svg",
+link: "https://discord.com/invite/hT6gxh2hJX"}]
 ---
 
 
 <footer class="w-[100vw] bg-black text-white">
-    <div class="flex flex-wrap-reverse py-2 gap-10 pt-24 px-1 justify-center sm:justify-start sm:px-[20vw] pt-40">
-        <div class="innerContent flex  justify-center gap-6 sm:flex-col sm:items-center  ">
+    <!-- <div class="flex flex-wrap-reverse py-2 gap-10 pt-24 px-1 justify-center sm:justify-start sm:px-[20vw] pt-40"> -->
+        <div class="innerContent flex py-10 justify-around gap-6 sm:flex-col sm:items-center  ">
             <div class="sm:w-[70vw]">
-                <FooterList heading={t("footer.research.head")} body={[t("footer.research.body")]}/>
+                <FooterList heading={t("footer.research.head")} body={[{ content: t("footer.research.body"),link:"/" } ]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading={t("footer.developer.head")} body={[t("footer.developer.body1"),t("footer.developer.body2"), t("footer.developer.body3")]}/>
+                <FooterList heading={t("footer.developer.head")} body={[{ content:t("footer.developer.body1"),link:"/" },{ content:t("footer.developer.body2"),link:"/" }, { content:t("footer.developer.body3"),link:"/" }]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading={t("footer.communityHub.head")} body={[t("footer.communityHub.body1"),t("footer.communityHub.body2"),t("footer.communityHub.body3"),t("footer.communityHub.body4"),t("footer.communityHub.body6"),t("footer.communityHub.body6"),t("footer.communityHub.body7")]}/>
+                <FooterList heading={t("footer.communityHub.head")} body={[{ content:t("footer.communityHub.body1"),link:"/" },{ content:t("footer.communityHub.body2"),link:"/" },{ content:t("footer.communityHub.body3"),link:"/" },{ content:t("footer.communityHub.body4"),link:"/" },{ content:t("footer.communityHub.body6"),link:"/" },{ content:t("footer.communityHub.body6"),link:"/" },{ content:t("footer.communityHub.body7"),link:localizePath("/language") }]}/>
             </div>
             <div class="sm:w-[70vw]">
-                <FooterList heading={t("footer.aboutWeb4.head")} body={[t("footer.aboutWeb4.body1"),t("footer.aboutWeb4.body2"),t("footer.aboutWeb4.body3"),t("footer.aboutWeb4.body4"),t("footer.aboutWeb4.body5"),t("footer.aboutWeb4.body6"),t("footer.aboutWeb4.body7")]}/>
+                <FooterList heading={t("footer.aboutWeb4.head")} body={[{ content:t("footer.aboutWeb4.body1"),link:"/" },{ content:t("footer.aboutWeb4.body2"),link:"/" },{ content:t("footer.aboutWeb4.body3"),link:"/" },{ content:t("footer.aboutWeb4.body4"),link:"/" },{ content:t("footer.aboutWeb4.body5"),link:"/" },{ content:t("footer.aboutWeb4.body6"),link:"/" },{ content:t("footer.aboutWeb4.body7"),link:"/" }]}/>
+            </div>
+            <div class="flex lg:flex-col lg:gap-1  gap-4 pb-2 h-auto items-baseline lg:">
+                {image.map((value) =>
+                    <div class="list-none pb-5">  
+                        <a href={value.link} aria-label="iconsLink">
+                            <object data={value.photo} style="pointer-events: none;" aria-label="icons">
+                            </object>
+                        </a> 
+                    </div>
+                )}     
             </div>
         </div>
     
     <!-- Footer logo -->
-        <div class="flex lg:flex-col lg:gap-1  gap-4 pb-2 h-auto items-baseline lg:">
-            {image.map((value) =>
-                <div class="list-none pb-5">  
-                    <a href="/" aria-label="iconsLink">
-                        <object data={value} aria-label="icons">
-                        </object>
-                    </a> 
-                </div>
-            )}     
-        </div>
+       
     <!-- Footer Logo Ends -->
         
-    </div>
+    <!-- </div> -->
     
     
     

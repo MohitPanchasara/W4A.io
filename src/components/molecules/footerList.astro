@@ -13,6 +13,7 @@ const { heading, body } = Astro.props;
 
 <div class="text-md">
     <ul>
-        {body.map((data) => <li class="pb-2 text-white">{data}</li>)}
+        {body.map((data) => <li class="pb-2 text-white">
+         <a href={data.link}> {data.content}</a></li>)}
       </ul>
 </div>
