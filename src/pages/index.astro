@@ -22,16 +22,7 @@ changeLanguage("en");
 
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
-const currentPath = Astro.url.pathname;
-var splitUrl = currentPath.split("/");
-const ans = "";
-if (splitUrl[1] == "") {
-    const ans = "";
-}
-else {
-    const ans = splitUrl[1];
-}
-console.log(ans);
+
 ---
 
 <!DOCTYPE html>

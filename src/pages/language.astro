@@ -1,0 +1,310 @@
+---
+import Footer from "~/components/template/footer.astro";
+import Header from "~/components/template/header.astro";
+
+import "src/styles/theme.css";
+
+
+
+
+const { generator, site } = Astro;
+const image = new URL("/public/Hero Section.png", site);
+const description ="Languages";
+---
+
+
+
+<html lang="en">
+
+<head>
+    <script src="src/scripts/footerParalax.jsx"></script>
+   <link rel="stylesheet" href="../fonts/satoshi-cufonfonts-webfont/app.css">
+   <link rel="stylesheet" href="../styles/theme.css">
+    <link rel="preload" as="font">
+   
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/svg/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+     <meta name="generator" content={generator} />
+
+    <title>Languages</title>
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" /><link
+      rel="preload"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <title>{title}</title> -->
+<!-- sdfd -->
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" /> 
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+      console.log(themeSaved)
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+
+        console.log(document.documentElement.dataset.theme)
+    </script>
+  </head>
+   <body class="h-full overflow-x-hidden bg-default text-base selection:bg-secondary selection:text-white">
+    <div>
+        <Header />
+    </div>
+    
+
+    <div class="pt-20 pl-5 ">
+        <p class="font-grotesk  md:text-4xl text-3xl lg:w-[600px] font-bold text-primary md:w-auto">Language Support</p>
+        
+    </div>
+   <div class="pl-5">
+                                 <style data-emotion="css 1vbppzy">.css-1vbppzy{margin-top:2rem;margin-bottom:2rem;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-flex-wrap:wrap;-webkit-flex-wrap:wrap;-ms-flex-wrap:wrap;flex-wrap:wrap;width:100%;}</style>
+                                 <div class="css-1vbppzy e1n7hmq33">
+                                    <style data-emotion="css m5lbdl">.css-m5lbdl{-webkit-text-decoration:none;text-decoration:none;margin:1rem 1rem 1rem 0;padding:1rem;-webkit-flex:0 1 240px;-ms-flex:0 1 240px;flex:0 1 240px;list-style:none;border-radius:2px;width:100%;border:1px solid #ececec;-webkit-transition:all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);transition:all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);color:#333333;}.css-m5lbdl:hover{-webkit-text-decoration:none;text-decoration:none;box-shadow:4px 4px 0px 0px #d2d2f9;border:1px solid #333;}@media (max-width: 414px){.css-m5lbdl{-webkit-flex:1 1 240px;-ms-flex:1 1 240px;flex:1 1 240px;margin:1rem 0;}}</style>
+                                    <style data-emotion="css 13ql62b">.css-13ql62b{transition-property:var(--eth-transition-property-common);transition-duration:var(--eth-transition-duration-fast);transition-timing-function:var(--eth-transition-easing-ease-out);cursor:pointer;-webkit-text-decoration:underline;text-decoration:underline;outline:2px solid transparent;outline-offset:2px;color:var(--eth-colors-primary);white-space:normal;-webkit-text-decoration:none;text-decoration:none;margin:1rem 1rem 1rem 0;padding:1rem;-webkit-flex:0 1 240px;-ms-flex:0 1 240px;flex:0 1 240px;list-style:none;border-radius:2px;width:100%;border:1px solid #ececec;-webkit-transition:all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);transition:all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);color:#333333;}.css-13ql62b:hover,.css-13ql62b[data-hover]{-webkit-text-decoration:underline;text-decoration:underline;}.css-13ql62b:focus-visible,.css-13ql62b[data-focus-visible]{box-shadow:var(--eth-shadows-none);outline:auto;}.css-13ql62b:focus,.css-13ql62b[data-focus]{box-shadow:var(--eth-shadows-none);}.css-13ql62b:hover{-webkit-text-decoration:none;text-decoration:none;box-shadow:4px 4px 0px 0px #d2d2f9;border:1px solid #333;}@media (max-width: 414px){.css-13ql62b{-webkit-flex:1 1 240px;-ms-flex:1 1 240px;flex:1 1 240px;margin:1rem 0;}}</style>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ar" href="/ar/">
+                                       <style data-emotion="css 1fppimf">.css-1fppimf{font-size:0.875rem;line-height:1.6;font-weight:400;letter-spacing:0.04em;margin:1.14em 0;text-transform:uppercase;}</style>
+                                       <div class="css-1fppimf e1n7hmq32">Arabic</div>
+                                       <h4>العربية</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="az" href="/az/">
+                                       <div class="css-1fppimf e1n7hmq32">Azerbaijani</div>
+                                       <h4>Azərbaycan</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="bn" href="/bn/">
+                                       <div class="css-1fppimf e1n7hmq32">Bengali</div>
+                                       <h4>বাংলা</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="bg" href="/bg/">
+                                       <div class="css-1fppimf e1n7hmq32">Bulgarian</div>
+                                       <h4>български</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ca" href="/ca/">
+                                       <div class="css-1fppimf e1n7hmq32">Catalan</div>
+                                       <h4>Català</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="zh" href="/zh/">
+                                       <div class="css-1fppimf e1n7hmq32">Chinese Simplified</div>
+                                       <h4>简体中文</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="zh-tw" href="/zh-tw/">
+                                       <div class="css-1fppimf e1n7hmq32">Chinese Traditional</div>
+                                       <h4>繁體中文</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="hr" href="/hr/">
+                                       <div class="css-1fppimf e1n7hmq32">Croatian</div>
+                                       <h4>Hrvatski</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="cs" href="/cs/">
+                                       <div class="css-1fppimf e1n7hmq32">Czech</div>
+                                       <h4>Čeština</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="da" href="/da/">
+                                       <div class="css-1fppimf e1n7hmq32">Danish</div>
+                                       <h4>Dansk</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="nl" href="/nl/">
+                                       <div class="css-1fppimf e1n7hmq32">Dutch</div>
+                                       <h4>Nederlands</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="en" style="color:#1c1cff" href="/en/">
+                                       <div class="css-1fppimf e1n7hmq32">English</div>
+                                       <h4>English</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="fa" href="/fa/">
+                                       <div class="css-1fppimf e1n7hmq32">Farsi</div>
+                                       <h4>فارسی</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ph" href="/ph/">
+                                       <div class="css-1fppimf e1n7hmq32">Filipino</div>
+                                       <h4>Filipino</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="fi" href="/fi/">
+                                       <div class="css-1fppimf e1n7hmq32">Finnish</div>
+                                       <h4>Suomi</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="fr" href="/fr/">
+                                       <div class="css-1fppimf e1n7hmq32">French</div>
+                                       <h4>Français</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="gl" href="/gl/">
+                                       <div class="css-1fppimf e1n7hmq32">Galician</div>
+                                       <h4>Galego</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ka" href="/ka/">
+                                       <div class="css-1fppimf e1n7hmq32">Georgian</div>
+                                       <h4>ქართული</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="de" href="/de/">
+                                       <div class="css-1fppimf e1n7hmq32">German</div>
+                                       <h4>Deutsch</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="el" href="/el/">
+                                       <div class="css-1fppimf e1n7hmq32">Greek</div>
+                                       <h4>Ελληνικά</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="gu" href="/gu/">
+                                       <div class="css-1fppimf e1n7hmq32">Gujarati</div>
+                                       <h4>ગુજરાતી</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="hi" href="/hi/">
+                                       <div class="css-1fppimf e1n7hmq32">Hindi</div>
+                                       <h4>हिन्दी</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="hu" href="/hu/">
+                                       <div class="css-1fppimf e1n7hmq32">Hungarian</div>
+                                       <h4>Magyar</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ig" href="/ig/">
+                                       <div class="css-1fppimf e1n7hmq32">Igbo</div>
+                                       <h4>Ibo</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="id" href="/id/">
+                                       <div class="css-1fppimf e1n7hmq32">Indonesian</div>
+                                       <h4>Bahasa Indonesia</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="it" href="/it/">
+                                       <div class="css-1fppimf e1n7hmq32">Italian</div>
+                                       <h4>Italiano</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ja" href="/ja/">
+                                       <div class="css-1fppimf e1n7hmq32">Japanese</div>
+                                       <h4>日本語</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="kk" href="/kk/">
+                                       <div class="css-1fppimf e1n7hmq32">Kazakh</div>
+                                       <h4>қазақ</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="km" href="/km/">
+                                       <div class="css-1fppimf e1n7hmq32">Khmer</div>
+                                       <h4>ចក្រភពខ្មែរ</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ko" href="/ko/">
+                                       <div class="css-1fppimf e1n7hmq32">Korean</div>
+                                       <h4>한국어</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="lt" href="/lt/">
+                                       <div class="css-1fppimf e1n7hmq32">Lithuanian</div>
+                                       <h4>Lietuvis</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ms" href="/ms/">
+                                       <div class="css-1fppimf e1n7hmq32">Malay</div>
+                                       <h4>Melayu</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ml" href="/ml/">
+                                       <div class="css-1fppimf e1n7hmq32">Malayalam</div>
+                                       <h4>മലയാളം</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="mr" href="/mr/">
+                                       <div class="css-1fppimf e1n7hmq32">Marathi</div>
+                                       <h4>मराठी</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="nb" href="/nb/">
+                                       <div class="css-1fppimf e1n7hmq32">Norwegian</div>
+                                       <h4>Norsk</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="pl" href="/pl/">
+                                       <div class="css-1fppimf e1n7hmq32">Polish</div>
+                                       <h4>Polski</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="pt" href="/pt/">
+                                       <div class="css-1fppimf e1n7hmq32">Portuguese</div>
+                                       <h4>Português</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="pt-br" href="/pt-br/">
+                                       <div class="css-1fppimf e1n7hmq32">Portuguese (Brazilian)</div>
+                                       <h4>Português</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ro" href="/ro/">
+                                       <div class="css-1fppimf e1n7hmq32">Romanian</div>
+                                       <h4>Română</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ru" href="/ru/">
+                                       <div class="css-1fppimf e1n7hmq32">Russian</div>
+                                       <h4>Pусский</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="sr" href="/sr/">
+                                       <div class="css-1fppimf e1n7hmq32">Serbian</div>
+                                       <h4>Српски</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="sk" href="/sk/">
+                                       <div class="css-1fppimf e1n7hmq32">Slovak</div>
+                                       <h4>Slovenský</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="sl" href="/sl/">
+                                       <div class="css-1fppimf e1n7hmq32">Slovenian</div>
+                                       <h4>Slovenščina</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="es" href="/es/">
+                                       <div class="css-1fppimf e1n7hmq32">Spanish</div>
+                                       <h4>Español</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="sw" href="/sw/">
+                                       <div class="css-1fppimf e1n7hmq32">Swahili</div>
+                                       <h4>Kiswahili</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="se" href="/se/">
+                                       <div class="css-1fppimf e1n7hmq32">Swedish</div>
+                                       <h4>Svenska</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ta" href="/ta/">
+                                       <div class="css-1fppimf e1n7hmq32">Tamil</div>
+                                       <h4>தமிழ்</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="th" href="/th/">
+                                       <div class="css-1fppimf e1n7hmq32">Thai</div>
+                                       <h4>ภาษาไทย</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="tr" href="/tr/">
+                                       <div class="css-1fppimf e1n7hmq32">Turkish</div>
+                                       <h4>Türkçe</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="uk" href="/uk/">
+                                       <div class="css-1fppimf e1n7hmq32">Ukrainian</div>
+                                       <h4>Українська</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="ur-in" href="/ur-in/">
+                                       <div class="css-1fppimf e1n7hmq32">Urdu (India)</div>
+                                       <h4>اردو</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="uz" href="/uz/">
+                                       <div class="css-1fppimf e1n7hmq32">Uzbek</div>
+                                       <h4>O&#x27;zbekcha</h4>
+                                    </a>
+                                    <a class="chakra-link eaa11rl5 css-13ql62b" dir="ltr" hrefLang="vi" href="/vi/">
+                                       <div class="css-1fppimf e1n7hmq32">Vietnamese</div>
+                                       <h4>Tiếng Việt</h4>
+                                    </a>
+                                 </div>
+                                </div>
+                                 <Footer />            
+              
+   </body>
+</html>
