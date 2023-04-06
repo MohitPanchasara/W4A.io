@@ -10,27 +10,27 @@ export interface Props {
 
 const { text, items, url} = Astro.props as Props;
 ---
-<ul>
-<li>
-    <span class="mr-0 text-base font-grotesk text-textbluetheme pr-[10px]">
-        <strong> <a href={url}> {text} <Icon name="ep:arrow-down-bold" class="textbluetheme  fa-bold w-3 bold h-2 border-1 inline-block" /> </a></strong>
-        
-    </span>
-
-
-    <ul>
-        {items.map((item) => (
-        <li>
-          <a href= {item.link}>
-            {item.content}
-            </a>
+<div class="inline-block">
+  <ul class="">
+    <li>
+        <span class="mr-0 text-base font-grotesk text-textbluetheme pr-[10px]">
+            <strong> <a href={url}> {text} <Icon name="ep:arrow-down-bold" class="textbluetheme  fa-bold w-3 bold h-2 border-1 inline-block" /> </a></strong>
             
-        </li>
-        ))}
-    </ul>
+        </span>
 
-</li>
-</ul>
+        <ul>
+            {items.map((item) => (
+            <li>
+              <a href= {item.link}>
+                {item.content}
+                </a>
+                
+            </li>
+            ))}
+        </ul>
+    </li>
+  </ul>
+</div>
 
 <style>
   ul {
@@ -41,7 +41,7 @@ const { text, items, url} = Astro.props as Props;
   font-weight: 400;
   color: rgb(111, 0, 255);
   display: inline-block;
-  padding: 5px;
+  padding: 15px;
   position: relative;
 }
 li ul {

@@ -25,7 +25,7 @@ const navItems: Array<NavItem> = [
   id="page-header"
   class="absolute bottom z-20 flex w-full items-center lg:justify-between border-transparent px-8 py-3 text-white fixed-header"
 >
-  <a class="flex items-center gap-3 sm:gap-2 font-grotesk" href="/">
+  <a class="flex items-center gap-1 sm:gap-2 font-grotesk" href="/">
     <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
@@ -42,7 +42,7 @@ const navItems: Array<NavItem> = [
       </div> -->
  
   </a>
-  <div class="hidden translate-x-[20px] w-[700px] lg:block">
+  <div class="hidden pr-20 w-[700px] lg:block">
     <!-- <Navbutton text="Community" />
    
     <Navbutton text="Developers" />
@@ -75,9 +75,16 @@ const navItems: Array<NavItem> = [
         </ul>
       </nav> -->
       
-      <div class="translate-x-[10px] gap-1 sm:translate-x-[2px]">
+      
+      <div class="translate-x-[0px] pr-[145px] gap-1 sm:translate-x-[2px]">
         <Search />
       </div>
+
+      <a href="/language" class="text-base font-grotesk text-textbluetheme">
+        <button aria-label="Search" type="submit" class=" h-[60px] m-0 absolute inline-block text-textbluetheme right-0 top-0 mt-3 mr-16">
+           <Icon name="zondicons:globe" class="h-[24px] pb-1 inline-block textbluetheme" /> Languages 
+        </button>
+      </a>
       
       <div class="w-10 flex textbluetheme translate-x-[30px] sm:translate-x-[10px] sm:gap-6 items-center gap-6">
         <ThemeSwitcher />
