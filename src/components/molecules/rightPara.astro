@@ -13,7 +13,7 @@ const { head, content, ahref, photo, button } = Astro.props;
 
 
 
-<div class="flex bg-bgdark justify-evenly pt-20 p-4 sm:p-0 sm:flex-wrap justify-evenly w-[100vw] sm:pt-10 align-middle">
+<div class="flex bg-bgdark justify-evenly  p-10 sm:p-0 sm:flex-wrap justify-evenly w-[100vw] sm:pt-10 align-middle">
 
     <div class="align-middle sm:w-[80vw]">
         <img src={photo} alt="hello" width="400" height="180">
@@ -21,10 +21,10 @@ const { head, content, ahref, photo, button } = Astro.props;
 
 
     <div class="align-middle sm:p-0 pt-15">
-       <div><p class="text-3xl sm:text-2xl font-grotesk font-bold text-primary sm:pt-4">{head}</p></div>
-        <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-md sm:text-sm text-secondary flex-none order-1 flex-grow-0">{content}</p></div>
+       <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{head}</p></div>
+        <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{content}</p></div>
             <div class="pt-5 sm:pt-2">
-                <button class="items-center w-32 sm:w-40 h-10 bg-purple-700 rounded text-white"> <a href={ahref}>{button}</a></button>
+                <button class="items-center w-32 sm:w-40 h-10 bg-textblue rounded text-white"> <a href={ahref}>{button}</a></button>
 
             </div>
           

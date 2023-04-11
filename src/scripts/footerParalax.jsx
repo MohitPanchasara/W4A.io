@@ -8,15 +8,16 @@ let scene1 = gsap.timeline();
 ScrollTrigger.create({
   animation: scene1,
   trigger: ".scrollElement",
-  start: "top top",
-  end: "45% 100%",
-  scrub: 3,
+  start: "top 20%",
+  end: "5% 22%",
+  scrub: 3
+  
 });
 
 // hills animation
 scene1.to(
   "#h1-1",
-  { y: 3 * speed, x: 1 * speed, scale: 0.9, ease: "power1.in" },
+  { y: 3 * speed, x: 1 * speed, scale: 0.5, ease: "power1.in" },
   0
 );
 scene1.to("#h1-2", { y: 2.6 * speed, x: -0.6 * speed, ease: "power1.in" }, 0);
@@ -60,8 +61,9 @@ ScrollTrigger.create({
   animation: clouds,
   trigger: ".scrollElement",
   start: "top top",
-  end: "70% 100%",
-  scrub: 1,
+  end: "25% 100%",
+  scrub: 1
+  
 });
 
 clouds.to("#cloud1", { x: 500 }, 0);
@@ -74,9 +76,10 @@ let sun = gsap.timeline();
 ScrollTrigger.create({
   animation: sun,
   trigger: ".scrollElement",
-  start: "top top",
-  end: "2200 100%",
-  scrub: 1,
+  start: "top 20%",
+  end: "15% 25%",
+  scrub: 1
+  
 });
 
 //sun motion
@@ -95,9 +98,10 @@ let scene2 = gsap.timeline();
 ScrollTrigger.create({
   animation: scene2,
   trigger: ".scrollElement",
-  start: "15% top",
-  end: "40% 100%",
-  scrub: 4,
+  start: "top 30%",
+  end: "40% 35%",
+  scrub: 4
+ 
 });
 
 scene2.fromTo("#h2-1", { y: 500, opacity: 0 }, { y: 0, opacity: 1 }, 0);
@@ -121,6 +125,7 @@ gsap.fromTo(
       start: "40% top",
       end: "70% 100%",
       scrub: 3,
+      
       onEnter: function () {
         gsap.utils.toArray("#bats path").forEach((item, i) => {
           gsap.to(item, {
@@ -146,9 +151,10 @@ let sun2 = gsap.timeline();
 ScrollTrigger.create({
   animation: sun2,
   trigger: ".scrollElement",
-  start: "2200 top",
-  end: "5000 100%",
+  start: "top 10%",
+  end: "10% 40%",
   scrub: 1,
+  
 });
 
 sun2.to("#sun", { attr: { offset: "20" } }, 0);
@@ -164,9 +170,10 @@ let sceneTransition = gsap.timeline();
 ScrollTrigger.create({
   animation: sceneTransition,
   trigger: ".scrollElement",
-  start: "70% top",
-  end: "bottom 100%",
+  start: "50% 30%",
+  end: "53% 33%",
   scrub: 3,
+
 });
 
 sceneTransition.to(
@@ -182,9 +189,10 @@ let scene3 = gsap.timeline();
 ScrollTrigger.create({
   animation: scene3,
   trigger: ".scrollElement",
-  start: "80% 50%",
-  end: "bottom 100%",
-  scrub: 3,
+  start: "55% 45%",
+  end: "70% 50%",
+  scrub: 3
+  
 });
 
 //Hills motion
