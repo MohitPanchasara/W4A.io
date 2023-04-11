@@ -37,7 +37,11 @@
 
         "research":{
             "head": "Research",
-            "body": "Learn about Web 4.0"
+            "body": "Learn about Web 4.0",
+            "body2": "Explore NFTs",
+            "body3": "Explore IoT",
+            "body4": "Explore AI/ML",
+            "body5": "Explore dapps"
             
             
         },

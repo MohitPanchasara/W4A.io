@@ -11,9 +11,9 @@ const { heading, body } = Astro.props;
 
 <div class="pt-4 sm:pt-8 pb-10 sm:pb-4 font-grotesk h-4 text-white font-bold text-lg flex items-center flex-none order-none flex-grow-0">{heading}</div>
 
-<div class="text-sm">
+<div class="text-sm ">
     <ul>
-        {body.map((data) => <li class="pb-2 text-white">
-         <a href={data.link}> {data.content}</a></li>)}
+        {body.map((data) => <li class="pb-2 text-white ">
+         <a href={data.link} > <p class="font-grotesk">{data.content}</p></a></li>)}
       </ul>
 </div>
