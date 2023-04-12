@@ -22,6 +22,10 @@ changeLanguage("en");
 
 const { generator, site } = Astro;
 const image = new URL("/public/Hero Section.png", site);
+
+
+
+
 ---
 
 <!DOCTYPE html>
@@ -60,19 +64,11 @@ const image = new URL("/public/Hero Section.png", site);
     <meta property="og:url" content={site} />
     <meta name="twitter:card" content="summary_large_image" /> 
     <!-- initialize theme -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
     <script is:inline>
 
-      const scrollF = document.querySelector('#scrollUp');
       
-      window.addEventListener('scroll', () => {
-        if(window.pageYOffset > 100){
-          scrollF.classList.add("active");
-        }
-        else{
-          scrollF.classList.remove("active");
-        }
-      });
+
 
       const themeSaved = localStorage.getItem("theme");
       console.log(themeSaved)
@@ -123,11 +119,30 @@ const image = new URL("/public/Hero Section.png", site);
       </section >
 
       <section>
-        <div>
+        <!-- <div>
           <LeftPara heading= {t("index.leftPara1.heading")}
           body= {t("index.leftPara1.body")}
           image="../svg/index/brain.svg" alink="/" button={t("index.knowMore")}/>
-        </div>
+        </div> -->
+        
+
+<div class="flex justify-evenly  p-5  sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-baseline">
+
+  <div class="sm:p-0 p-20 align-middle ">
+     <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{t("index.leftPara1.heading")}</p></div>
+      <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.leftPara1.body")}</p></div>
+          <div class="pt-5 sm:pt-2">
+              <button class="items-center w-auto pl-[10px] pr-[10px] sm:w-40 h-10 bg-textblue rounded text-white "><a href="/"> {t("index.knowMore")}</a></button>
+
+          </div>
+        
+  </div>
+
+  <div class="align-middle sm:w-[80vw]">
+      <img src="../svg/index/brain.svg" alt="nothinh" width="400" height="180">         
+  </div>
+
+</div>
       </section>
       
 
@@ -178,11 +193,9 @@ const image = new URL("/public/Hero Section.png", site);
         </div>
       </section>
 
-      <section class="h-[100vh]">
-        <Imageslider />
-      </section>
+      
 
-      <section>
+      
        
 
          
@@ -190,11 +203,11 @@ const image = new URL("/public/Hero Section.png", site);
         <AIexchange />
       </section>
      
-  <section class="scrollElement overflow:hidden ">
-    
-    <FooterParalaxScroll class="z-1" />
-  </section>
-     
+      <section class="h-[100vh]">
+        <Imageslider />
+      </section>
+  
+  <section>
   <div>
     <LeftPara heading= {t("index.leftPara3.heading")}
     body= {t("index.leftPara3.body")}
@@ -206,11 +219,17 @@ const image = new URL("/public/Hero Section.png", site);
         <Leftpara2 />
           
       </section>
+
+      <section class="scrollElement overflow:hidden ">
+    
+        <FooterParalaxScroll class="z-1" />
+      </section>
       
   <Footer />
   </div>
   <div class="bottom-[40px] right-[40px] fixed"> 
-    <a href="" class="" id="scrollUp"><svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <a href="#"  id="scroll">
+    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
     <circle cx="20" cy="20" r="19" fill="white" stroke="black" stroke-width="2"/>
     <path d="M12.9333 23.6C12.6889 23.3556 12.5667 23.0444 12.5667 22.6667C12.5667 22.2889 12.6889 21.9778 12.9333 21.7333L19.0667 15.6C19.2 15.4667 19.3444 15.372 19.5 15.316C19.6555 15.2609 19.8222 15.2333 20 15.2333C20.1778 15.2333 20.3502 15.2667 20.5173 15.3333C20.6835 15.4 20.8222 15.4889 20.9333 15.6L27.0666 21.7333C27.3111 21.9778 27.4333 22.2889 27.4333 22.6667C27.4333 23.0444 27.3111 23.3556 27.0666 23.6C26.8222 23.8444 26.5111 23.9667 26.1333 23.9667C25.7555 23.9667 25.4444 23.8444 25.2 23.6L20 18.4L14.8 23.6C14.5555 23.8444 14.2444 23.9667 13.8667 23.9667C13.4889 23.9667 13.1778 23.8444 12.9333 23.6Z" fill="black"/>
     </svg>

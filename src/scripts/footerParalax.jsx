@@ -9,8 +9,9 @@ ScrollTrigger.create({
   animation: scene1,
   trigger: ".scrollElement",
   start: "top 20%",
-  end: "5% 22%",
-  scrub: 3
+  end: "10% 22%",
+  scrub: 3,
+  
   
 });
 
@@ -78,8 +79,7 @@ ScrollTrigger.create({
   trigger: ".scrollElement",
   start: "top 20%",
   end: "15% 25%",
-  scrub: 1
-  
+  scrub: 1,
 });
 
 //sun motion
