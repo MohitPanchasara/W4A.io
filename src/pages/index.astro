@@ -17,7 +17,10 @@ import AIexchange from "~/components/molecules/AIexchange.astro";
 import Imageslider from "~/components/organisms/index/imageslider.astro";
 import i18next, { t, changeLanguage } from "i18next";
 import { HeadHrefLangs } from "astro-i18next/components";
-
+import Camera from "~/components/Atoms/camera.astro";
+import HumanScreen from "~/components/Atoms/humanScreen.astro";
+import VR from "~/components/Atoms/vr.astro";
+import Robot4arm from "~/components/Atoms/robot4arm.astro";
 changeLanguage("en");
 
 const { generator, site } = Astro;
@@ -118,6 +121,22 @@ const image = new URL("/public/Hero Section.png", site);
         <Whatisweb4 />        
       </section >
 
+      
+      
+      <section>
+        <Boxes />
+      </section>
+
+      <section class="overflow-hidden	">
+        <Toggle />
+      </section>
+
+      <section class="h-[100vh]">
+        <Imageslider />
+      </section>
+      
+      
+
       <section>
         <!-- <div>
           <LeftPara heading= {t("index.leftPara1.heading")}
@@ -126,7 +145,7 @@ const image = new URL("/public/Hero Section.png", site);
         </div> -->
         
 
-<div class="flex justify-evenly  p-5  sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-baseline">
+<div class="flex justify-evenly  p-20  sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-baseline bg-gray-300">
 
   <div class="sm:p-0 p-20 align-middle ">
      <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{t("index.leftPara1.heading")}</p></div>
@@ -144,53 +163,30 @@ const image = new URL("/public/Hero Section.png", site);
 
 </div>
       </section>
-      
-
-      <section class="overflow-hidden	">
-        <Toggle />
-      </section>
-      
-
-        <!-- <Scrollpart3 /> -->
-        <!-- <Scrollpart1 /> -->
     
       
       
       <section>
-        <div>
-            <RightPara head= {t("index.rightPara1.heading")}
-            content={t("index.rightPara1.body")}
-            photo="../svg/index/camera.svg" ahref="/" button={t("index.knowMore")}/>
-        </div>
+        <Camera/>
       </section>
 
-      
-
-      <section>
-        <Boxes />
-      </section>
-
-      <section>
-
-        <div>
-          <LeftPara heading= {t("index.leftPara2.heading")}
-          body= {t("index.leftPara2.body")}
-          image="../svg/index/vr.svg" alink="/" button={t("index.knowMore")}/>
-        </div>
-      </section>
-      
       <section>
        
         <Beforeafter />
       </section>  
 
+
+      <section>
+     <VR/>
+      </section>
+      
+    
+
       
       <section>
-        <div>
-            <RightPara head={t("index.rightPara2.heading")}
-            content= {t("index.rightPara2.body")}
-            photo="../svg/index/life.svg" ahref="/" button={t("index.knowMore")}/>
-        </div>
+        
+
+        <HumanScreen/>
       </section>
 
       
@@ -201,16 +197,10 @@ const image = new URL("/public/Hero Section.png", site);
          
       
      
-      <section class="h-[100vh]">
-        <Imageslider />
-      </section>
+      
   
   <section>
-  <div>
-    <LeftPara heading= {t("index.leftPara3.heading")}
-    body= {t("index.leftPara3.body")}
-    image="../svg/index/robot4arm.svg" alink="/" button={t("index.knowMore")}/>
-</div>
+  <Robot4arm/>
 </section>
 
        <section>
