@@ -11,7 +11,7 @@ import {t} from "i18next";
   
     }
     </style> -->
-<div id="grad0" class=" flex justify-evenly  sm:p-0 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-middle">
+<!-- <div id="grad0" class=" flex justify-evenly  sm:p-0 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-middle">
 
     <div class="sm:p-0 align middle pt-[50px]">
        <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{t("index.AIexchange.head")}</p></div>
@@ -24,5 +24,54 @@ import {t} from "i18next";
     <div class="align-middle sm:w-[80vw]">
         <img src="../svg/index/astronaut.svg" alt="nothinh" width="500" height="220">         
     </div>
+
+</div> -->
+
+
+<style>
+.hello{
+    width: 100vw;
+    height: 60vh;
+    background: linear-gradient(180deg, #FFFFFF 4.65%, #FEB8A5 101.54%);
+}
+
+.inside{
+    margin: 0 10vw;
+    width: 70vw;
+    height: 40vh;
+    box-sizing: border-box;
+
+
+
+/* background: url(../svg/index/astronaut.svg); */
+background-blend-mode: overlay, normal;
+backdrop-filter: blur(70px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 15px;
+}
+
+.robo{
+    position: absolute;
+    left: 70%;
+    top: 1025%;
+}
+
+</style>
+
+
+
+<div class="hello py-10" >
+   
+<div class="inside">
+    <div class="pl-5 pt-5"><p class="text-xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4 ">{t("index.AIexchange.head")}</p></div>
+    <div class="pl-5 pt-5 sm:pt-2"><p class="font-satoshi  sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.AIexchange.body")}</p></div>
+
+    <div class="pt-5 pl-5 sm:pt-2">
+        <button class="items-center w-auto pl-[10px] pr-[10px] sm:w-40 h-10 bg-textblue rounded text-white "><a href="/community">{t("index.AIexchange.button")}  </a></button>
+    </div>
+
+</div>
+<img src="../svg/index/astronaut.svg" alt="nothinh" width="300" height="120" class="robo">
 
 </div>
