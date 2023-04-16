@@ -40,15 +40,20 @@ import {t} from "i18next";
     width: 70vw;
     height: 40vh;
     box-sizing: border-box;
+    background: linear-gradient(30deg,#ff6f62, #f95088, #b038ea , #6e53ff,#0894ff);
+    animation: gradient 2s linear infinite;
+    animation-direction: alternate;
+    background-size: 600% 100%;
 
+    background-blend-mode: overlay, normal;
+    backdrop-filter: blur(70px);
+    border-radius: 15px;
 
+}
 
-/* background: url(../svg/index/astronaut.svg); */
-background-blend-mode: overlay, normal;
-backdrop-filter: blur(70px);
-/* Note: backdrop-filter has minimal browser support */
-
-border-radius: 15px;
+@keyframes gradient {
+    0% {background-position: 0%}
+    100% {background-position: 100%}
 }
 
 .robo{
