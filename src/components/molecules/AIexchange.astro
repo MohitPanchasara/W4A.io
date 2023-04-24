@@ -31,22 +31,23 @@ import {t} from "i18next";
 <style>
 .hello{
     width: 100vw;
-    height: 70vh;
+    height: 90vh;
     background: linear-gradient(180deg, #FFFFFF 4.65%, #FEB8A5 101.54%);
 }
 
 .inside{
     margin: 0 10vw;
     width: 80vw;
-    height: 40vh;
+    height: 45vh;
     box-sizing: border-box;
-    background: linear-gradient(30deg,#ff6f62, #f95088, #b038ea , #6e53ff,#0894ff);
+    background: linear-gradient(120deg,#FFA199, #FF99BB, #CC8CEA , #A999FF,#99D3FF);
     animation: gradient 2s linear infinite;
     animation-direction: alternate;
     background-size: 600% 100%;
-
+    
     background-blend-mode: overlay, normal;
-    backdrop-filter: blur(70px);
+    
+    
     border-radius: 15px;
 
 }
@@ -72,10 +73,10 @@ import {t} from "i18next";
 
 
 
-<div class="hello py-10 sm:py-5" >
+<div class="hello py-20 sm:py-5" >
    
-<div class="inside">
-    <div class="pl-10 pt-10"><p class="text-xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4 ">{t("index.AIexchange.head")}</p></div>
+<div class="inside px-5">
+    <div class=" pt-[60px] px-10 "><p class="text-xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4 ">{t("index.AIexchange.head")}</p></div>
     
     <div class="px-10 pt-5 sm:pt-2"><p class="font-satoshi  sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.AIexchange.body")}</p>
         <img src="../svg/index/astronaut.svg" alt="nothinh" width="300" height="90" class="float-right">

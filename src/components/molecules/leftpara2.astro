@@ -1,8 +1,55 @@
 ---
 
 import {t} from "i18next";
+
 ---
 
+
+
+<style>
+
+
+    /* Slideshow container */
+    .slideshow-container {
+      position: relative;
+      background: #f1f1f1f1;
+    }
+    
+    /* Slides */
+    .mySlides {
+      display: none;
+      padding: 80px;
+      text-align: center;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -30px;
+      padding: 16px;
+      color: #888;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      position: absolute;
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    
+    
+    
+    
+    
+    </style>
 
 <div  class="flex justify-evenly pt-10 pb-20 sm:p-0 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-middle">
 
@@ -10,8 +57,11 @@ import {t} from "i18next";
         <img src="../svg/index/2arm.svg" alt="nothinh" width="500" height="220">         
     </div>
 
+
+<!-- slider starts -->
+    <div class="slideshow-container">
 <!-- Join Community -->
-    <div class="sm:p-0 align middle pt-15">
+    <div class="sm:p-0 align middle pt-15 mySlides">
        <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{t("index.paraLeft2.head1")}</p></div>
         <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.paraLeft2.body1")}</p></div>
         
@@ -44,8 +94,9 @@ import {t} from "i18next";
                 </div>
 
             </div> 
-            <!-- COntribute to web 4.0 -->
-        <div class="pt-10"><p class="text-2xl pt-6 sm:text-2xl font-grotesk font-bold text-primary sm:pt-4">{t("index.paraLeft2.head2")}</p></div>
+    <!-- COntribute to web 4.0 -->
+    <div class="mySlides">
+        <div class="pt-10 "><p class="text-2xl pt-6 sm:text-2xl font-grotesk font-bold text-primary sm:pt-4">{t("index.paraLeft2.head2")}</p></div>
         <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.paraLeft2.body2")}</p></div>
         
         
@@ -70,8 +121,14 @@ import {t} from "i18next";
         </div>
           
     </div>
-
-    
-    
-
 </div>
+    <!-- contribute ends  -->
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<!-- slider ends -->
+</div>
+
+
+<script src="src/scripts/textSlider.jsx"></script>
