@@ -1,0 +1,107 @@
+---
+export interface Props {
+   body1: string,
+  body2: string,
+  body3: string,
+  body4: string,
+}
+
+const { body1, body2, body3, body4 } = Astro.props;
+
+import i18next, { t } from "i18next";
+
+---
+
+
+<div class="container">
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black text-center">
+              <h3 class="text-xl font-black">Web 1.0</h3>
+              <p class="text-sm font-medium pt-4">{body1}</p>
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black text-center">
+              <h3 class="text-xl font-black">Web 2.0</h3>
+              <p class="text-sm font-medium pt-4">{body2}</p>
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black text-center">
+              <h3 class="text-xl font-black">Web 3.0</h3>
+              <p class="text-sm font-medium pt-4">{body3}</p>
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black text-center">
+              <h3 class="text-xl font-black">Web 4.0</h3>
+              <p class="text-sm font-medium pt-4">{body4}</p>
+          </div>
+      </div>
+  </div>
+</div>
+
+<style>
+  .menu {
+  display: flex;
+}
+
+.menu button {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button_active {
+  color: teal;
+}
+
+.content_inside {
+  display: none;
+  padding: 10px;
+}
+
+.content_inside_active {
+  display: block;
+}
+.container{
+  margin: auto auto;
+
+  background-color: none;
+  display:grid;
+  grid-template-columns: 45vw 45vw;
+  grid-row: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+}
+
+
+.container .box {
+    padding:30px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container .card:nth-child(1) .box {
+  background: #B0C8FF;
+}
+.container .card:nth-child(2) .box {
+  background: #D2B5FB;
+}
+.container .card:nth-child(3) .box {
+  background: #EEB4E3;
+}
+.container .card:nth-child(4) .box {
+  background: #FEBEC9;
+}
+</style>

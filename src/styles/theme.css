@@ -7,6 +7,9 @@
   --color-lightdark: white;
   --color-text-offset: theme("colors.gray.600");
   --color-bgdark: theme("colors.gray.50");
+  --color-bgbluedark: #D6EDFF;
+  --color-bgpurpledark: #DDD6FF;
+  --color-bgpinkdark: #F2D6FF;
   --color-background: theme("colors.gray.50");
   --color-background-offset: theme("colors.gray.100");
   --color-border: theme("colors.gray.900" / 10%);
@@ -23,6 +26,9 @@
   --color-lightdark: #0a090f;
   --color-text-offset: theme("colors.gray.400");
   --color-bgdark: #222222;
+  --color-bgbluedark: #222222;
+  --color-bgpurpledark: #272627;
+  --color-bgpinkdark: #272627;
   --color-background: #272627;
   --color-background-offset: #272627;
   --color-border: theme("colors.gray.50" / 10%);

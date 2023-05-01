@@ -24,6 +24,9 @@ module.exports = {
         textbluetheme: "var(--color-textbluetheme)",
         lightdark: "var(--color-lightdark)",
         bgdark: "var(--color-bgdark)",
+        bgbluedark: "var(--color-bgbluedark)",
+        bgpurpledark: "var(--color-bgpurpledark)",
+        bgpinkdark: "var(--color-bgpinkdark)",
 
         current: "currentColor",
         primaryweb: "#0A090F",

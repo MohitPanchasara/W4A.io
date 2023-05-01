@@ -29,7 +29,7 @@ const navItems: Array<NavItem> = [
     <!-- <h1 class="sr-only">AstroXX</h1>
     <Icon name="logomark" class="h-10" />
     <Icon name="wordmark" class="hidden h-4 sm:block" /> -->
-    <div class="sm:translate-x-[40px] sm:px-24 sm:items-center sm:items-center md:translate-x-[120px]">   
+    <div class="sm:translate-x-[40vw] sm:mr-40 sm:items-center sm:items-center md:translate-x-[120px]">   
       <img src="../svg/index/navbarlogo.svg" width="35" height="35" alt="AE navbar logo"  />
     </div>
     <!-- <Logo /> -->
@@ -80,8 +80,8 @@ const navItems: Array<NavItem> = [
         <Search />
       </div>
 
-      <a href="/language" class="text-base font-grotesk text-textbluetheme">
-        <button aria-label="Search" type="submit" class=" h-[60px] m-0 absolute inline-block text-textbluetheme right-0 top-0 mt-3 mr-16">
+      <a href="/language" class="sm:hidden text-base font-grotesk text-textbluetheme">
+        <button aria-label="Search" type="submit" class=" h-[0px] m-0 sm:h-[18px] inline-block text-textbluetheme right-0 top-0 mt-1">
            <Icon name="zondicons:globe" class="h-[24px] pb-1 inline-block textbluetheme" /> 
         </button>
       </a>
@@ -95,9 +95,9 @@ const navItems: Array<NavItem> = [
           aria-label="Navigation"
         >
                    
-          <Icon name="el:lines" class="h-5 textbluetheme" />
+          <Icon name="zondicons:menu" class="h-5 textbluetheme mr-10" />
           <style>
-                  [astro-icon="el:lines"] {
+                  [astro-icon="zondicons:menu"] {
                     color: #A080FF;
                 }
             </style>
@@ -119,42 +119,48 @@ const navItems: Array<NavItem> = [
       </div>
  
 
-    
-    <div id="menu-modal" class="modal hidden" aria-hidden="true">
-      <div class="bg-default fixed inset-0 px-8 py-4">
-        <div class="space-y-4" role="dialog" aria-modal="true">
-          <header class="text-right">
-            <button
-              id="close-nav-button"
-              type="button"
-              class="btn "
-              aria-label="Close navigation"
-            >
-              <Icon name="teenyicons:x-outline" class="h-8" />
-              <style>
-                  [astro-icon="teenyicons:x-outline"] {
-                    color: #A080FF;
+      <!--Hamburger -->
+      <div id="menu-modal" class="modal hidden" aria-hidden="true">
+        <div class="bg-default fixed inset-0 px-10 py-4">
+          <div class="space-y-4" role="dialog" aria-modal="true">
+            <header class="text-right">
+              <button
+                id="close-nav-button"
+                type="button"
+                class="btn "
+                aria-label="Close navigation"
+              >
+                <Icon name="teenyicons:x-outline" class="h-8" />
+                <style>
+                    [astro-icon="teenyicons:x-outline"] {
+                      color: #A080FF;
+                  }
+              </style>
+              </button>
+            </header>
+            <div class="flex justify-center">
+              <!-- <Icon name="logomark" class="h-16" /> -->
+              <W4logo />
+            </div>
+            <nav>
+              <ul class="flex flex-col">
+                {
+                  navItems.map(({ title, url }) => (
+                    <li>
+                      <a class="block py-4 text-center text-primary text-xl" href={url}>
+                        {title}
+                      </a>
+                    </li>
+                  ))
                 }
-            </style>
-            </button>
-          </header>
-          <div class="flex justify-center">
-            <!-- <Icon name="logomark" class="h-16" /> -->
-            <W4logo />
-          </div>
-          <nav>
-            <ul class="flex flex-col">
-              {
-                navItems.map(({ title, url }) => (
-                  <li>
-                    <a class="block py-4 text-center text-primary text-xl" href={url}>
-                      {title}
-                    </a>
-                  </li>
-                ))
-              }
-            </ul>
-          </nav>
+              </ul>
+              <a href="/language" class="block py-4 text-primary text-xl font-grotesk sm:ml-[20vw]">
+                <button aria-label="Search" type="submit" class=" h-[20px] m-0 sm:h-[18px] inline-block right-0 top-0">
+                   <Icon name="zondicons:globe" class="h-[23px] pb-1 inline-block textbluetheme" />
+                   Languages 
+                </button>
+              </a>
+            </nav>
         </div>
       </div>
     </div>

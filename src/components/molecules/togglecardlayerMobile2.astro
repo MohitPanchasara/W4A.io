@@ -1,0 +1,117 @@
+---
+
+import i18next, { t } from "i18next";
+
+---
+
+
+<div class="container">
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black">
+            <h3 class="text-xl font-black text-center">{t("index.toggle.toggleCardLayer2.web1.h3")}</h3>
+            <ul class="text-sm font-medium pt-4">
+                <li>&#8226 {t("index.toggle.toggleCardLayer2.web1.li1")}</li>
+                <li>&#8226 {t("index.toggle.toggleCardLayer2.web1.li2")}</li>
+                <li>&#8226 {t("index.toggle.toggleCardLayer2.web1.li3")}</li>
+            </ul>  
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black">
+            <h3 class="text-xl font-black text-center">{t("index.toggle.toggleCardLayer2.web2.h3")}</h3>
+            <ul class="text-sm font-medium pt-4">
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web2.li1")}</li>
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web2.li2")}</li>
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web2.li3")}</li>
+           </ul>  
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black">
+            <h3 class="text-xl font-black text-center">{t("index.toggle.toggleCardLayer2.web3.h3")}</h3>
+            <ul class="text-sm font-medium pt-4">
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web3.li1")}</li>
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web3.li2")}</li>
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web3.li3")}</li>
+           </ul> 
+          </div>
+      </div>
+  </div>
+  <div class="card ">
+      <div class="box ">
+          <div class="content font-grotesk text-black">
+            <h3 class="text-xl font-black text-center">{t("index.toggle.toggleCardLayer2.web4.h3")}</h3>
+            <ul class="text-sm font-medium pt-4">
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web4.li1")}</li>
+               <li>&#8226 {t("index.toggle.toggleCardLayer2.web4.li2")}</li>
+           </ul>
+          </div>
+      </div>
+  </div>
+</div>
+
+<style>
+  .menu {
+  display: flex;
+}
+
+.menu button {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.button_active {
+  color: teal;
+}
+
+.content_inside {
+  display: none;
+  padding: 10px;
+}
+
+.content_inside_active {
+  display: block;
+}
+.container{
+  margin: auto auto;
+
+  background-color: none;
+  display:grid;
+  grid-template-columns: 45vw 45vw;
+  grid-row: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+}
+
+
+.container .box {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.container .card:nth-child(1) .box {
+  background: #B0C8FF;
+}
+.container .card:nth-child(2) .box {
+  background: #D2B5FB;
+}
+.container .card:nth-child(3) .box {
+  background: #EEB4E3;
+}
+.container .card:nth-child(4) .box {
+  background: #FEBEC9;
+}
+</style>

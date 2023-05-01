@@ -21,6 +21,8 @@ import Camera from "~/components/Atoms/camera.astro";
 import HumanScreen from "~/components/Atoms/humanScreen.astro";
 import VR from "~/components/Atoms/vr.astro";
 import Robot4arm from "~/components/Atoms/robot4arm.astro";
+import Brain from "~/components/Atoms/brain.astro";
+import ToggleMobile from "~/components/organisms/index/toggleMobile.astro";
 changeLanguage("en");
 
 const { generator, site } = Astro;
@@ -129,8 +131,14 @@ const image = new URL("/public/Hero Section.png", site);
 
       <section class="overflow-hidden	">
 
-        <p class="h-10 font-grotesk pt-20 font-bold text-2xl text-center text-black ">Evolution of the Modern Web</p>
-        <Toggle />
+        <p class="h-10 font-grotesk pt-20 font-bold text-2xl text-center text-primary sm:text-xl">Evolution of the Modern Web</p>
+          <div class="sm:hidden">
+            <Toggle />
+          </div>
+          <div class="hidden sm:block">
+            <ToggleMobile />
+            
+          </div>
       </section>
 
       <section class="h-[100vh]">
@@ -141,25 +149,7 @@ const image = new URL("/public/Hero Section.png", site);
 
       <section>
         
-        
-
-<div class="flex justify-evenly py-20 sm:flex-wrap-reverse w-[100vw] sm:pt-10 align-baseline " style="background: #D6EDFF;">
-
-  <div class="sm:p-0 pt-20 align-middle ">
-     <div><p class="text-2xl sm:text-xl font-grotesk font-bold text-primary sm:pt-4">{t("index.leftPara1.heading")}</p></div>
-      <div class="pt-5 sm:pt-2"><p class="font-satoshi w-[50vw] sm:w-[80vw] font-medium text-sm sm:text-sm text-secondary flex-none order-1 flex-grow-0">{t("index.leftPara1.body")}</p></div>
-          <div class="pt-5 sm:pt-2">
-              <button class="items-center w-auto pl-[10px] pr-[10px] sm:w-40 h-10 bg-textblue rounded-lg text-white "><a href="/"> {t("index.knowMore")}</a></button>
-
-          </div>
-        
-  </div>
-
-  <div class="align-middle sm:w-[80vw]">
-      <img src="../svg/index/brain.svg" alt="nothinh" width="400" height="180">         
-  </div>
-
-</div>
+      <Brain />
       </section>
     
       

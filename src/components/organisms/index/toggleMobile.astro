@@ -1,0 +1,157 @@
+---
+import i18next, { t } from "i18next";
+import TogglecardlayerMobile from "~/components/molecules/togglecardlayerMobile.astro";
+import TogglecardlayerMobile2 from "~/components/molecules/togglecardlayerMobile2.astro";
+---
+
+<div class="">
+    <div class="menu pt-10">
+        <div class="flex flex-wrap justify-center p-2">
+            <!-- First row of buttons -->
+                <div class="w-full sm:w-auto mr-2">
+                    <button class="button button_active rounded-l-lg active">{t("index.toggle.Defination")}</button>
+                </div>
+                <div class="w-full sm:w-auto mr-1">
+                    <button class="button">{t("index.toggle.Features")}</button>
+                </div>
+                <div class="w-full sm:w-auto ml-1">
+                    <button class="button rounded-r-lg">{t("index.toggle.Theme")}</button>
+                </div>
+
+                 <!-- Second row of buttons -->
+                <div class="w-full sm:w-2/5 mr-1 pr-4 mt-4">
+                    <button class="button rounded-tl-lg active">{t("index.toggle.Technology Breakthrough")}</button>
+                </div>
+                <div class="w-full sm:w-2/5 ml-1 pl-2 mt-4">
+                    <button class="button rounded-tr-lg">{t("index.toggle.Biggest Innovation")}</button>
+                </div>
+
+            </div>
+      
+    
+      
+    </div>
+    <div class="content pt-8 pb-14">
+        
+      <div class="content_inside content_inside_active">
+
+        <TogglecardlayerMobile body1= {t("index.toggle.toggleCard1.body1")}
+                                body2= {t("index.toggle.toggleCard1.body2")}
+                                body3= {t("index.toggle.toggleCard1.body3")}
+                                body4= {t("index.toggle.toggleCard1.body4")}/>
+        
+      </div>
+      <div class="content_inside">
+        <TogglecardlayerMobile2 />
+      </div>
+
+      <div class="content_inside">
+        <TogglecardlayerMobile body1= {t("index.toggle.toggleCard2.body1")}
+                                body2= {t("index.toggle.toggleCard2.body2")}
+                                body3= {t("index.toggle.toggleCard2.body3")}
+                                body4= {t("index.toggle.toggleCard2.body4")}/>
+      </div>
+      <div class="content_inside">
+        <TogglecardlayerMobile body1= {t("index.toggle.toggleCard3.body1")}
+                                body2= {t("index.toggle.toggleCard3.body2")}
+                                body3= {t("index.toggle.toggleCard3.body3")}
+                                body4= {t("index.toggle.toggleCard3.body4")}/>
+      </div>
+      <div class="content_inside">
+        <TogglecardlayerMobile body1= {t("index.toggle.toggleCard4.body1")}
+                                body2= {t("index.toggle.toggleCard4.body1")}
+                                body3= {t("index.toggle.toggleCard4.body1")}
+                                body4= {t("index.toggle.toggleCard4.body1")}/>
+      </div>
+    </div>
+</div>
+  
+
+<style>
+.menu {
+  display: flex;
+}
+
+.button_active{
+    color: white!important;
+    background-color: #3F00F9!important;
+}
+
+.menu button {
+  cursor: pointer;
+  display: block;
+	padding: .5rem 1rem;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    margin: auto auto;
+}
+
+.button_active {
+  color: teal;
+}
+
+.content_inside {
+  display: none;
+  padding: 10px;
+}
+
+.content_inside_active {
+  display: block;
+}
+.container{
+  margin: 30px auto;
+
+  background-color: none;
+  display:grid;
+  grid-template-columns: auto auto;
+  grid-row: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+
+}
+
+
+.container .box {
+    background-color:#333;
+    padding:30px;
+    border-radius:10px;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:40px;
+    font-family:sans-serif;
+}
+
+.container .card:nth-child(1) .box {
+  background: #B0C8FF;
+}
+.container .card:nth-child(2) .box {
+  background: #D2B5FB;
+}
+.container .card:nth-child(3) .box {
+  background: #EEB4E3;
+}
+.container .card:nth-child(4) .box {
+  background: #FEBEC9;
+}
+</style>
+
+<script>
+    let button = document.querySelectorAll('.menu button');
+let content_inside = document.querySelectorAll('.content_inside');
+
+Array.from(button).forEach(function(buttonArray, i) {
+buttonArray.addEventListener('click', function() {
+
+    Array.from(button).forEach(buttonAll => buttonAll.classList.remove('button_active'));
+    
+    Array.from(content_inside).forEach(content_insideAll => content_insideAll.classList.remove('content_inside_active'));
+    
+    button[i].classList.add('button_active'); 
+    
+    content_inside[i].classList.add('content_inside_active');  
+  });
+});
+
+</script>
